@@ -1,68 +1,68 @@
 export const navigation = [
   {
-    title: "Product",
+    title: "Platform",
     items: [
       {
-        title: "SBOM",
-        href: "/sbom",
+        title: "Overview",
+        href: "/platform/overview",
       },
       {
-        title: "CBOM",
-        href: "/cbom",
+        title: "SBOM Management",
+        href: "/platform/sbom",
+      },
+      {
+        title: "CBOM Management",
+        href: "/platform/cbom",
+      },
+      {
+        title: "Vulnerability Intelligence",
+        href: "/platform/vulnerability-intelligence",
+      },
+      {
+        title: "Compliance & Governance",
+        href: "/platform/compliance",
       },
     ],
   },
-
   {
-    title: "Use Cases",
+    title: "Solutions",
     items: [
       {
-        title: "Compliance & Regulatory",
-        href: "/use-cases/compliance",
+        title: "Software Supply Chain Security",
+        href: "/solutions/supply-chain-security",
       },
       {
-        title: "Supply Chain Security",
-        href: "/use-cases/supply-chain",
+        title: "Open Source Risk Management",
+        href: "/solutions/open-source-risk",
       },
       {
-        title: "Cryptographic Agility",
-        href: "/use-cases/cryptographic-agility",
+        title: "Vulnerability Management",
+        href: "/solutions/vulnerability-management",
+      },
+      {
+        title: "Compliance & Audit Readiness",
+        href: "/solutions/compliance-audit",
       },
     ],
   },
-
   {
     title: "Resources",
     items: [
       {
-        title: "Blog",
-        href: "/resources/blog",
+        title: "Blogs",
+        href: "/resources/blogs",
       },
       {
-        title: "Docs",
-        href: "/resources/docs",
+        title: "Whitepapers",
+        href: "/resources/whitepapers",
       },
       {
         title: "Case Studies",
         href: "/resources/case-studies",
       },
-    ],
-  },
-
-  {
-    title: "Company",
-    items: [
       {
-        title: "About",
-        href: "/company/about",
-      },
-      {
-        title: "Contact",
-        href: "/company/contact",
-      },
-      {
-        title: "Pricing",
-        href: "/company/pricing",
+        title: "FAQs",
+        href: "/resources/faqs",
       },
     ],
   },

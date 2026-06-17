@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="shield-container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="text-2xl font-bold tracking-tight">
+          <span className="text-2xl font-extrabold tracking-tight font-heading">
             <span className="text-white">Shield</span>
             <span className="text-violet-400">VUE</span>
           </span>
@@ -106,7 +106,7 @@ export default function Navbar() {
               hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]
             "
           >
-            Book Demo
+            Book A Demo
           </Button>
         </div>
 
