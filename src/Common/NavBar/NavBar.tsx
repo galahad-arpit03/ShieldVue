@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu } from "lucide-react";
 import { navigation } from "./NavBarData";
@@ -7,14 +8,26 @@ import { Button } from "@/Common/UI/Button/Button";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
-      <div className="shield-container flex h-20 items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 border-b border-slate-200 bg-white shadow-sm">
+      <div className="shield-container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <span className="text-2xl font-extrabold tracking-tight font-heading">
-            <span className="text-white">Shield</span>
-            <span className="text-violet-400">VUE</span>
-          </span>
+        <Link href="/" className="flex items-center gap-1">
+          <Image 
+            src="/brand-logo/brand-logo.png" 
+            alt="ShieldVUE Logo Icon" 
+            width={60} 
+            height={60} 
+            className="h-12 w-auto object-contain"
+            priority
+          />
+          <Image 
+            src="/brand-logo/brand-bg-text.png" 
+            alt="ShieldVUE Logo Text" 
+            width={90} 
+            height={200} 
+            className="h-16 w-auto object-contain -ml-4"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -28,9 +41,9 @@ export default function Navbar() {
                   gap-1
                   text-sm
                   font-medium
-                  text-zinc-400
+                  text-slate-600
                   transition-colors
-                  hover:text-white
+                  hover:text-slate-900
                 "
               >
                 {group.title}
@@ -48,12 +61,11 @@ export default function Navbar() {
                   w-72
                   rounded-2xl
                   border
-                  border-white/10
-                  bg-[#111111]
+                  border-slate-200
+                  bg-white
                   p-3
                   opacity-0
-                  shadow-2xl
-                  backdrop-blur-xl
+                  shadow-xl
                   transition-all
                   duration-200
                   group-hover:visible
@@ -70,10 +82,10 @@ export default function Navbar() {
                       px-4
                       py-3
                       text-sm
-                      text-zinc-400
+                      text-slate-600
                       transition-all
-                      hover:bg-white/5
-                      hover:text-violet-400
+                      hover:bg-slate-50
+                      hover:text-primary
                     "
                   >
                     {item.title}
@@ -88,22 +100,16 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <Button
             className="
-              rounded-full
-              border-0
-
-              bg-gradient-to-r
-              from-violet-600
-              to-fuchsia-600
-
-              px-6
-
+              h-10
+              px-5
+              rounded-md
+              text-sm
+              font-semibold
+              bg-primary
               text-white
-
               transition-all
-              duration-300
-
-              hover:scale-[1.02]
-              hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]
+              hover:bg-primary/90
+              shadow-sm
             "
           >
             Book A Demo
@@ -115,9 +121,9 @@ export default function Navbar() {
           className="
             rounded-lg
             p-2
-            text-white
+            text-slate-600
             transition-colors
-            hover:bg-white/5
+            hover:bg-slate-100
             lg:hidden
           "
         >

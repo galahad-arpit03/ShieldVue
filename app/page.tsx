@@ -1,36 +1,37 @@
 import Navbar from "@/Common/NavBar/NavBar";
 import Footer from "@/Common/Footer/Footer";
 
-import Hero from "@/LandingPage/HeroSection/HeroSection";
-import ProblemStatement from "@/LandingPage/ProblemStatement/ProblemStatement";
-import LogoMarquee from "@/LandingPage/LogoMarquee/LogoMarquee";
-import MeetShieldVue from "@/LandingPage/MeetShieldVue/MeetShieldVue";
-import ProductDeepDive from "@/LandingPage/ProductDeepDive/ProductDeepDive";
-import BusinessImpact from "@/LandingPage/BusinessImpact/BusinessImpact";
-import Testimonials from "@/LandingPage/Testimonials/Testimonials";
-import CTA from "@/LandingPage/CTA/CTA";
+import Hero from "@/LandingPage/Hero/Hero";
+import TrustCompliance from "@/LandingPage/TrustCompliance/TrustCompliance";
+import TheProblem from "@/LandingPage/TheProblem/TheProblem";
+import Solutions from "@/LandingPage/Solutions/Solutions";
+import PlatformCapabilities from "@/LandingPage/PlatformCapabilities/PlatformCapabilities";
+import ProductScreenshots from "@/LandingPage/ProductScreenshots/ProductScreenshots";
+import HowItWorks from "@/LandingPage/HowItWorks/HowItWorks";
+import ProcessFlow from "@/LandingPage/ProcessFlow/ProcessFlow";
+import SbomCbom from "@/LandingPage/SbomCbom/SbomCbom";
+import BusinessOutcomes from "@/LandingPage/BusinessOutcomes/BusinessOutcomes";
+import Industries from "@/LandingPage/Industries/Industries";
+import EnterpriseCTA from "@/LandingPage/EnterpriseCTA/EnterpriseCTA";
 
 export default function Home() {
   return (
     <>
       <Navbar />
 
-      <main className="bg-black">
+      <main className="bg-brand-bg text-brand-body">
         <Hero />
-
-        <ProblemStatement />
-
-        <LogoMarquee />
-
-        <MeetShieldVue />
-
-        <ProductDeepDive />
-
-        <BusinessImpact />
-
-        <Testimonials />
-
-        <CTA />
+        <TrustCompliance />
+        <TheProblem />
+        <Solutions />
+        <PlatformCapabilities />
+        <ProductScreenshots />
+        <HowItWorks />
+        <ProcessFlow />
+        <SbomCbom />
+        <BusinessOutcomes />
+        <Industries />
+        <EnterpriseCTA />
       </main>
 
       <Footer />

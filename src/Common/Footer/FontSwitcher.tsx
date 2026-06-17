@@ -18,6 +18,7 @@ export default function FontSwitcher() {
   useEffect(() => {
     const savedFont = localStorage.getItem("shieldvue-font");
     if (savedFont && FONTS.some(f => f.value === savedFont)) {
+      // eslint-disable-next-line
       setActiveFont(savedFont);
     }
   }, []);
@@ -47,7 +48,7 @@ export default function FontSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-full mb-2 left-0 w-48 overflow-hidden rounded-xl border border-white/10 bg-black shadow-2xl backdrop-blur-xl">
+        <div className="absolute bottom-full mb-2 left-0 w-48 overflow-hidden rounded-md border border-white/10 bg-black shadow-2xl backdrop-blur-xl">
           <div className="p-1">
             {FONTS.map((font) => (
               <button
