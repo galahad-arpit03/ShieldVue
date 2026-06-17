@@ -3,30 +3,34 @@ import { ArrowRight } from "lucide-react";
 
 export default function EnterpriseCTA() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16 md:py-24">
       <div className="shield-container">
-        <div className="relative rounded-xl bg-slate-900 overflow-hidden shadow-2xl px-6 py-12 sm:px-12 sm:py-16 md:px-16 lg:px-20">
+        <div className="relative rounded-xl bg-gradient-to-br from-slate-100/80 to-slate-200/40 backdrop-blur-2xl border border-white/60 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.1)] overflow-hidden px-6 py-12 sm:px-12 sm:py-16 md:px-16 lg:px-20">
           
-          {/* Abstract Security Visualization BG */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-md blur-[100px] translate-x-1/3 -translate-y-1/3" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/20 rounded-md blur-[80px] -translate-x-1/3 translate-y-1/3" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[length:32px_32px] opacity-[0.03]" />
+          {/* Purple Ray & Glass Abstract BG */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {/* Primary Purple Ray */}
+            <div className="absolute -top-[20%] left-[10%] w-[80%] h-[140%] bg-gradient-to-b from-primary/20 via-primary/5 to-transparent -rotate-[15deg] blur-2xl transform-gpu" />
+            
+            {/* Ambient glows */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-400/10 rounded-full blur-[80px] -translate-x-1/3 translate-y-1/3" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#cbd5e1_1px,transparent_1px)] bg-[length:32px_32px] opacity-40" />
           </div>
 
           <div className="relative z-10 max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
-              Ready to Understand Your Software Supply Chain?
+            <h2 className="text-3xl md:text-4xl font-medium text-slate-900 mb-4 tracking-tight font-['Clash_Grotesk']">
+              Ready to Understand Your <br className="hidden sm:block" /> Software Supply Chain?
             </h2>
-            <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
               Book a Personalized Demo to see how ShieldVUE can automate your SBOMs, map vulnerabilities, and ensure enterprise-grade compliance.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="h-11 px-6 rounded-md text-sm font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg">
+              <Button size="lg" className="h-11 px-8 rounded-md text-sm font-semibold bg-primary hover:bg-primary/90 text-white shadow-md transition-all">
                 Schedule Demo
               </Button>
-              <Button size="lg" variant="outline" className="h-11 px-6 rounded-md text-sm font-medium border border-white/20 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 hover:text-white flex items-center justify-center gap-2 shadow-lg">
+              <Button size="lg" variant="outline" className="h-11 px-8 rounded-md text-sm font-medium border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 hover:text-slate-900 flex items-center justify-center gap-2 shadow-sm transition-all">
                 Contact Sales
                 <ArrowRight className="w-4 h-4" />
               </Button>
