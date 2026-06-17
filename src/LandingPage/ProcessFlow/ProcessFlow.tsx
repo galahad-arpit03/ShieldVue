@@ -8,7 +8,7 @@ export default function ProcessFlow() {
           <h2 className="text-sm font-semibold text-primary tracking-wide uppercase mb-3">
             Platform Workflow
           </h2>
-          <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h3 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-normal font-['Clash_Grotesk']">
             How ShieldVUE Secures Your Ecosystem
           </h3>
         </div>
