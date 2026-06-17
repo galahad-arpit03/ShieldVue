@@ -14,7 +14,7 @@ export default function ProcessFlow() {
         </div>
         <div className="relative w-full">
           <Image
-            src="/landing/flow.png"
+            src="/landing/flow2.png"
             alt="ShieldVUE Process Flow"
             width={1920}
             height={1080}

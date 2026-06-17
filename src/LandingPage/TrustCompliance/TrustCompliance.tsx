@@ -9,7 +9,7 @@ export default function TrustCompliance() {
   ];
 
   return (
-    <section className="bg-slate-50 py-12 border-y border-slate-100">
+    <section className="bg-slate-50 pt-90 pb-12 border-y border-slate-100">
       <div className="shield-container">
         <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-wider mb-8">
           Trusted by Enterprise Security Teams
