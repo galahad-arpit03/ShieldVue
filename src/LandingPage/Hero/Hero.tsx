@@ -40,7 +40,7 @@ export default function Hero() {
   };
 
   return (
-    <section ref={containerRef} className="relative bg-white pt-32 pb-48 lg:pt-48 lg:pb-64 min-h-[100vh] flex items-center">
+    <section ref={containerRef} className="relative bg-white pt-32 pb-24 md:pb-48 lg:pt-48 lg:pb-64 min-h-[100vh] flex flex-col justify-center">
       {/* Light Enterprise Background Image with Parallax */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div 
@@ -69,14 +69,13 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            {/* Eyebrow */}
                
-            <motion.h1 variants={itemVariants} className="text-6xl lg:text-7xl font-medium leading-[1.1] tracking-[-0.02em] text-slate-900 font-['Clash_Grotesk'] whitespace-nowrap">
-              Know Your Software <br />
+            <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-[-0.02em] text-slate-900 font-['Clash_Grotesk']">
+              Know Your Software <br className="hidden sm:block" />
               <span className="text-primary font-medium">Supply Chain.</span>
             </motion.h1>
 
-            <motion.p variants={itemVariants} className="mt-6 text-xl leading-8 text-slate-600">
+            <motion.p variants={itemVariants} className="mt-6 text-lg sm:text-xl leading-8 text-slate-600">
               Gain complete visibility into software components, vulnerabilities,
               cryptographic assets, and compliance risks before they become business problems.
             </motion.p>
@@ -101,27 +100,18 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3, type: "spring", bounce: 0.4 }}
             style={{ y: yMockup }}
           >
-            {/* <div className="relative rounded-2xl border border-white/10 shadow-[0_0_50px_-12px_rgba(0,0,0,0.8)] overflow-hidden aspect-[1.3] bg-transparent">
-              <Image
-                src="/images/hero_dashboard_dark.png"
-                alt="ShieldVUE Dashboard showcasing SBOM Graph, Dependency Tree, and KPIs"
-                fill
-                className="object-cover scale-[1.18] object-center"
-                priority
-              />
-            </div> */}
           </motion.div>
         </div>
       </div>
 
       {/* 3 Overlapping Glassmorphic Cards with Parallax */}
       <motion.div 
-        className="absolute left-0 right-0 -bottom-36 z-20 mx-auto w-full px-4 sm:px-6 lg:px-8 shield-container"
+        className="relative mt-16 md:absolute md:left-0 md:right-0 md:-bottom-36 z-20 mx-auto w-full px-4 sm:px-6 lg:px-8 shield-container"
         style={{ y: yCards }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 pb-8 md:pb-0">
           {/* Card 1: Primary Color */}
-          <div className="flex flex-col justify-between items-start bg-primary/70 backdrop-blur-2xl border border-white/20 rounded-lg p-8 min-h-[220px] shadow-[0_8px_32px_rgba(0,0,0,0.15)] text-white transform transition-all duration-300 hover:-translate-y-2 hover:bg-primary/80">
+          <div className="flex flex-col justify-between items-start bg-primary/70 backdrop-blur-2xl border border-white/20 rounded-lg p-8 min-h-[220px] shadow-[0_8px_32px_rgba(0,0,0,0.15)] text-white transform transition-all duration-300 md:hover:-translate-y-2 hover:bg-primary/80">
             <div>
               <h3 className="text-xl font-medium mb-2">Comprehensive Visibility</h3>
               <p className="text-sm leading-relaxed text-white/90">Monitor your entire software supply chain in real-time.</p>
@@ -129,7 +119,7 @@ export default function Hero() {
             <a href="#" className="text-sm font-medium mt-4 hover:underline flex items-center gap-1">Learn More <ArrowRight className="h-4 w-4" /></a>
           </div>
           {/* Card 2: White Color */}
-          <div className="flex flex-col justify-between items-start bg-white/50 backdrop-blur-2xl border border-white/60 rounded-lg p-8 min-h-[220px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] text-slate-800 transform transition-all duration-300 hover:-translate-y-2 hover:bg-white/60">
+          <div className="flex flex-col justify-between items-start bg-white/50 backdrop-blur-2xl border border-white/60 rounded-lg p-8 min-h-[220px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] text-slate-800 transform transition-all duration-300 md:hover:-translate-y-2 hover:bg-white/60">
             <div>
               <h3 className="text-xl font-medium mb-2">Vulnerability Management</h3>
               <p className="text-sm leading-relaxed text-slate-700">Identify and remediate risks before they impact operations.</p>
@@ -137,7 +127,7 @@ export default function Hero() {
             <a href="#" className="text-sm font-medium mt-4 text-primary hover:underline flex items-center gap-1">View Services <ArrowRight className="h-4 w-4" /></a>
           </div>
           {/* Card 3: White Color */}
-          <div className="flex flex-col justify-between items-start bg-white/50 backdrop-blur-2xl border border-white/60 rounded-lg p-8 min-h-[220px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] text-slate-800 transform transition-all duration-300 hover:-translate-y-2 hover:bg-white/60">
+          <div className="flex flex-col justify-between items-start bg-white/50 backdrop-blur-2xl border border-white/60 rounded-lg p-8 min-h-[220px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] text-slate-800 transform transition-all duration-300 md:hover:-translate-y-2 hover:bg-white/60">
             <div>
               <h3 className="text-xl font-medium mb-2">Automated Compliance</h3>
               <p className="text-sm leading-relaxed text-slate-700">Ensure adherence to industry standards effortlessly.</p>
