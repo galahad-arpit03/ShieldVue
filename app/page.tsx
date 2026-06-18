@@ -23,8 +23,8 @@ export default function Home() {
         <TheProblem />
         <ProductScreenshots />
         <ProcessFlow />
-        <PlatformCapabilities />
         <SbomCbom />
+        <PlatformCapabilities />
         {/* <Solutions /> */}
         <WhatShieldVUESolves />
         <BusinessOutcomes />

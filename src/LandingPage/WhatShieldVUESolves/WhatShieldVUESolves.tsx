@@ -181,42 +181,10 @@ export default function WhatShieldVUESolves() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            const idx = parseInt(id.replace("solve-section-", ""));
-            if (!isNaN(idx)) setActiveTab(idx);
-          }
-        });
-      },
-      { rootMargin: "-20% 0px -60% 0px", threshold: 0.1 }
-    );
-
-    tabs.forEach((_, idx) => {
-      const el = document.getElementById(`solve-section-${idx}`);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, [tabs]);
-
-  const scrollToSection = (idx: number) => {
-    const el = document.getElementById(`solve-section-${idx}`);
-    if (el) {
-      const yOffset = -150;
-      const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
+  const activeData = tabs[activeTab].content;
 
   return (
     <section className="bg-slate-50 py-24 relative">
-      {/* Background styling elements */}
-      {/* <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-md blur-[120px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div> */}
-    
       <div className="shield-container relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-8">
@@ -228,7 +196,7 @@ export default function WhatShieldVUESolves() {
           </p>
         </div>
 
-        {/* Sticky-like top navigation */}
+        {/* Navigation */}
         <div 
           className="sticky z-50 bg-slate-50/90 backdrop-blur-md flex flex-wrap justify-between border-b border-slate-200 mb-12 gap-y-2 transition-[top] duration-300"
           style={{ top: isNavVisible ? '64px' : '0px' }}
@@ -239,7 +207,7 @@ export default function WhatShieldVUESolves() {
             return (
               <button 
                 key={tab.id}
-                onClick={() => scrollToSection(idx)}
+                onClick={() => setActiveTab(idx)}
                 className={`flex items-center px-4 py-5 whitespace-nowrap transition-all duration-300 font-medium ${
                   isActive 
                     ? 'text-primary border-b-2 border-primary' 
@@ -252,75 +220,62 @@ export default function WhatShieldVUESolves() {
           })}
         </div>
 
-        {/* Content Sections */}
-        <div className="flex flex-col">
-          {tabs.map((tab, idx) => {
-            const data = tab.content;
-            return (
-              <div key={idx} id={`solve-section-${idx}`} className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <h2 className="text-2xl md:text-5xl font-normal font-['Clash_Grotesk'] text-primary mb-8">
-                  {data.title}
-                </h2>
+        {/* Content Section Container (Single View with Slide Animation) */}
+        <div className="overflow-hidden w-full relative min-h-[500px]">
+          <div 
+            key={activeTab} 
+            className="animate-in slide-in-from-right-16 fade-in duration-500 fill-mode-forwards"
+          >
+            <h2 className="text-2xl md:text-5xl font-normal font-['Clash_Grotesk'] text-primary mb-8">
+              {activeData.title}
+            </h2>
 
-                <div className="grid lg:grid-cols-12 gap-16">
-                  {/* Left side info */}
-                  <div className="lg:col-span-5">
-                    <p className="text-slate-800 mb-12 text-md leading-relaxed">
-                      {data.description}
-                    </p>
-                    
-                    <div className="flex gap-16 mb-12">
-                       <div>
-                         <div className="text-4xl font-bold text-slate-900 mb-2">{data.metric1}</div>
-                         <div className="text-xs font-semibold text-slate-500 uppercase tracking-[0.2em]">{data.metric1Label}</div>
-                       </div>
-                       <div>
-                         <div className="text-4xl font-extrabold text-slate-900 mb-2">{data.metric2}</div>
-                         <div className="text-xs font-semibold text-slate-500 uppercase tracking-[0.1em]">{data.metric2Label}</div>
-                       </div>
-                    </div>
-                    
-                    <button className="bg-primary text-white font-normal py-4 px-8 rounded-md flex items-center gap-3 hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
-                      {data.cta} <ArrowRight className="w-5 h-5" />
-                    </button>
-                  </div>
-                  
-                  {/* Right side cards grid */}
-                  <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6 relative">
-                    <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none overflow-hidden">
-                      <div className="w-[200%] h-full flex gap-4 -skew-x-[30deg] transform -translate-x-1/4">
-                        {[...Array(20)].map((_, i) => (
-                          <div key={i} className="w-[1px] h-full bg-gradient-to-b from-primary/0 via-primary to-primary/0"></div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {data.cards.map((card, cIdx) => (
-                      <div key={cIdx} className="p-6 rounded-md border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 group overflow-hidden relative">
-                        {/* Subtle beam glow for enterprise aesthetics inside the card */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-[60px] group-hover:bg-primary/30 transition-all duration-500 pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
-
-                        {/* High-opacity watermark numbering cut through the top-right */}
-                        {/* <div className="absolute -top-4 -right-0 text-7xl font-extrabold text-primary/10 select-none pointer-events-none font-['Clash_Grotesk'] tracking-tighter transform rotate-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-                          {cIdx + 1}
-                        </div> */}
-
-                        <div className="relative z-10">
-                          <h4 className="text-2xl font-semibold text-slate-800 mb-2 font-['Manrope']">{card.title}</h4>
-                          <p className="text-sm text-slate-600 leading-relaxed font-medium">{card.description}</p>
-                        </div>
-                      </div>
+            <div className="grid lg:grid-cols-12 gap-16">
+              {/* Left side info */}
+              <div className="lg:col-span-5">
+                <p className="text-slate-800 mb-12 text-md leading-relaxed">
+                  {activeData.description}
+                </p>
+                
+                <div className="flex gap-16 mb-12">
+                   <div>
+                     <div className="text-4xl font-bold text-slate-900 mb-2">{activeData.metric1}</div>
+                     <div className="text-xs font-semibold text-slate-500 uppercase tracking-[0.2em]">{activeData.metric1Label}</div>
+                   </div>
+                   <div>
+                     <div className="text-4xl font-extrabold text-slate-900 mb-2">{activeData.metric2}</div>
+                     <div className="text-xs font-semibold text-slate-500 uppercase tracking-[0.1em]">{activeData.metric2Label}</div>
+                   </div>
+                </div>
+                
+                <button className="bg-primary text-white font-normal py-4 px-8 rounded-md flex items-center gap-3 hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                  {activeData.cta} <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+              
+              {/* Right side cards grid */}
+              <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6 relative">
+                <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none overflow-hidden">
+                  <div className="w-[200%] h-full flex gap-4 -skew-x-[30deg] transform -translate-x-1/4">
+                    {[...Array(20)].map((_, i) => (
+                      <div key={i} className="w-[1px] h-full bg-gradient-to-b from-primary/0 via-primary to-primary/0"></div>
                     ))}
                   </div>
                 </div>
 
-                {/* Thin Divider Line */}
-                {idx !== tabs.length - 1 && (
-                  <div className="mt-20 mb-20 border-b border-slate-200 w-full" />
-                )}
+                {activeData.cards.map((card, cIdx) => (
+                  <div key={cIdx} className="p-6 rounded-md border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 group overflow-hidden relative">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-[60px] group-hover:bg-primary/30 transition-all duration-500 pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
+
+                    <div className="relative z-10">
+                      <h4 className="text-2xl font-semibold text-slate-800 mb-2 font-['Manrope']">{card.title}</h4>
+                      <p className="text-sm text-slate-600 leading-relaxed font-medium">{card.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            );
-          })}
+            </div>
+          </div>
         </div>
 
       </div>
