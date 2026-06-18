@@ -8,7 +8,7 @@ export default function Industries() {
         <div className="max-w-3xl mb-16 text-center mx-auto">
           <h2 className="text-4xl md:text-5xl font-medium tracking-normal font-['Clash_Grotesk'] text-slate-900 mb-6">
             Securing Regulated Industries
-          </h2>
+          </h2> 
           <p className="text-md md:text-lg text-slate-600 font-light leading-relaxed">
             ShieldVUE is trusted by organizations operating in sectors where security, compliance, and absolute software transparency are non-negotiable.
           </p>
@@ -31,7 +31,7 @@ export default function Industries() {
               <div className="w-10 h-10 rounded-full bg-[#7755BE]/10 flex items-center justify-center text-[#7755BE] mb-4">
                 <HeartPulse className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-2 group-hover:text-[#7755BE] transition-colors">Healthcare</h3>
+              <h3 className="text-xl font-medium text-slate-900 mb-2 group-hover:text-[#7755BE] transition-colors">Healthcare</h3>
               <p className="text-slate-600 font-light leading-relaxed text-sm">
                 Ensure HIPAA compliance and secure embedded software supply chains for critical medical devices. Automatically scan third-party dependencies in health monitoring systems.
               </p>
@@ -54,7 +54,7 @@ export default function Industries() {
                 {/* <div className="w-10 h-10 rounded-full bg-[#7755BE]/10 flex items-center justify-center text-[#7755BE] mb-4">
                   <Landmark className="w-5 h-5" />
                 </div> */}
-                <h3 className="text-xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-2 group-hover:text-[#7755BE] transition-colors">
+                <h3 className="text-xl font-medium text-slate-900 mb-2 group-hover:text-[#7755BE] transition-colors">
                   Banking & Finance
                 </h3>
                 <p className="text-slate-800 font-light leading-relaxed text-sm mb-2">
@@ -83,7 +83,7 @@ export default function Industries() {
               />
             </div>
             <div className="relative z-10 mt-auto p-6 pt-24 bg-gradient-to-t from-white via-white/90 to-transparent">
-              <h3 className="text-xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-1 group-hover:text-[#7755BE] transition-colors">Government</h3>
+              <h3 className="text-xl font-medium text-slate-900 mb-1 group-hover:text-[#7755BE] transition-colors">Government</h3>
               <p className="text-slate-800 font-light leading-relaxed text-sm">
                 Comply with Executive Order 14028 and FedRAMP SBOM mandates effortlessly.
               </p>
@@ -101,7 +101,7 @@ export default function Industries() {
               />
             </div>
             <div className="relative z-10 mt-auto p-6 pt-24 bg-gradient-to-t from-white via-white/90 to-transparent">
-              <h3 className="text-xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-1 group-hover:text-[#7755BE] transition-colors">Insurance</h3>
+              <h3 className="text-xl font-medium text-slate-900 mb-1 group-hover:text-[#7755BE] transition-colors">Insurance</h3>
               <p className="text-slate-600 font-light leading-relaxed text-sm">
                 Protect sensitive policyholder data and audit third-party components.
               </p>
@@ -119,7 +119,7 @@ export default function Industries() {
               />
             </div>
             <div className="relative z-10 p-6 w-full md:w-[70%] bg-gradient-to-r from-white via-white/90 to-transparent flex flex-col justify-center h-full">
-              <h3 className="text-xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-2 group-hover:text-[#7755BE] transition-colors">
+              <h3 className="text-xl font-medium text-slate-900 mb-2 group-hover:text-[#7755BE] transition-colors">
                 SaaS Providers
               </h3>
               <p className="text-slate-600 font-light leading-relaxed text-sm mb-3">
@@ -147,7 +147,7 @@ export default function Industries() {
               />
             </div>
             <div className="relative z-10 mt-auto p-6 pt-24 bg-gradient-to-t from-white via-white/90 to-transparent">
-              <h3 className="text-xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-1 group-hover:text-[#7755BE] transition-colors">Enterprise IT</h3>
+              <h3 className="text-xl font-medium text-slate-900 mb-1 group-hover:text-[#7755BE] transition-colors">Enterprise IT</h3>
               <p className="text-slate-600 font-light  leading-relaxed text-sm">
                 Govern internal development teams and audit vendor software securely.
               </p>
