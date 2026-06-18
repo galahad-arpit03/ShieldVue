@@ -58,7 +58,7 @@ export default function DemoFaq() {
           h-[500px]
           w-[500px]
 
-          rounded-full
+          rounded-md
 
           bg-primary/5
 
@@ -130,7 +130,7 @@ export default function DemoFaq() {
                 className="
                   overflow-hidden
 
-                  rounded-[28px]
+                  rounded-2xl
 
                   border
                   border-slate-200
@@ -183,7 +183,7 @@ export default function DemoFaq() {
                       items-center
                       justify-center
 
-                      rounded-xl
+                      rounded-md
 
                       bg-primary/5
 
