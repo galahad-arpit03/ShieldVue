@@ -258,7 +258,7 @@ export default function WhatShieldVUESolves() {
             const data = tab.content;
             return (
               <div key={idx} id={`solve-section-${idx}`} className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <h2 className="text-3xl md:text-5xl font-normal font-['Clash_Grotesk'] text-primary mb-8">
+                <h2 className="text-2xl md:text-5xl font-normal font-['Clash_Grotesk'] text-primary mb-8">
                   {data.title}
                 </h2>
 
