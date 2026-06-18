@@ -11,6 +11,7 @@ import SbomCbom from "@/LandingPage/SbomCbom/SbomCbom";
 import BusinessOutcomes from "@/LandingPage/BusinessOutcomes/BusinessOutcomes";
 import Industries from "@/LandingPage/Industries/Industries";
 import EnterpriseCTA from "@/LandingPage/EnterpriseCTA/EnterpriseCTA";
+import WhatShieldVUESolves from "@/LandingPage/WhatShieldVUESolves/WhatShieldVUESolves";
 
 export default function Home() {
   return (
@@ -24,7 +25,8 @@ export default function Home() {
         <ProcessFlow />
         <PlatformCapabilities />
         <SbomCbom />
-        <Solutions />
+        {/* <Solutions /> */}
+        <WhatShieldVUESolves />
         <BusinessOutcomes />
         <Industries />
         <EnterpriseCTA />
