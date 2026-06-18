@@ -69,28 +69,7 @@ export default function DemoFaq() {
       <div className="shield-container relative z-10">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <span
-            className="
-              inline-flex
 
-              rounded-full
-
-              border
-              border-primary/20
-
-              bg-primary/5
-
-              px-4
-              py-2
-
-              text-sm
-              font-medium
-
-              text-primary
-            "
-          >
-            FAQs
-          </span>
 
           <h2
             className="

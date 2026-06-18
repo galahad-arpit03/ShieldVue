@@ -12,7 +12,7 @@ import { Button } from "@/Common/UI/Button/Button";
 
 export default function DemoForm() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-32">
+    <section id="demo-form" className="relative overflow-hidden bg-slate-50 py-32">
       {/* Background Pattern */}
       <div
         className="
@@ -37,7 +37,7 @@ export default function DemoForm() {
           -translate-x-1/2
           -translate-y-1/2
 
-          rounded-full
+          rounded-md
 
           bg-primary/5
 
@@ -53,13 +53,13 @@ export default function DemoForm() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:sticky lg:top-32 h-fit"
+            className="lg:sticky lg:top-6 h-fit"
           >
-            <div
+            {/* <div
               className="
                 inline-flex
                 items-center
-                rounded-full
+                rounded-md
 
                 border
                 border-primary/20
@@ -76,7 +76,7 @@ export default function DemoForm() {
               "
             >
               Book Your Personalized Demo
-            </div>
+            </div> */}
 
             <h2
               className="
@@ -145,7 +145,7 @@ export default function DemoForm() {
                       items-center
                       justify-center
 
-                      rounded-2xl
+                      rounded-md
 
                       bg-white
 
@@ -181,7 +181,7 @@ export default function DemoForm() {
               relative
               overflow-hidden
 
-              rounded-[32px]
+              rounded-3xl
 
               border
               border-slate-200
@@ -204,7 +204,7 @@ export default function DemoForm() {
                 h-64
                 w-64
 
-                rounded-full
+                rounded-md
 
                 bg-primary/10
 
@@ -232,7 +232,7 @@ export default function DemoForm() {
                 <input
                   placeholder="Full Name"
                   className="
-                    rounded-2xl
+                    rounded-md
                     border
                     border-slate-200
 
@@ -255,7 +255,7 @@ export default function DemoForm() {
                   placeholder="Business Email"
                   type="email"
                   className="
-                    rounded-2xl
+                    rounded-md
                     border
                     border-slate-200
 
@@ -277,7 +277,7 @@ export default function DemoForm() {
                 <input
                   placeholder="Company Name"
                   className="
-                    rounded-2xl
+                    rounded-md
                     border
                     border-slate-200
 
@@ -295,7 +295,7 @@ export default function DemoForm() {
                 <input
                   placeholder="Phone Number"
                   className="
-                    rounded-2xl
+                    rounded-md
                     border
                     border-slate-200
 
@@ -312,7 +312,7 @@ export default function DemoForm() {
 
                 <select
                   className="
-                    rounded-2xl
+                    rounded-md
                     border
                     border-slate-200
 
@@ -340,7 +340,7 @@ export default function DemoForm() {
                   rows={5}
                   placeholder="Tell us about your requirements..."
                   className="
-                    rounded-2xl
+                    rounded-md
                     border
                     border-slate-200
 
@@ -366,7 +366,7 @@ export default function DemoForm() {
 
                     md:col-span-2
 
-                    rounded-2xl
+                    rounded-md
 
                     bg-primary
 
