@@ -82,12 +82,17 @@ export default function DemoForm() {
               className="
                 mt-8
 
-                text-5xl
-                font-extrabold
+                text-4xl
+                md:text-5xl
 
-                tracking-tight
+                font-medium
+
+                tracking-[-0.46px]
+                leading-[1.1]
 
                 text-slate-900
+
+                font-['Clash_Grotesk']
               "
             >
               See ShieldVUE
@@ -405,21 +410,8 @@ export default function DemoForm() {
         </div>
       </div>
 
-      {/* Slanted Divider */}
-      <div
-        className="
-          absolute
-          bottom-[-70px]
-          left-0
-
-          h-[140px]
-          w-full
-
-          bg-white
-
-          -skew-y-3
-        "
-      />
+{/* Bottom Separator */}
+<div className="absolute bottom-0 left-0 w-full border-b border-slate-200" />
     </section>
   );
 }

@@ -75,17 +75,17 @@ export default function BookDemoHero() {
             <h1
               className="
                 mt-8
-
                 text-6xl
-                font-extrabold
+                lg:text-7xl
+
+                font-medium
 
                 leading-[1.05]
-
-                tracking-tight
+                tracking-[-0.04em]
 
                 text-slate-900
 
-                lg:text-7xl
+                font-['Clash_Grotesk']
               "
             >
               See
@@ -198,21 +198,6 @@ export default function BookDemoHero() {
         </div>
       </div>
 
-      {/* Bottom Slanted Divider */}
-      <div
-        className="
-          absolute
-          bottom-[-70px]
-          left-0
-
-          h-[140px]
-          w-full
-
-          bg-slate-50
-
-          -skew-y-3
-        "
-      />
     </section>
   );
 }

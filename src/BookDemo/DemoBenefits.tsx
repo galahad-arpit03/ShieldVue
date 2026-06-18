@@ -257,23 +257,7 @@ export default function DemoBenefits() {
         </div>
       </div>
 
-      {/* Slanted Divider for Next Section */}
-      <div
-        className="
-          absolute
-          bottom-[-80px]
-          left-0
 
-          h-[160px]
-          w-full
-
-          bg-slate-50
-
-          -skew-y-3
-
-          origin-bottom-left
-        "
-      />
     </section>
   );
 }

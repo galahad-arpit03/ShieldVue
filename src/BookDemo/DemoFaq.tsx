@@ -71,20 +71,23 @@ export default function DemoFaq() {
         <div className="mx-auto max-w-3xl text-center">
 
 
-          <h2
-            className="
-              mt-8
+            <h2
+              className="
+                mt-8
 
-              text-4xl
-              font-extrabold
+                text-4xl
+                md:text-5xl
 
-              tracking-tight
+                font-semibold
 
-              text-slate-900
+                tracking-[-0.46px]
+                leading-[1.1]
 
-              md:text-5xl
-            "
-          >
+                text-slate-900
+
+                font-['Clash_Grotesk']
+              "
+            >
             Frequently Asked
             <br />
             Questions
@@ -245,21 +248,7 @@ export default function DemoFaq() {
         </div>
       </div>
 
-      {/* Slanted Divider */}
-      <div
-        className="
-          absolute
-          bottom-[-70px]
-          left-0
 
-          h-[140px]
-          w-full
-
-          bg-slate-100
-
-          -skew-y-3
-        "
-      />
     </section>
   );
 }
