@@ -1,4 +1,4 @@
-import { ShieldAlert, FileCheck, Eye, LockKeyhole, HeartHandshake, Zap } from "lucide-react";
+import { ShieldAlert, FileCheck, Eye, LockKeyhole, HeartHandshake, Zap, Wrench } from "lucide-react";
 
 export default function BusinessOutcomes() {
   const outcomes = [
@@ -37,12 +37,19 @@ export default function BusinessOutcomes() {
       label: "Compliant by default",
       description: "Deliver secure-by-design software that inherently meets SSDF standards, providing your enterprise clients with provable security."
     },
+    // {
+    //   icon: <Zap className="w-5 h-5" />,
+    //   title: "Faster Incident Response",
+    //   metric: "< 1h",
+    //   label: "Zero-day impact assessment",
+    //   description: "Instantly pinpoint affected applications when a new zero-day vulnerability emerges, enabling immediate remediation and patching."
+    // },
     {
-      icon: <Zap className="w-5 h-5" />,
-      title: "Faster Incident Response",
-      metric: "< 1h",
-      label: "Zero-day impact assessment",
-      description: "Instantly pinpoint affected applications when a new zero-day vulnerability emerges, enabling immediate remediation and patching."
+      icon: <Wrench className="w-5 h-5" />,
+      title: "Auto Remediation",
+      metric: "90%",
+      label: "Automated vulnerability patching",
+      description: "Automatically generate and apply secure code fixes and patches, drastically reducing the window of exposure for critical vulnerabilities."
     }
   ];
 
