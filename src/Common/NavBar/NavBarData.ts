@@ -4,7 +4,7 @@ export const navigation = [
     items: [
       {
         title: "Overview",
-        href: "/platform/overview",
+        href: "/overview",
       },
       {
         title: "SBOM Management",

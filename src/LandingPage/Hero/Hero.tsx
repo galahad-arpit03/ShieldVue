@@ -94,7 +94,9 @@ export default function Hero() {
               </Button>
 
               <Button size="lg" variant="outline" className="h-11 px-6 rounded-md text-sm font-medium border border-slate-200 text-slate-800 bg-white/50 backdrop-blur-md hover:bg-white/80 flex items-center gap-2 shadow-sm">
+                 <Link href="/overview">
                 Explore Platform
+                </Link>
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </motion.div>
