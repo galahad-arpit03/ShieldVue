@@ -1,5 +1,3 @@
-import Footer from "@/Common/Footer/Footer";
-import Navbar from "@/Common/NavBar/NavBar";
 import CTA from "@/sbom/CTA";
 import RepositorySection from "@/sbom/RepositorySection";
 import SBOMHero from "@/sbom/sbomhero";
@@ -10,8 +8,7 @@ import Workflow from "@/sbom/Workflow";
 export default function PlatformOverviewPage() {
   return (
     <main className="overflow-x-hidden">
-        <Navbar/>
-      <SBOMHero />
+              <SBOMHero />
       <WhatIsSBOM/>
       <SupportedFormats/>
       <Workflow/>
@@ -19,7 +16,6 @@ export default function PlatformOverviewPage() {
       <CTA/>
 
 
-      <Footer/>
-    </main>
+          </main>
   );
 }

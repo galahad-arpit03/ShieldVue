@@ -6,15 +6,12 @@ import RepositorySection from "@/cbom/RepositorySection";
 import SupportedFormats from "@/cbom/SupportedFormats";
 import WhatIsCBOM from "@/cbom/WhatIsCBOM";
 import Workflow from "@/cbom/Workflow";
-import Footer from "@/Common/Footer/Footer";
-import Navbar from "@/Common/NavBar/NavBar";
 
 
 export default function PlatformOverviewPage() {
   return (
     <main className="overflow-x-hidden">
-        <Navbar/>
-        <CBOMHero/>
+                <CBOMHero/>
         <WhatIsCBOM/>
         <CryptoCapabilities/>
         {/* <CryptoInventory/> */}
@@ -25,7 +22,6 @@ export default function PlatformOverviewPage() {
         
 
 
-      <Footer/>
-    </main>
+          </main>
   );
 }

@@ -1,5 +1,3 @@
-import Navbar from "@/Common/NavBar/NavBar";
-import Footer from "@/Common/Footer/Footer";
 import ComplianceHero from "@/Solutions/ComplianceAudit/ComplianceHero";
 import SupportedFrameworks from "@/Solutions/ComplianceAudit/SupportedFrameworks";
 import PolicyEnforcement from "@/Solutions/ComplianceAudit/PolicyEnforcement";
@@ -15,8 +13,7 @@ export const metadata = {
 export default function ComplianceAuditPage() {
   return (
     <>
-      <Navbar />
-      <main className="bg-white">
+            <main className="bg-white">
         <ComplianceHero />
         <SupportedFrameworks />
         <PolicyEnforcement />
@@ -24,7 +21,6 @@ export default function ComplianceAuditPage() {
         <ComplianceFAQ />
         <ComplianceCTA />
       </main>
-      <Footer />
-    </>
+          </>
   );
 }

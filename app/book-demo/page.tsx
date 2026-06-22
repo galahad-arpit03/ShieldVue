@@ -1,5 +1,3 @@
-import Navbar from "@/Common/NavBar/NavBar";
-import Footer from "@/Common/Footer/Footer";
 
 import BookDemoHero from "@/BookDemo/BookDemoHero";
 import DemoBenefits from "@/BookDemo/DemoBenefits";
@@ -9,8 +7,7 @@ import DemoFaq from "@/BookDemo/DemoFaq";
 export default function BookDemoPage() {
   return (
     <>
-      <Navbar />
-
+      
       <main>
         {/* <BookDemoHero /> */}
         {/* <DemoBenefits /> */}
@@ -18,7 +15,6 @@ export default function BookDemoPage() {
         <DemoFaq />
       </main>
 
-      <Footer />
-    </>
+          </>
   );
 }

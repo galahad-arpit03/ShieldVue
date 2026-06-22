@@ -30,15 +30,15 @@ export default function ComplianceHero() {
   };
 
   return (
-    <section ref={containerRef} className="relative bg-white pt-32 pb-24 lg:pt-40 lg:pb-24 min-h-[80vh] flex flex-col justify-center border-b border-slate-100">
+    <section ref={containerRef} className="relative bg-white pt-32 pb-24 md:pb-48 lg:pt-48 lg:pb-48 min-h-[100vh] flex flex-col justify-center border-b border-slate-100">
       {/* Light Enterprise Background Image with Parallax */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
-          className="absolute inset-0 z-0 opacity-100 origin-top"
+          className="absolute inset-0 z-0 opacity-90 origin-top"
           style={{ y: yBg, scale: 1.1 }}
         >
           <Image
-            src="/solutions/compliance_bg.png"
+            src="/solutions/Continuous Compliance & Audit Readiness.png"
             alt="Secure Digital Governance Visualization"
             fill
             className="object-cover object-right"
@@ -46,7 +46,7 @@ export default function ComplianceHero() {
             unoptimized
           />
           {/* Gradient overlay to ensure text readability on the left */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent w-[140%] md:w-[120%]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent w-[130%]" />
         </motion.div>
       </div>
 
@@ -61,8 +61,8 @@ export default function ComplianceHero() {
           >
          
             <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-[-0.02em] text-slate-900 font-['Clash_Grotesk']">
-              Continuous <br className="hidden md:block" />
-              <span className="text-primary font-medium">Compliance & Audit Readiness.</span>
+              Continuous <br />
+              <span className="text-primary font-medium">Compliance.</span>
             </motion.h1>
 
             <motion.p variants={itemVariants} className="mt-6 text-lg sm:text-xl leading-8 text-slate-600 max-w-xl">

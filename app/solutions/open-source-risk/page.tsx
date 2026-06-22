@@ -1,5 +1,3 @@
-import Navbar from "@/Common/NavBar/NavBar";
-import Footer from "@/Common/Footer/Footer";
 import OpenSourceHero from "@/Solutions/OpenSourceRisk/OpenSourceHero";
 import DependencyMapping from "@/Solutions/OpenSourceRisk/DependencyMapping";
 import LicenseGovernance from "@/Solutions/OpenSourceRisk/LicenseGovernance";
@@ -15,8 +13,7 @@ export const metadata = {
 export default function OpenSourceRiskPage() {
   return (
     <>
-      <Navbar />
-      <main className="bg-white">
+            <main className="bg-white">
         <OpenSourceHero />
         <DependencyMapping />
         <LicenseGovernance />
@@ -24,7 +21,6 @@ export default function OpenSourceRiskPage() {
         <OpenSourceCaseStudies />
         <OpenSourceCTA />
       </main>
-      <Footer />
-    </>
+          </>
   );
 }

@@ -52,14 +52,14 @@ export const navigation = [
         title: "Blogs",
         href: "/resources/blogs",
       },
-      {
-        title: "Whitepapers",
-        href: "/resources/whitepapers",
-      },
-      {
-        title: "Case Studies",
-        href: "/resources/case-studies",
-      },
+      // {
+      //   title: "Whitepapers",
+      //   href: "/resources/whitepapers",
+      // },
+      // {
+      //   title: "Case Studies",
+      //   href: "/resources/case-studies",
+      // },
       {
         title: "FAQs",
         href: "/resources/faqs",

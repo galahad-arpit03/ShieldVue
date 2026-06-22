@@ -5,14 +5,12 @@ import CapabilitiesGrid from "@/Overview/CapabilitiesGrid";
 import Workflow from "@/Overview/Workflow";
 import BusinessOutcomes from "@/Overview/BusinessOutcomes";
 import CTA from "@/Overview/CTA";
-import Navbar from "@/Common/NavBar/NavBar";
 import PlatformDemo from "@/Overview/PlatformDemo";
 
 export default function PlatformOverviewPage() {
   return (
     <main className="overflow-x-hidden">
-        <Navbar/>
-      <Hero />
+              <Hero />
 
       {/* <PlatformHighlights /> */}
       <PlatformDemo />

@@ -30,6 +30,7 @@ export default function DemoForm() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -513,21 +514,53 @@ export default function DemoForm() {
                   ) : (
                     <form
                       className="space-y-6"
-                      onSubmit={(e) => {
+                      onSubmit={async (e) => {
                         e.preventDefault();
                         if (!selectedDate) {
-                          alert(
-                            "Please select a date from the calendar first.",
-                          );
+                          alert("Please select a date from the calendar first.");
                           return;
                         }
                         if (!formData.time) {
                           alert("Please select a meeting time.");
                           return;
                         }
-                        setIsSubmitted(true);
+                        
+                        setIsSubmitting(true);
+                        
+                        const form = e.target as HTMLFormElement;
+                        const honey = (form.elements.namedItem('_honey') as HTMLInputElement).value;
+                        
+                        const formattedDate = new Date(
+                          currentDate.getFullYear(),
+                          currentDate.getMonth(),
+                          selectedDate
+                        ).toLocaleDateString();
+
+                        try {
+                          const res = await fetch('/api/book-demo', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                              ...formData,
+                              date: formattedDate,
+                              contactType: selectedContact,
+                              _honey: honey
+                            }),
+                          });
+                          
+                          if (res.ok) {
+                            setIsSubmitted(true);
+                          } else {
+                            alert("Failed to submit demo request. Please try again.");
+                          }
+                        } catch (error) {
+                          alert("An error occurred. Please try again later.");
+                        } finally {
+                          setIsSubmitting(false);
+                        }
                       }}
                     >
+                      <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">
@@ -612,10 +645,10 @@ export default function DemoForm() {
 
                       <button
                         type="submit"
-                        disabled={!selectedDate || !formData.time}
+                        disabled={!selectedDate || !formData.time || isSubmitting}
                         className="w-full mt-4 bg-primary text-white rounded-md py-4 font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        Confirm Booking
+                        {isSubmitting ? "Confirming..." : "Confirm Booking"}
                       </button>
                     </form>
                   )}

@@ -1,14 +1,11 @@
 import Link from "next/link";
-import Navbar from "@/Common/NavBar/NavBar";
-import Footer from "@/Common/Footer/Footer";
 import { Button } from "@/Common/UI/Button/Button";
 import { ShieldAlert, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
     <>
-      <Navbar />
-      <main className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-slate-50 py-32">
+            <main className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-slate-50 py-32">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,#6843b7_1px,transparent_1px)] bg-[length:36px_36px]" />
 
@@ -49,7 +46,6 @@ export default function NotFound() {
           </div>
         </div>
       </main>
-      <Footer />
-    </>
+          </>
   );
 }

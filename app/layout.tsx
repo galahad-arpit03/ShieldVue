@@ -28,6 +28,10 @@ export const metadata: Metadata = {
   description: "Automated SBOM and CBOM intelligence",
 };
 
+
+import Navbar from "@/Common/NavBar/NavBar";
+import Footer from "@/Common/Footer/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +50,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col overflow-x-clip font-light" suppressHydrationWarning>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

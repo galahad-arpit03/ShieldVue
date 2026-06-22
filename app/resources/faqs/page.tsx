@@ -1,5 +1,3 @@
-import Navbar from "@/Common/NavBar/NavBar";
-import Footer from "@/Common/Footer/Footer";
 import FAQs from "@/Resources/FAQs/FAQs";
 
 export const metadata = {
@@ -10,11 +8,9 @@ export const metadata = {
 export default function FAQPage() {
   return (
     <>
-      <Navbar />
-      <main>
+            <main>
         <FAQs />
       </main>
-      <Footer />
-    </>
+          </>
   );
 }

@@ -1,5 +1,3 @@
-import Navbar from "@/Common/NavBar/NavBar";
-import Footer from "@/Common/Footer/Footer";
 import SupplyChainHero from "@/Solutions/SupplyChainSecurity/SupplyChainHero";
 import SupplyChainOverview from "@/Solutions/SupplyChainSecurity/SupplyChainOverview";
 import SupplyChainFeatures from "@/Solutions/SupplyChainSecurity/SupplyChainFeatures";
@@ -15,8 +13,7 @@ export const metadata = {
 export default function SupplyChainSecurityPage() {
   return (
     <>
-      <Navbar />
-      <main className="bg-white">
+            <main className="bg-white">
         <SupplyChainHero />
         <SupplyChainOverview />
         <SupplyChainFeatures />
@@ -24,7 +21,6 @@ export default function SupplyChainSecurityPage() {
         <SupplyChainBenefits />
         <SupplyChainCTA />
       </main>
-      <Footer />
-    </>
+          </>
   );
 }

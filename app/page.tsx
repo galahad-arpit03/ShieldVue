@@ -1,5 +1,3 @@
-import Navbar from "@/Common/NavBar/NavBar";
-import Footer from "@/Common/Footer/Footer";
 
 import Hero from "@/LandingPage/Hero/Hero";
 import TheProblem from "@/LandingPage/TheProblem/TheProblem";
@@ -16,8 +14,7 @@ import WhatShieldVUESolves from "@/LandingPage/WhatShieldVUESolves/WhatShieldVUE
 export default function Home() {
   return (
     <>
-      <Navbar />
-
+      
       <main className="bg-brand-bg text-brand-body">
         <Hero />
         <TheProblem />
@@ -32,7 +29,6 @@ export default function Home() {
         <EnterpriseCTA />
       </main>
 
-      <Footer />
-    </>
+          </>
   );
 }
