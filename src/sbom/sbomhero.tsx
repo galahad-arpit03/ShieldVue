@@ -2,13 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/Common/UI/Button/Button";
-import {
-  ArrowRight,
-  Boxes,
-  GitBranch,
-  ShieldCheck,
-  Database,
-} from "lucide-react";
+import {ArrowRight} from "lucide-react";
+import Link from "next/link";
+
 
 export default function SBOMHero() {
   return (
@@ -195,7 +191,9 @@ export default function SBOMHero() {
                 border-0
               "
             >
-              Request Demo
+              <Link href="/book-demo">
+                Request Demo
+              </Link>
             </Button>
 
             <Button

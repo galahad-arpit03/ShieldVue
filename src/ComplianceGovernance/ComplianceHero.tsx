@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/Common/UI/Button/Button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ComplianceHero() {
   return (
@@ -160,7 +161,9 @@ export default function ComplianceHero() {
                 border-0
               "
             >
-              Request Demo
+              <Link href="/book-demo">
+                Request Demo
+              </Link>
             </Button>
 
             <Button
