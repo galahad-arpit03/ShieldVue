@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 import { Button } from "@/Common/UI/Button/Button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CBOMHero() {
   return (
     <section className="relative overflow-hidden pt-40 pb-32">
       {/* Background Image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url('/images/cbomHero.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "right center",
-        }}
+      <Image
+        src="/images/cbomHero.png"
+        alt="ShieldVUE CBOM"
+        fill
+        priority
+        className="object-cover object-[right_center] -z-10"
       />
 
       {/* White Gradient Overlay */}

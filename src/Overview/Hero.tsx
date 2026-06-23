@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 import { Button } from "@/Common/UI/Button/Button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-40 pb-32 min-h-[80vh] flex items-center">
       {/* Background Image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url('/images/overviewHero.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "right center",
-        }}
+      <Image
+        src="/images/overviewHero.png"
+        alt="ShieldVUE Overview"
+        fill
+        priority
+        className="object-cover object-[right_center] -z-10"
       />
 
       {/* White Gradient Overlay */}
