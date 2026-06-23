@@ -12,18 +12,18 @@ export default function SupportedFrameworks() {
   ];
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-white border-y border-slate-100">
       <div className="shield-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-4">
-            Built for Modern Regulations
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-6 leading-[1.1]">
+            Built for Modern <span className="text-primary">Regulations</span>
           </h2>
           <p className="text-lg text-slate-600">
             Out-of-the-box support for the most stringent federal and commercial security frameworks.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full relative z-10">
           {frameworks.map((fw, i) => (
             <motion.div 
               key={i}
@@ -31,14 +31,26 @@ export default function SupportedFrameworks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex gap-6"
+              className="group relative bg-white border border-slate-200 rounded-md p-8 flex flex-col h-full overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <fw.icon className="w-8 h-8 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{fw.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{fw.desc}</p>
+              {/* Animated Top Border */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-slate-100 group-hover:bg-primary transition-colors duration-500" />
+              
+              {/* Background Gradient that appears on hover */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-slate-50 border border-slate-100 rounded-md flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary transition-colors duration-500">
+                  <fw.icon className="w-6 h-6 text-slate-500 group-hover:text-white transition-colors duration-500" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-wide">
+                  {fw.title}
+                </h3>
+                
+                <p className="text-slate-600 leading-relaxed text-sm flex-grow">
+                  {fw.desc}
+                </p>
               </div>
             </motion.div>
           ))}

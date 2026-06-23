@@ -142,7 +142,7 @@ export default function WhatIsCBOM() {
 
                 overflow-hidden
 
-                rounded-[32px]
+                rounded-md
 
                 border
                 border-slate-200
@@ -200,7 +200,7 @@ export default function WhatIsCBOM() {
                           items-center
                           justify-center
 
-                          rounded-xl
+                          rounded-md
 
                           bg-white
 
@@ -236,7 +236,7 @@ export default function WhatIsCBOM() {
                   className="
                     mt-12
 
-                    rounded-2xl
+                    rounded-md
 
                     border
                     border-slate-200

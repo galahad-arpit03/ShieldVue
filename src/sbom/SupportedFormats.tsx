@@ -46,7 +46,7 @@ const formats = [
 
 export default function SupportedFormats() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-32">
+    <section className="relative bg-slate-50 py-16">
       {/* Background Pattern */}
       <div
         className="
@@ -61,14 +61,14 @@ export default function SupportedFormats() {
       />
 
       <div className="shield-container relative z-10">
-        <div className="grid items-center gap-20 lg:grid-cols-12">
+        <div className="grid items-start gap-20 lg:grid-cols-12">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5"
+            className="lg:col-span-5 lg:sticky lg:top-20"
           >
             {/* <div
               className="
@@ -96,8 +96,6 @@ export default function SupportedFormats() {
 
             <h2
               className="
-                mt-6
-
                 text-4xl
                 md:text-5xl
 
@@ -117,31 +115,13 @@ export default function SupportedFormats() {
               </span>
             </h2>
 
-            <p
-              className="
-                mt-8
-
-                text-lg
-                leading-8
-
-                text-slate-600
-              "
-            >
+            <p className="mt-6 text-lg leading-relaxed text-slate-600">
               ShieldVUE supports globally recognized SBOM standards,
               enabling seamless interoperability across security,
               compliance, and software development ecosystems.
             </p>
 
-            <p
-              className="
-                mt-6
-
-                text-lg
-                leading-8
-
-                text-slate-600
-              "
-            >
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
               Generate, export, and share Software Bills of Materials
               in the format best suited for your compliance,
               governance, and operational requirements.
@@ -150,43 +130,15 @@ export default function SupportedFormats() {
 
           {/* Right Formats */}
           <div className="lg:col-span-7">
-            <div className="space-y-5">
+            <div className="space-y-4">
               {formats.map((format, index) => (
                 <motion.div
                   key={format.name}
-                  initial={{
-                    opacity: 0,
-                    y: 30,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.1,
-                  }}
-                  className="
-                    group
-
-                    rounded-[24px]
-
-                    border
-                    border-slate-200
-
-                    bg-white
-
-                    p-8
-
-                    transition-all
-                    duration-300
-
-                    hover:border-primary/20
-                    hover:shadow-lg
-                  "
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group rounded-md border border-slate-200 bg-white p-6 transition-all duration-300 hover:border-primary/20 hover:shadow-lg"
                 >
                   <div
                     className="
@@ -209,7 +161,7 @@ export default function SupportedFormats() {
                           items-center
                           justify-center
 
-                          rounded-2xl
+                          rounded-md
 
                           bg-primary/5
 
@@ -247,37 +199,11 @@ export default function SupportedFormats() {
                       </div>
                     </div>
 
-                    {/* Right */}
-                    <div
-                      className="
-                        flex
-                        flex-wrap
-                        gap-3
-                      "
-                    >
+                    <div className="flex flex-wrap gap-3 mt-4 lg:mt-0 lg:justify-end max-w-sm">
                       {format.features.map((feature) => (
                         <div
                           key={feature}
-                          className="
-                            inline-flex
-                            items-center
-                            gap-2
-
-                            rounded-full
-
-                            border
-                            border-slate-200
-
-                            bg-slate-50
-
-                            px-4
-                            py-2
-
-                            text-sm
-                            font-medium
-
-                            text-slate-700
-                          "
+                          className="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-medium text-slate-700"
                         >
                           <CheckCircle2 className="h-4 w-4 text-primary" />
                           {feature}

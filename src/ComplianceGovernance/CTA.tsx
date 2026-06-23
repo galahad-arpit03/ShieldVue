@@ -28,7 +28,7 @@ export default function CTA() {
 
             overflow-hidden
 
-            rounded-xl
+            rounded-md
 
             bg-gradient-to-br
             from-slate-100/80

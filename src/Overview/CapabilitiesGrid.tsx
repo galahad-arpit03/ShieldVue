@@ -93,7 +93,7 @@ const capabilities = [
 
 export default function CapabilitiesGrid() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-32">
+    <section className="relative overflow-hidden bg-slate-50 py-16">
       {/* Background Pattern */}
       <div
         className="

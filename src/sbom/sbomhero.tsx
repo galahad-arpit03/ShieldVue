@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function SBOMHero() {
   return (
-    <section className="relative overflow-hidden pt-40 pb-32">
+    <section className="relative overflow-hidden pt-40 pb-16">
       {/* Background Image */}
       <div
         className="absolute inset-0"

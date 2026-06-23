@@ -51,7 +51,7 @@ const workflowSteps = [
 
 export default function Workflow() {
   return (
-    <section className="relative overflow-hidden bg-white py-32">
+    <section className="relative overflow-hidden bg-white py-16">
       {/* Background */}
       <div
         className="
@@ -364,37 +364,6 @@ export default function Workflow() {
           </div>
         </div>
 
-        {/* Bottom Statement */}
-        <div
-          className="
-            mt-24
-
-            border-t
-            border-slate-200
-
-            pt-10
-          "
-        >
-          <p
-            className="
-    max-w-4xl
-
-    text-xl
-
-    leading-9
-
-    text-slate-700
-    text-center
-    mx-auto
-  "
-          >
-            ShieldVUE connects repositories, discovers software
-            components, generates SBOMs and CBOMs, identifies
-            vulnerabilities, applies governance policies, generates
-            audit-ready reports, and continuously monitors your
-            software supply chain from a single integrated platform.
-          </p>
-        </div>
       </div>
     </section>
   );

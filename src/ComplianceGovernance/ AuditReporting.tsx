@@ -142,7 +142,7 @@ export default function AuditReporting() {
                       items-center
                       justify-center
 
-                      rounded-xl
+                      rounded-md
 
                       bg-primary/5
 
@@ -203,7 +203,7 @@ export default function AuditReporting() {
               className="
                 overflow-hidden
 
-                rounded-[28px]
+                rounded-md
 
                 border
                 border-slate-200
@@ -239,7 +239,7 @@ export default function AuditReporting() {
             >
               <div
                 className="
-                  rounded-2xl
+                  rounded-md
 
                   border
                   border-slate-200
@@ -284,7 +284,7 @@ export default function AuditReporting() {
             >
               <div
                 className="
-                  rounded-2xl
+                  rounded-md
 
                   border
                   border-slate-200

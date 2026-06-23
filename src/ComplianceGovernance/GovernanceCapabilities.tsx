@@ -128,7 +128,7 @@ export default function GovernanceCapabilities() {
               className="
                 group
 
-                rounded-[28px]
+                rounded-md
 
                 border
                 border-slate-200
@@ -153,7 +153,7 @@ export default function GovernanceCapabilities() {
                   items-center
                   justify-center
 
-                  rounded-2xl
+                  rounded-md
 
                   bg-primary/5
 

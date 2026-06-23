@@ -81,7 +81,7 @@ export default function Workflow() {
 
             overflow-hidden
 
-            rounded-[32px]
+            rounded-md
 
             border
             border-slate-200

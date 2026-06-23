@@ -1,57 +1,107 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GitPullRequest, ArrowRight, XCircle } from "lucide-react";
+import { GitPullRequest, XCircle, Search } from "lucide-react";
 
 export default function PolicyEnforcement() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-slate-50 border-y border-slate-100">
       <div className="shield-container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-6">
-              Shift-Left Governance
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-6 leading-[1.1]">
+              Shift-Left <span className="text-primary">Governance</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
               Automatically block non-compliant code, missing SBOMs, or unauthorized licenses from progressing through your CI/CD pipelines. Security shouldn't be an afterthought.
             </p>
           </motion.div>
 
-          {/* Interactive Pipeline Flowchart */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-slate-900 rounded-3xl p-8 shadow-xl border border-slate-800 text-white font-mono text-sm"
+            className="bg-[#0A0A0A] rounded-md p-8 shadow-2xl border border-white/10 text-white font-mono text-sm relative overflow-hidden group"
           >
-             <div className="flex flex-col items-center gap-4 relative">
-                
-                <div className="bg-slate-800 px-6 py-3 rounded-lg border border-slate-700 w-full text-center flex items-center justify-center gap-2">
-                   <GitPullRequest className="w-4 h-4 text-slate-400" /> Pull Request Created
-                </div>
-                
-                <ArrowRight className="w-5 h-5 text-slate-500 rotate-90" />
-                
-                <div className="bg-slate-800 px-6 py-3 rounded-lg border border-slate-700 w-full text-center flex items-center justify-between">
-                   <span>Scanning Dependencies...</span>
-                   <span className="text-green-400">Pass</span>
-                </div>
+             {/* Background Effects */}
+             <div className="absolute top-0 right-0 w-[500px] h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent pointer-events-none opacity-50" />
+             
+             <div className="relative z-10">
+               {/* Vertical Pipeline Line */}
+               <div className="absolute left-[23px] top-4 bottom-12 w-0.5 bg-slate-800" />
 
-                <ArrowRight className="w-5 h-5 text-slate-500 rotate-90" />
+               {/* Step 1 */}
+               <motion.div 
+                 initial={{ opacity: 0, x: -10 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 transition={{ delay: 0.2 }}
+                 className="flex items-start gap-6 mb-8 relative"
+               >
+                 <div className="w-12 h-12 rounded-md bg-[#161b22] border border-white/10 flex items-center justify-center flex-shrink-0 z-10 shadow-lg">
+                   <GitPullRequest className="w-5 h-5 text-slate-400" />
+                 </div>
+                 <div className="flex-1 bg-[#161b22] border border-white/5 rounded-md p-4 mt-1 flex justify-between items-center group-hover:border-white/10 transition-colors">
+                   <span className="text-slate-300 font-medium tracking-wide text-xs md:text-sm">git push origin main</span>
+                   <span className="text-slate-500 text-xs">00:00s</span>
+                 </div>
+               </motion.div>
 
-                <div className="bg-slate-800 px-6 py-3 rounded-lg border border-slate-700 w-full text-center flex items-center justify-between">
-                   <span>Checking Licenses...</span>
-                   <span className="text-red-400 flex items-center gap-1"><XCircle className="w-4 h-4"/> Fail</span>
-                </div>
+               {/* Step 2 */}
+               <motion.div 
+                 initial={{ opacity: 0, x: -10 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 transition={{ delay: 0.6 }}
+                 className="flex items-start gap-6 mb-8 relative"
+               >
+                 <div className="w-12 h-12 rounded-md bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0 z-10 shadow-[0_0_15px_rgba(var(--color-primary),0.2)]">
+                   <div className="w-3 h-3 bg-primary rounded-md animate-pulse" />
+                 </div>
+                 <div className="flex-1 bg-gradient-to-r from-primary/10 to-[#161b22] border border-primary/20 rounded-md p-4 mt-1 relative overflow-hidden">
+                   <div className="absolute top-0 left-0 w-1 h-full bg-primary/50" />
+                   <div className="flex justify-between items-center mb-3">
+                     <span className="text-primary font-bold">Scanning Dependencies</span>
+                     <span className="text-primary/80 text-xs flex items-center gap-1"><Search className="w-3 h-3" /> Running</span>
+                   </div>
+                   <div className="w-full bg-black/50 h-1.5 rounded-md overflow-hidden">
+                     <motion.div 
+                       initial={{ width: "0%" }}
+                       whileInView={{ width: "100%" }}
+                       transition={{ duration: 2, delay: 0.6 }}
+                       className="h-full bg-primary"
+                     />
+                   </div>
+                 </div>
+               </motion.div>
 
-                <div className="mt-4 p-4 bg-red-500/10 border border-red-500/50 rounded-lg text-red-400 w-full">
-                   <strong>Pipeline Blocked:</strong> GPL v3.0 license detected in 'faker.js'. Violates company policy [POL-003].
-                </div>
+               {/* Step 3 (Blocked) */}
+               <motion.div 
+                 initial={{ opacity: 0, x: -10 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 transition={{ delay: 2.8 }}
+                 className="flex items-start gap-6 relative"
+               >
+                 <div className="w-12 h-12 rounded-md bg-[#161b22] border border-primary/50 flex items-center justify-center flex-shrink-0 z-10 shadow-[0_0_15px_rgba(var(--color-primary),0.4)]">
+                   <XCircle className="w-5 h-5 text-primary" />
+                 </div>
+                 <div className="flex-1 bg-gradient-to-r from-[#161b22] to-[#161b22] border border-primary/30 rounded-md p-4 mt-1 relative overflow-hidden">
+                   <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
+                   <div className="flex justify-between items-center mb-3">
+                     <span className="text-white font-bold tracking-wide">License Validation</span>
+                     <span className="text-primary font-bold text-xs uppercase tracking-wider">Blocked</span>
+                   </div>
+                   <div className="p-3 bg-primary/10 rounded-md border border-primary/20">
+                     <p className="text-slate-400 text-[13px] leading-relaxed">
+                       Restrictive license detected in <span className="text-primary font-bold">faker.js</span>.<br/>
+                       Violates policy: [POL-003] No GPL v3.0.
+                     </p>
+                   </div>
+                 </div>
+               </motion.div>
 
              </div>
           </motion.div>

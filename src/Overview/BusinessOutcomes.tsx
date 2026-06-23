@@ -57,7 +57,7 @@ const outcomes = [
 
 export default function BusinessOutcomes() {
   return (
-    <section className="relative overflow-hidden bg-white py-32">
+    <section className="relative overflow-hidden bg-white py-16">
       {/* Background Pattern */}
       <div
         className="
@@ -265,68 +265,7 @@ export default function BusinessOutcomes() {
           ))}
         </div>
 
-        {/* Bottom Summary */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="
-            mt-20
-
-            rounded-md
-
-            border
-            border-slate-200
-
-            bg-slate-50
-
-            p-10
-
-            text-center
-          "
-        >
-          <div
-            className="
-              text-2xl
-              md:text-3xl
-
-              font-medium
-
-              text-slate-900
-
-              font-['Clash_Grotesk']
-            "
-          >
-            Visibility. Governance. Intelligence.
-          </div>
-
-          <p
-            className="
-              mx-auto
-              mt-4
-
-              max-w-3xl
-
-              text-slate-600
-              leading-8
-            "
-          >
-            ShieldVUE combines SBOM management, vulnerability intelligence,
-            inventory tracking, governance controls, and reporting into a
-            unified enterprise platform for software supply chain security.
-          </p>
-        </motion.div>
+      
       </div>
     </section>
   );

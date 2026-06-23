@@ -56,64 +56,61 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 lg:flex">
           {navigation.map((group) => (
-            <div key={group.title} className="group relative">
+            <div key={group.title} className="group relative py-5">
               <button
                 className="
                   flex
                   items-center
                   gap-1
                   text-sm
-                  font-medium
+                  font-bold
                   text-slate-600
                   transition-colors
-                  hover:text-slate-900
+                  group-hover:text-primary
                 "
               >
                 {group.title}
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:-rotate-180" />
               </button>
 
-              {/* Dropdown */}
-              <div
-                className="
-                  invisible
-                  absolute
-                  left-0
-                  top-full
-                  mt-4
-                  w-72
-                  rounded-2xl
-                  border
-                  border-slate-200
-                  bg-white
-                  p-3
-                  opacity-0
-                  shadow-xl
-                  transition-all
-                  duration-200
-                  group-hover:visible
-                  group-hover:opacity-100
-                "
-              >
-                {group.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="
-                      block
-                      rounded-xl
-                      px-4
-                      py-3
-                      text-sm
-                      text-slate-600
-                      transition-all
-                      hover:bg-slate-50
-                      hover:text-primary
-                    "
-                  >
-                    {item.title}
-                  </Link>
-                ))}
+              {/* Dropdown Wrapper (invisible bridge for hover) */}
+              <div className="absolute left-0 top-full pt-1 invisible opacity-0 translate-y-2 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+                <div
+                  className="
+                    w-72
+                    rounded-md
+                    border
+                    border-slate-200
+                    bg-white
+                    p-2
+                    shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)]
+                    relative
+                  "
+                >
+                  <div className="relative bg-white z-10 flex flex-col space-y-1">
+                    {group.items.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="
+                          block
+                          rounded-md
+                          px-4
+                          py-3
+                          text-sm
+                          font-medium
+                          text-slate-600
+                          transition-all
+                          hover:bg-primary/5
+                          hover:text-primary
+                          hover:translate-x-1
+                        "
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           ))}

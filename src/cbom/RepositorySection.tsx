@@ -144,7 +144,7 @@ export default function RepositorySection() {
                       items-center
                       justify-center
 
-                      rounded-xl
+                      rounded-md
 
                       bg-primary/5
 
@@ -205,7 +205,7 @@ export default function RepositorySection() {
               className="
                 overflow-hidden
 
-                rounded-[28px]
+                rounded-md
 
                 border
                 border-slate-200
@@ -241,7 +241,7 @@ export default function RepositorySection() {
             >
               <div
                 className="
-                  rounded-2xl
+                  rounded-md
 
                   border
                   border-slate-200
@@ -286,7 +286,7 @@ export default function RepositorySection() {
             >
               <div
                 className="
-                  rounded-2xl
+                  rounded-md
 
                   border
                   border-slate-200

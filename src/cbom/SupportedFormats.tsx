@@ -146,7 +146,7 @@ export default function SupportedFormats() {
                   className="
                     group
 
-                    rounded-[24px]
+                    rounded-md
 
                     border
                     border-slate-200
@@ -182,7 +182,7 @@ export default function SupportedFormats() {
                           items-center
                           justify-center
 
-                          rounded-2xl
+                          rounded-md
 
                           bg-primary/5
 

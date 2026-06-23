@@ -4,23 +4,23 @@ export const navigation = [
     items: [
       {
         title: "Overview",
-        href: "/overview",
+        href: "/platform/overview",
       },
       {
         title: "SBOM Management",
-        href: "/overview/sbom-management",
+        href: "/platform/sbom-management",
       },
       {
         title: "CBOM Management",
-        href: "/overview/cbom-management",
+        href: "/platform/cbom-management",
       },
       {
         title: "Vulnerability Intelligence",
-        href: "/overview/vulnerability-intelligence",
+        href: "/platform/vulnerability-intelligence",
       },
       {
         title: "Compliance & Governance",
-        href: "/overview/compliance-governance",
+        href: "/platform/compliance-governance",
       },
     ],
   },

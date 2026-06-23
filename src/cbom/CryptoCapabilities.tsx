@@ -148,7 +148,7 @@ export default function CryptoCapabilities() {
 
                 overflow-hidden
 
-                rounded-[28px]
+                rounded-md
 
                 border
                 border-slate-200
@@ -200,7 +200,7 @@ export default function CryptoCapabilities() {
                     items-center
                     justify-center
 
-                    rounded-2xl
+                    rounded-md
 
                     bg-primary/5
 

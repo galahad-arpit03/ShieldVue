@@ -88,7 +88,7 @@ export default function Workflow() {
 
             overflow-hidden
 
-            rounded-[32px]
+            rounded-md
 
             border
             border-slate-200
@@ -149,7 +149,7 @@ export default function Workflow() {
                 items-center
                 gap-4
 
-                rounded-2xl
+                rounded-md
 
                 border
                 border-slate-200
@@ -170,7 +170,7 @@ export default function Workflow() {
                   items-center
                   justify-center
 
-                  rounded-xl
+                  rounded-md
 
                   bg-primary/5
 

@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function Workflow() {
     return (
-        <section className="relative overflow-hidden bg-slate-50 py-32">
+        <section className="relative overflow-hidden bg-slate-50 py-16">
             {/* Background */}
             <div
                 className="
@@ -33,40 +33,27 @@ export default function Workflow() {
                     <h2
                         className="
               mt-6
-
               text-4xl
               md:text-5xl
-
               font-medium
-
               leading-[1.05]
-
               tracking-[-0.03em]
-
               text-slate-900
-
               font-['Clash_Grotesk']
             "
                     >
-                        From Software Assets
-                        <span className="text-primary">
-                            {" "}To Governed SBOM Intelligence
-                        </span>
+                        Automated SBOM Intelligence
                     </h2>
 
                     <p
                         className="
               mt-6
-
               text-lg
-              leading-8
-
+              leading-relaxed
               text-slate-600
             "
                     >
-                        Watch how ShieldVUE automatically discovers components,
-                        generates SBOMs, tracks versions, and maintains
-                        centralized software supply chain visibility.
+                        Automatically discover components, generate SBOMs, and maintain total supply chain visibility.
                     </p>
                 </div>
 
@@ -91,7 +78,7 @@ export default function Workflow() {
 
             overflow-hidden
 
-            rounded-[32px]
+            rounded-md
 
             border
             border-slate-200
@@ -122,7 +109,7 @@ export default function Workflow() {
 
     overflow-hidden
 
-    rounded-[32px]
+    rounded-md
 
     border
     border-slate-200
@@ -184,7 +171,7 @@ export default function Workflow() {
                 items-center
                 gap-4
 
-                rounded-2xl
+                rounded-md
 
                 border
                 border-slate-200
@@ -205,7 +192,7 @@ export default function Workflow() {
                   items-center
                   justify-center
 
-                  rounded-xl
+                  rounded-md
 
                   bg-primary/5
 

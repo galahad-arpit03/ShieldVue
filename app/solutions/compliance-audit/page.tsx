@@ -17,7 +17,7 @@ export default function ComplianceAuditPage() {
         <ComplianceHero />
         <SupportedFrameworks />
         <PolicyEnforcement />
-        <RegulatoryReporting />
+        {/* <RegulatoryReporting /> */}
         <ComplianceFAQ />
         <ComplianceCTA />
       </main>

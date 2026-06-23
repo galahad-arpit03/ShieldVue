@@ -29,7 +29,7 @@ const benefits = [
 
 export default function WhatIsSBOM() {
   return (
-    <section className="relative overflow-hidden bg-white py-32">
+    <section className="relative overflow-hidden bg-white py-16">
       <div className="shield-container">
         <div className="grid gap-20 items-center lg:grid-cols-2">
           {/* Left Content */}
@@ -96,47 +96,20 @@ export default function WhatIsSBOM() {
               </span>
             </h2>
 
-            <p
-              className="
-                mt-8
-
-                text-lg
-                leading-8
-
-                text-slate-600
-              "
-            >
+            <p className="mt-6 text-lg leading-relaxed text-slate-600">
               A Software Bill of Materials (SBOM) is a complete inventory
               of all software components, libraries, dependencies, and
               packages used within an application.
             </p>
 
-            <p
-              className="
-                mt-6
-
-                text-lg
-                leading-8
-
-                text-slate-600
-              "
-            >
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
               It provides organizations with the visibility needed to
               identify vulnerabilities, manage supply chain risks,
               meet compliance requirements, and maintain control over
               rapidly evolving software ecosystems.
             </p>
 
-            <p
-              className="
-                mt-6
-
-                text-lg
-                leading-8
-
-                text-slate-600
-              "
-            >
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
               ShieldVUE automatically generates and manages SBOMs
               across source code, containers, binaries, packages,
               and CI/CD pipelines while maintaining centralized
@@ -161,22 +134,7 @@ export default function WhatIsSBOM() {
               duration: 0.7,
             }}
           >
-            <div
-              className="
-                relative
-
-                overflow-hidden
-
-                rounded-[32px]
-
-                border
-                border-slate-200
-
-                bg-slate-50
-
-                p-10
-              "
-            >
+              <div className="relative overflow-hidden rounded-md border border-slate-200 bg-slate-50 p-8">
               {/* Glow */}
               <div
                 className="
@@ -207,49 +165,13 @@ export default function WhatIsSBOM() {
                   SBOM Benefits
                 </div>
 
-                <div className="mt-10 space-y-8">
+                <div className="mt-6 space-y-4">
                   {benefits.map((item) => (
-                    <div
-                      key={item.title}
-                      className="
-                        flex
-                        items-center
-                        gap-4
-                      "
-                    >
-                      <div
-                        className="
-                          flex
-                          h-12
-                          w-12
-                          items-center
-                          justify-center
-
-                          rounded-xl
-
-                          bg-white
-
-                          shadow-sm
-                        "
-                      >
-                        <item.icon
-                          className="
-                            h-5
-                            w-5
-
-                            text-primary
-                          "
-                        />
+                    <div key={item.title} className="flex items-center gap-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-md bg-white shadow-sm">
+                        <item.icon className="h-4 w-4 text-primary" />
                       </div>
-
-                      <div
-                        className="
-                          text-lg
-                          font-medium
-
-                          text-slate-900
-                        "
-                      >
+                      <div className="text-base font-medium text-slate-900">
                         {item.title}
                       </div>
                     </div>
@@ -257,20 +179,7 @@ export default function WhatIsSBOM() {
                 </div>
 
                 {/* Mini Flow */}
-                <div
-                  className="
-                    mt-12
-
-                    rounded-2xl
-
-                    border
-                    border-slate-200
-
-                    bg-white
-
-                    p-6
-                  "
-                >
+                <div className="mt-8 rounded-md border border-slate-200 bg-white p-4">
                   <div
                     className="
                       flex

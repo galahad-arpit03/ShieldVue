@@ -89,7 +89,7 @@ export default function CryptoInventory() {
               className="
                 overflow-hidden
 
-                rounded-[28px]
+                rounded-md
 
                 border
                 border-slate-200
@@ -125,7 +125,7 @@ export default function CryptoInventory() {
             >
               <div
                 className="
-                  rounded-2xl
+                  rounded-md
 
                   border
                   border-slate-200
@@ -231,7 +231,7 @@ export default function CryptoInventory() {
                       items-center
                       justify-center
 
-                      rounded-xl
+                      rounded-md
 
                       bg-primary/5
 
