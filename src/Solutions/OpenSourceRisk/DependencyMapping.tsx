@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GitMerge } from "lucide-react";
+import Image from "next/image";
 
 export default function DependencyMapping() {
   return (
-    <section id="features" className="py-24 bg-white">
+    <section id="features" className="py-24 bg-white border-y border-slate-100">
       <div className="shield-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
@@ -15,39 +15,41 @@ export default function DependencyMapping() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-6">
-              Uncover Hidden Transitive Risks
+            
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium font-['Clash_Grotesk'] text-slate-900 mb-6 leading-[1.1]">
+              Uncover Hidden <span className="text-primary">Transitive Risks</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
               Look beyond direct dependencies. Our engine maps your complete software tree to expose vulnerabilities nested deep within transitive open-source packages.
             </p>
+            <ul className="space-y-4 text-slate-700 font-medium">
+              <li className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-primary" /> Multi-Level Depth Scanning
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-primary" /> Automated SBOM Integration
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-primary" /> Real-Time Exploit Path Mapping
+              </li>
+            </ul>
           </motion.div>
 
-          {/* Node Graph Mockup */}
+          {/* Node Graph Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-inner flex items-center justify-center min-h-[400px] overflow-hidden"
+            className="relative bg-white rounded-md min-h-[250px] lg:min-h-[320px] flex items-center justify-center border border-slate-200/60 shadow-lg overflow-hidden group"
           >
-             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#121B31_1px,transparent_1px)] [background-size:16px_16px]" />
-             
-             {/* Simulated Nodes */}
-             <div className="relative z-10 w-full h-full flex items-center justify-center">
-                <GitMerge className="w-48 h-48 text-slate-300 absolute" />
-                <div className="absolute top-[20%] left-[20%] w-4 h-4 rounded-full bg-primary animate-pulse" />
-                <div className="absolute top-[30%] right-[25%] w-6 h-6 rounded-full bg-red-500 animate-pulse" />
-                <div className="absolute bottom-[25%] left-[30%] w-5 h-5 rounded-full bg-yellow-500" />
-                <div className="absolute bottom-[20%] right-[20%] w-8 h-8 rounded-full bg-green-500/50" />
-                {/* Lines */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="20%" y1="20%" x2="50%" y2="50%" stroke="currentColor" strokeWidth="2" />
-                  <line x1="75%" y1="30%" x2="50%" y2="50%" stroke="currentColor" strokeWidth="2" />
-                  <line x1="30%" y1="75%" x2="50%" y2="50%" stroke="currentColor" strokeWidth="2" />
-                  <line x1="80%" y1="80%" x2="50%" y2="50%" stroke="currentColor" strokeWidth="2" />
-                </svg>
-             </div>
+            <Image 
+              src="/solutions/slide-dep-light.png"
+              alt="Dependency Mapping and Transitive Risks"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent pointer-events-none" />
           </motion.div>
         </div>
       </div>
