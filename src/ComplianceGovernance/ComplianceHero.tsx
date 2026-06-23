@@ -12,7 +12,7 @@ export default function ComplianceHero() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('/images/ChatGPT Image Jun 22, 2026, 12_58_14 PM.png')",
+          backgroundImage: "url('/images/complianceHero.png')",
           backgroundSize: "cover",
           backgroundPosition: "right center",
         }}

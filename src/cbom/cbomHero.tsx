@@ -12,7 +12,7 @@ export default function CBOMHero() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('/images/cbom-hero.png')",
+          backgroundImage: "url('/images/cbomHero.png')",
           backgroundSize: "cover",
           backgroundPosition: "right center",
         }}
