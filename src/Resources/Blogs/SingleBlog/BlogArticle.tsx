@@ -50,7 +50,7 @@ export default function BlogArticle({ id }: BlogArticleProps) {
             <span>{blog.readTime}</span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-[4rem] font-medium font-['Clash_Grotesk'] leading-[1.1] tracking-[-0.02em] mb-6 md:mb-12 w-full md:max-w-[60%] lg:max-w-[55%] text-slate-900">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-medium font-['Clash_Grotesk'] leading-[1.2] tracking-[-0.01em] mb-6 md:mb-12 w-full md:max-w-[80%] lg:max-w-[75%] text-slate-900">
             {blog.title.split(' ').slice(0, -1).join(' ')}{' '}
             <span className="text-primary">{blog.title.split(' ').pop()}</span>
           </h1>
@@ -72,13 +72,13 @@ export default function BlogArticle({ id }: BlogArticleProps) {
 
         {/* Intro / Description with Left Border */}
         <div className="pl-6 border-l-[3px] border-[#8B5CF6] mb-8 md:mb-16">
-          <p className="text-lg text-slate-700 font-['Inter'] leading-relaxed">
+          <p className="text-base text-slate-700 font-['Inter'] leading-[1.8] font-normal">
             {blog.description}
           </p>
         </div>
 
         {/* Body Content */}
-        <div className="max-w-none text-slate-700 font-['Manrope'] leading-loose space-y-6 text-base">
+        <div className="max-w-none text-slate-700 font-['Inter'] leading-loose space-y-6 text-sm">
           {blog.content ? (
             blog.content.split("\n\n").map((rawParagraph, idx) => {
               const paragraph = rawParagraph.trim();
@@ -86,21 +86,21 @@ export default function BlogArticle({ id }: BlogArticleProps) {
 
               if (paragraph.startsWith("## ")) {
                 return (
-                  <h2 key={idx} className="text-xl md:text-2xl font-semibold text-slate-900 mt-12 mb-6 leading-snug">
+                  <h2 key={idx} className="text-2xl md:text-3xl font-medium font-['Manrope'] text-slate-900 mt-12 mb-6 leading-snug">
                     {paragraph.replace("## ", "")}
                   </h2>
                 );
               }
               if (paragraph.startsWith("> ")) {
                 return (
-                  <blockquote key={idx} className="border-l-4 border-primary pl-6 py-1 my-10 text-lg md:text-lg leading-relaxed text-slate-700 font-normal">
+                  <blockquote key={idx} className="border-l-4 border-primary pl-6 py-1 my-8 text-base leading-relaxed text-slate-700 font-normal">
                     {paragraph.replace("> ", "")}
                   </blockquote>
                 );
               }
               if (paragraph.startsWith("- ")) {
                 return (
-                  <ul key={idx} className="list-disc pl-6 my-6 space-y-4 font-normal">
+                  <ul key={idx} className="list-disc pl-6 my-4 space-y-3 font-normal">
                     {paragraph.split('\n').map((item, i) => {
                       const cleanItem = item.trim();
                       if (!cleanItem) return null;
@@ -110,7 +110,7 @@ export default function BlogArticle({ id }: BlogArticleProps) {
                 );
               }
               return (
-                <p key={idx} className="text-base leading-[1.8] text-slate-700 mb-8 font-normal font-['Inter']">
+                <p key={idx} className="text-base leading-[1.8] text-slate-700 mb-6 font-normal">
                   {paragraph}
                 </p>
               );

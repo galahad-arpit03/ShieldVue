@@ -7,17 +7,19 @@ import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
 import { navigation } from "./NavBarData";
 import { Button } from "@/Common/UI/Button/Button";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         // Scrolling down past 50px
         setIsVisible(false);
@@ -25,7 +27,7 @@ export default function Navbar() {
         // Scrolling up
         setIsVisible(true);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
@@ -47,19 +49,19 @@ export default function Navbar() {
       <div className="shield-container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1 z-50" onClick={() => setIsMobileMenuOpen(false)}>
-          <Image 
-            src="/brand_logo/shieldvue_logo.png" 
-            alt="ShieldVUE Logo Icon" 
-            width={60} 
-            height={60} 
+          <Image
+            src="/brand_logo/shieldvue_logo.png"
+            alt="ShieldVUE Logo Icon"
+            width={60}
+            height={60}
             className="h-12 w-auto object-contain"
             priority
           />
-          <Image 
-            src="/brand_logo/brand_bg_text.png" 
-            alt="ShieldVUE Logo Text" 
-            width={90} 
-            height={200} 
+          <Image
+            src="/brand_logo/brand_bg_text.png"
+            alt="ShieldVUE Logo Text"
+            width={90}
+            height={200}
             className="h-16 w-auto object-contain -ml-4"
             priority
           />
@@ -67,19 +69,21 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 lg:flex">
-          {navigation.map((group) => (
+          {navigation.map((group) => {
+            const isActiveGroup = pathname && group.items.some((item) => pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href)));
+            return (
             <div key={group.title} className="group relative py-5">
               <button
-                className="
+                className={`
                   flex
                   items-center
                   gap-1
                   text-sm
-                  font-bold
-                  text-slate-600
+                  font-medium
                   transition-colors
                   group-hover:text-primary
-                "
+                  ${isActiveGroup ? 'text-primary' : 'text-slate-600'}
+                `}
               >
                 {group.title}
                 <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:-rotate-180" />
@@ -100,32 +104,34 @@ export default function Navbar() {
                   "
                 >
                   <div className="relative bg-white z-10 flex flex-col space-y-1">
-                    {group.items.map((item) => (
+                    {group.items.map((item) => {
+                      const isActiveItem = pathname === item.href || (item.href !== '/' && pathname?.startsWith(item.href));
+                      return (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="
+                        className={`
                           block
                           rounded-md
                           px-4
                           py-3
                           text-sm
                           font-medium
-                          text-slate-600
                           transition-all
                           hover:bg-primary/5
                           hover:text-primary
                           hover:translate-x-1
-                        "
+                          ${isActiveItem ? 'bg-primary/5 text-primary translate-x-1' : 'text-slate-600'}
+                        `}
                       >
                         {item.title}
                       </Link>
-                    ))}
+                    )})}
                   </div>
                 </div>
               </div>
             </div>
-          ))}
+          )})}
         </nav>
 
         {/* CTA */}
@@ -136,7 +142,7 @@ export default function Navbar() {
               px-5
               rounded-md
               text-sm
-              font-semibold
+              font-medium
               bg-primary
               text-white
               transition-all
@@ -144,9 +150,9 @@ export default function Navbar() {
               shadow-sm
             "
           >
-           <Link href="/book-demo">
-            Book A Demo
-          </Link>
+            <Link href="/book-demo">
+              Book A Demo
+            </Link>
           </Button>
         </div>
 
@@ -179,20 +185,21 @@ export default function Navbar() {
             className="absolute left-0 top-[64px] w-full h-[calc(100vh-64px)] bg-white z-40 lg:hidden overflow-y-auto pb-12 md:pb-24 shadow-xl"
           >
             <div className="flex flex-col px-4 py-4 gap-2">
-              {navigation.map((group) => (
+              {navigation.map((group) => {
+                const isActiveGroup = pathname && group.items.some((item) => pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href)));
+                return (
                 <div key={group.title} className="flex flex-col border-b border-slate-100 last:border-0 pb-2">
                   <button
                     onClick={() => setActiveMobileDropdown(activeMobileDropdown === group.title ? null : group.title)}
-                    className="flex items-center justify-between py-3 text-base font-bold text-slate-800"
+                    className={`flex items-center justify-between py-3 text-base font-bold ${isActiveGroup ? 'text-primary' : 'text-slate-800'}`}
                   >
                     {group.title}
                     <ChevronDown
-                      className={`h-4 w-4 text-slate-500 transition-transform duration-300 ${
-                        activeMobileDropdown === group.title ? "rotate-180 text-primary" : ""
-                      }`}
+                      className={`h-4 w-4 text-slate-500 transition-transform duration-300 ${activeMobileDropdown === group.title ? "rotate-180 text-primary" : ""
+                        }`}
                     />
                   </button>
-                  
+
                   <AnimatePresence>
                     {activeMobileDropdown === group.title && (
                       <motion.div
@@ -201,23 +208,25 @@ export default function Navbar() {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden flex flex-col gap-1 pt-1"
                       >
-                        {group.items.map((item) => (
+                        {group.items.map((item) => {
+                          const isActiveItem = pathname === item.href || (item.href !== '/' && pathname?.startsWith(item.href));
+                          return (
                           <Link
                             key={item.href}
                             href={item.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="flex items-center text-sm font-medium text-slate-600 py-2.5 px-3 rounded-lg hover:bg-primary/5 hover:text-primary transition-colors"
+                            className={`flex items-center text-sm font-medium py-2.5 px-3 rounded-lg hover:bg-primary/5 hover:text-primary transition-colors ${isActiveItem ? 'bg-primary/5 text-primary' : 'text-slate-600'}`}
                           >
-                            <ChevronRight className="h-3.5 w-3.5 mr-2 text-primary/50" />
+                            <ChevronRight className={`h-3.5 w-3.5 mr-2 ${isActiveItem ? 'text-primary' : 'text-primary/50'}`} />
                             {item.title}
                           </Link>
-                        ))}
+                        )})}
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
-              ))}
-              
+              )})}
+
               <div className="mt-6 px-2">
                 <Button
                   className="w-full h-11 rounded-lg text-sm font-bold bg-primary text-white shadow-lg shadow-primary/25"
