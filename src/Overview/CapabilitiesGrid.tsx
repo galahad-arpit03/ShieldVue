@@ -16,7 +16,7 @@ const capabilities = [
     description:
       "Automatically discover components and generate accurate Software Bills of Materials across source code, containers, binaries, packages, and CI/CD pipelines.",
     icon: FileCode2,
-    image: "/images/ChatGPT Image Jun 24, 2026, 11_53_05 AM.png",
+    image: "/images/ui_illustration_13.png",
     className: "md:col-span-1 md:row-span-2",
   },
   {
@@ -24,7 +24,7 @@ const capabilities = [
     description:
       "Maintain a centralized, version-controlled repository of SBOMs with complete traceability and lifecycle visibility.",
     icon: Database,
-    image: "/images/ChatGPT Image Jun 24, 2026, 12_35_27 PM.png",
+    image: "/images/ui_illustration_14.png",
     className: "md:col-span-2 md:row-span-1",
   },
   {
@@ -32,7 +32,7 @@ const capabilities = [
     description:
       "Continuously correlate software components with CVEs, threat intelligence, and risk context in real time.",
     icon: Radar,
-    image: "/images/ChatGPT Image Jun 24, 2026, 12_39_13 PM.png",
+    image: "/images/ui_illustration_15.png",
     className: "md:col-span-1 md:row-span-1",
   },
   {
@@ -40,7 +40,7 @@ const capabilities = [
     description:
       "Build a complete inventory of applications, dependencies, environments, and software assets across your organization.",
     icon: Boxes,
-    image: "/images/ChatGPT Image Jun 24, 2026, 12_41_39 PM.png",
+    image: "/images/ui_illustration_16.png",
     className: "md:col-span-1 md:row-span-1",
   },
   {
@@ -48,7 +48,7 @@ const capabilities = [
     description:
       "Apply compliance policies, licensing controls, and security standards consistently across the software lifecycle.",
     icon: ShieldCheck,
-    image: "/images/ChatGPT Image Jun 24, 2026, 12_43_58 PM.png",
+    image: "/images/ui_illustration_17.png",
     className: "md:col-span-2 md:row-span-1",
   },
   {
@@ -56,7 +56,7 @@ const capabilities = [
     description:
       "Deliver executive dashboards, compliance evidence, and audit-ready reporting from a single source of truth.",
     icon: FileText,
-    image: "/images/ChatGPT Image Jun 24, 2026, 12_46_29 PM.png",
+    image: "/images/ui_illustration_18.png",
     className: "md:col-span-1 md:row-span-1",
   },
 ];

@@ -92,7 +92,7 @@ export default function Workflow() {
           "
         >
           <Image
-            src="/images/ChatGPT Image Jun 22, 2026, 01_30_57 PM.png"
+            src="/images/ui_illustration_1.png"
             alt="ShieldVUE Compliance Governance Workflow"
             width={1600}
             height={900}

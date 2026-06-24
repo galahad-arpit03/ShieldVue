@@ -214,7 +214,7 @@ export default function AuditReporting() {
               "
             >
               <Image
-                src="/images/ChatGPT Image Jun 22, 2026, 01_36_14 PM.png"
+                src="/images/ui_illustration_2.png"
                 alt="ShieldVUE Compliance Dashboard"
                 width={1400}
                 height={900}
