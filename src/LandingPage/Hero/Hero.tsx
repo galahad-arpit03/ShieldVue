@@ -92,8 +92,8 @@ export default function Hero() {
                 </Link>
               </Button>
 
-              <Button size="lg" variant="outline" className="h-11 flex-1 sm:flex-none px-3 sm:px-6 rounded-md text-xs sm:text-sm font-medium border border-slate-200 text-slate-800 bg-white/50 backdrop-blur-md hover:bg-white/80 flex items-center justify-center gap-1 sm:gap-2 shadow-sm">
-                 <Link href="/overview" className="flex items-center gap-1 sm:gap-2">
+              <Button size="lg" variant="outline" className="h-11 px-6 rounded-md text-sm font-medium border border-slate-200 text-slate-800 bg-white/50 backdrop-blur-md hover:bg-white/80 flex items-center gap-2 shadow-sm">
+                 <Link href="/platform/overview">
                 Explore Platform
                 <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 </Link>

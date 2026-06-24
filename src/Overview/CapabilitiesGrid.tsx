@@ -8,85 +8,55 @@ import {
   Boxes,
   ShieldCheck,
   FileText,
-  CheckCircle2,
 } from "lucide-react";
 
 const capabilities = [
   {
     title: "SBOM Generation",
     description:
-      "Automatically generate standardized Software Bills of Materials across your entire software ecosystem.",
+      "Automatically discover components and generate accurate Software Bills of Materials across source code, containers, binaries, packages, and CI/CD pipelines.",
     icon: FileCode2,
-    features: [
-      "Source Code",
-      "Containers",
-      "Binaries",
-      "Packages",
-      "CI/CD Pipelines",
-    ],
+    image: "/images/ChatGPT Image Jun 24, 2026, 11_53_05 AM.png",
     className: "md:col-span-1 md:row-span-2",
   },
   {
     title: "SBOM Repository",
     description:
-      "Centralized storage and lifecycle management for all software bill of materials records.",
+      "Maintain a centralized, version-controlled repository of SBOMs with complete traceability and lifecycle visibility.",
     icon: Database,
-    features: [
-      "Centralized Storage",
-      "Version Management",
-      "Searchable Repository",
-      "Audit Ready Records",
-    ],
+    image: "/images/ChatGPT Image Jun 24, 2026, 12_35_27 PM.png",
     className: "md:col-span-2 md:row-span-1",
   },
   {
     title: "Vulnerability Mapping",
     description:
-      "Map vulnerabilities directly to software components with continuous monitoring.",
+      "Continuously correlate software components with CVEs, threat intelligence, and risk context in real time.",
     icon: Radar,
-    features: [
-      "CVE Mapping",
-      "Threat Intelligence",
-      "Risk Prioritization",
-    ],
+    image: "/images/ChatGPT Image Jun 24, 2026, 12_39_13 PM.png",
     className: "md:col-span-1 md:row-span-1",
   },
   {
     title: "Inventory Management",
     description:
-      "Maintain complete visibility into applications, environments, and software assets.",
+      "Build a complete inventory of applications, dependencies, environments, and software assets across your organization.",
     icon: Boxes,
-    features: [
-      "Application Inventory",
-      "Component Inventory",
-      "Asset Visibility",
-    ],
+    image: "/images/ChatGPT Image Jun 24, 2026, 12_41_39 PM.png",
     className: "md:col-span-1 md:row-span-1",
   },
   {
     title: "Governance & Policy Enforcement",
     description:
-      "Enforce security standards, licensing controls, and organizational governance policies.",
+      "Apply compliance policies, licensing controls, and security standards consistently across the software lifecycle.",
     icon: ShieldCheck,
-    features: [
-      "License Compliance",
-      "Policy Enforcement",
-      "Build Gate Controls",
-      "Risk Governance",
-    ],
+    image: "/images/ChatGPT Image Jun 24, 2026, 12_43_58 PM.png",
     className: "md:col-span-2 md:row-span-1",
   },
   {
     title: "Reporting & Analytics",
     description:
-      "Generate executive dashboards and audit-ready reports in real time.",
+      "Deliver executive dashboards, compliance evidence, and audit-ready reporting from a single source of truth.",
     icon: FileText,
-    features: [
-      "Executive Dashboards",
-      "Compliance Reports",
-      "Risk Reports",
-      "Audit Reports",
-    ],
+    image: "/images/ChatGPT Image Jun 24, 2026, 12_46_29 PM.png",
     className: "md:col-span-1 md:row-span-1",
   },
 ];
@@ -111,14 +81,10 @@ export default function CapabilitiesGrid() {
           absolute
           right-0
           top-0
-
           h-[600px]
           w-[600px]
-
           rounded-full
-
           bg-primary/5
-
           blur-[140px]
         "
       />
@@ -130,14 +96,10 @@ export default function CapabilitiesGrid() {
             className="
               text-2xl md:text-4xl
               md:text-5xl
-
               font-medium
-
               leading-[1.1]
               tracking-[-0.02em]
-
               text-slate-900
-
               font-['Clash_Grotesk']
             "
           >
@@ -147,10 +109,8 @@ export default function CapabilitiesGrid() {
           <p
             className="
               mt-6
-
               text-lg
               leading-8
-
               text-slate-600
             "
           >
@@ -206,143 +166,165 @@ export default function CapabilitiesGrid() {
                   transition-all
                   duration-300
 
-                  hover:border-primary/20
+                  hover:border-primary/30
                   hover:shadow-xl
 
                   ${capability.className}
                 `}
               >
-                {/* Glow */}
-                <div
-                  className="
-                    absolute
-                    right-0
-                    top-0
-
-                    h-64
-                    w-64
-
-                    rounded-full
-
-                    bg-primary/10
-
-                    blur-[100px]
-
-                    opacity-0
-
-                    transition-opacity
-                    duration-500
-
-                    group-hover:opacity-100
-                  "
-                />
-
-                {/* Gradient Background */}
-                <div
-                  className={`
-                    absolute
-                    inset-0
-
-                    ${
-                      isWide
-                        ? "bg-gradient-to-r from-white via-white to-primary/5"
-                        : "bg-gradient-to-b from-white to-primary/5"
-                    }
-                  `}
-                />
-
-                <div className="relative z-10 flex h-full flex-col p-8">
-                  {/* Icon */}
-                  <div
-                    className="
-                      flex
-                      h-14
-                      w-14
-                      items-center
-                      justify-center
-
-                      rounded-md
-
-                      bg-primary/10
-
-                      text-primary
-                    "
-                  >
-                    <Icon className="h-7 w-7" />
-                  </div>
-
-                  {/* Content */}
-                  <h3
-                    className="
-                      mt-6
-
-                      text-2xl
-                      font-medium
-
-                      text-slate-900
-                    "
-                  >
-                    {capability.title}
-                  </h3>
-
-                  <p
-                    className="
-                      mt-3
-
-                      text-sm
-                      leading-7
-
-                      text-slate-600
-                    "
-                  >
-                    {capability.description}
-                  </p>
-
-                  {/* Features */}
-                  <div
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                  <img
+                    src={capability.image}
+                    alt={capability.title}
                     className={`
-                      mt-6
+                      h-full
+                      w-full
 
-                      grid
-
-                      gap-2
-
-                      ${
-                        isWide
-                          ? "sm:grid-cols-2"
-                          : "grid-cols-1"
+                      ${isWide
+                        ? "object-cover object-right"
+                        : "object-cover object-center"
                       }
+
+                      opacity-95
+
+                      group-hover:scale-105
+
+                      transition-transform
+                      duration-700
                     `}
+                  />
+                </div>
+
+                {/* Wide Cards */}
+                {isWide ? (
+                  <div
+                    className="
+                      relative
+                      z-10
+
+                      h-full
+
+                      flex
+                      items-end
+
+                      p-8
+
+                      bg-gradient-to-r
+                      from-white
+                      via-white/92
+                      to-transparent
+                    "
                   >
-                    {capability.features.map((feature) => (
+                    <div className="max-w-md">
                       <div
-                        key={feature}
                         className="
                           flex
+                          h-12
+                          w-12
                           items-center
-                          gap-2
+                          justify-center
 
-                          text-sm
+                          rounded-xl
 
-                          text-slate-700
+                          bg-primary/10
+
+                          text-primary
+
+                          mb-4
                         "
                       >
-                        <CheckCircle2
-                          className="
-                            h-4
-                            w-4
-
-                            flex-shrink-0
-
-                            text-primary
-                          "
-                        />
-
-                        {feature}
+                        <Icon className="h-6 w-6" />
                       </div>
-                    ))}
+
+                      <h3
+                        className="
+                          text-2xl
+                          font-medium
+
+                          text-slate-900
+                        "
+                      >
+                        {capability.title}
+                      </h3>
+
+                      <p
+                        className="
+                          mt-3
+
+                          text-sm
+                          leading-7
+
+                          text-slate-600
+                        "
+                      >
+                        {capability.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div
+                    className="
+                      absolute
+                      inset-x-0
+                      bottom-0
+
+                      z-10
+
+                      p-6
+                      pt-24
+
+bg-gradient-to-t
+from-white
+via-white/60
+to-transparent
+                    "
+                  >
+                    <div
+                      className="
+                        flex
+                        h-12
+                        w-12
+                        items-center
+                        justify-center
+
+                        rounded-xl
+
+                        bg-primary/10
+
+                        text-primary
+
+                        mb-4
+                      "
+                    >
+                      <Icon className="h-6 w-6" />
+                    </div>
+
+                    <h3
+                      className="
+                        text-xl
+                        font-medium
+
+                        text-slate-900
+                      "
+                    >
+                      {capability.title}
+                    </h3>
+
+                    <p
+                      className="
+                        mt-2
+
+                        text-sm
+                        leading-6
+
+                        text-slate-600
+                      "
+                    >
+                      {capability.description}
+                    </p>
+                  </div>
+                )}
               </motion.div>
             );
           })}

@@ -15,13 +15,14 @@ export default function PlatformOverviewPage() {
       {/* <PlatformHighlights /> */}
       <PlatformDemo />
 
-      <CapabilitiesGrid />
+     
 
       {/* <CapabilitySection /> */}
 
       <Workflow />
 
       <BusinessOutcomes />
+       <CapabilitiesGrid />
 
       <CTA />
       <footer/>
