@@ -6,12 +6,14 @@ import { cn } from "@/Common/UI/Button/Button";
 
 export default function ProductScreenshots() {
   const tabs = [
-    "Dashboard",
-    "Repository",
-    "Vulnerability Mapping",
-    "Version Comparison",
-    "Reports",
-    "CBOM"
+    { name: "Dashboard", file: "dashboard_page.png" },
+    { name: "Drill Down", file: "drill_down_dashboard.png" },
+    { name: "AI Remediation", file: "ai_remediation.png" },
+    { name: "Manual Scheduler", file: "manual_scheduler.png" },
+    { name: "CBOM Dashboard", file: "cbom_dashboard.png" },
+    { name: "CBOM File Mapping", file: "cbom_file_mapping.png" },
+    { name: "CBOM IVs", file: "cbom_ivs.png" },
+    { name: "CBOM Reports", file: "cbom_reports.png" }
   ];
 
   const [activeTab, setActiveTab] = useState(tabs[0]);
@@ -32,16 +34,16 @@ export default function ProductScreenshots() {
         <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-12">
           {tabs.map((tab) => (
             <button
-              key={tab}
+              key={tab.name}
               onClick={() => setActiveTab(tab)}
               className={cn(
                 "px-5 py-2.5 rounded-md text-sm font-semibold transition-all duration-300",
-                activeTab === tab
+                activeTab.name === tab.name
                   ? "bg-primary text-white shadow-md"
                   : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
               )}
             >
-              {tab}
+              {tab.name}
             </button>
           ))}
         </div>
@@ -57,16 +59,18 @@ export default function ProductScreenshots() {
                 <div className="w-3 h-3 rounded-md bg-red-400" />
                 <div className="w-3 h-3 rounded-md bg-amber-400" />
                 <div className="w-3 h-3 rounded-md bg-green-400" />
-                <div className="ml-4 text-xs font-medium text-slate-400">ShieldVUE Enterprise • {activeTab}</div>
+                <div className="ml-4 text-xs font-medium text-slate-400">ShieldVUE Enterprise • {activeTab.name}</div>
               </div>
               
               {/* Image */}
-              <div className="relative aspect-[16/10] w-full bg-slate-100">
+              <div className="relative w-full bg-slate-100/50 p-2 sm:p-4">
                 <Image
-                  src="/landing/hero_dashboard_mockup.png"
-                  alt={`ShieldVUE ${activeTab} Interface`}
-                  fill
-                  className="object-cover object-top"
+                  src={`/sbomb/${activeTab.file}`}
+                  alt={`ShieldVUE ${activeTab.name} Interface`}
+                  width={1600}
+                  height={900}
+                  sizes="100vw"
+                  className="w-full h-auto object-contain rounded-md shadow-sm border border-slate-200/60"
                   priority
                 />
               </div>
