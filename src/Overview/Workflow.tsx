@@ -15,45 +15,45 @@ import {
 const workflowSteps = [
   {
     icon: Code2,
-    title: "Configure Application",
+    title: "Configure\nApplication",
     description:
-      "Set up applications, repositories, agents, or scan targets for software analysis.",
+      "Configure repositories, agents, and scan targets for software analysis.",
   },
   {
     icon: Boxes,
-    title: "Generate SBOM",
+    title: "Generate \n SBOM",
     description:
-      "Create a comprehensive inventory of software components and dependencies.",
+      "Generate a complete inventory of software components and dependencies.",
   },
   {
     icon: Database,
-    title: "Manage Software Inventory",
+    title: "Manage Software\nInventory",
     description:
-      "Store, organize, version, and maintain software inventories in a centralized repository.",
+      "Store, organize, and version software inventories in one repository.",
   },
   {
     icon: Radar,
-    title: "Identify Vulnerabilities",
+    title: "Identify\nVulnerabilities",
     description:
-      "Correlate software components with CVEs, security advisories, and threat intelligence.",
+      "Map components to CVEs, security advisories, and threat intelligence.",
   },
   {
     icon: GitBranch,
-    title: "Analyze Software Composition",
+    title: "Analyze Software\nComposition",
     description:
-      "Review dependencies, inventory records, licenses, and version changes.",
+      "Review dependencies, licenses, inventory records, and version changes.",
   },
   {
     icon: FileText,
-    title: "Generate Reports",
+    title: "Generate\nReports",
     description:
-      "Produce executive dashboards, compliance evidence, and audit-ready reports.",
+      "Create executive dashboards, compliance evidence, and audit reports.",
   },
   {
     icon: ShieldCheck,
-    title: "Strengthen Governance",
+    title: "Strengthen\nGovernance",
     description:
-      "Improve software supply chain visibility, risk management, and compliance readiness.",
+      "Improve software visibility, risk management, and compliance readiness.",
   },
 ];
 
@@ -221,11 +221,15 @@ export default function Workflow() {
                     <h3
                       className="
                         mt-3
-
                         text-lg
                         font-semibold
-
                         text-slate-900
+                        leading-snug
+                        h-16
+                        flex
+                        items-center
+                        justify-center
+                        text-center
                       "
                     >
                       {step.title}
