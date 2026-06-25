@@ -232,7 +232,7 @@ export default function CTA() {
                   shadow-lg
                 "
               >
-                <Link href="/book-demo">
+                <Link href="/contact-us">
                   Book Demo
                 </Link>
               </Button>

@@ -98,7 +98,7 @@ export default function CTA() {
               <Button
                 asChild
                 size="lg"
-                className="
+                className="whitespace-nowrap flex justify-center items-center gap-2 flex-1 sm:flex-none 
                   h-11
                   px-8
                   rounded-md
@@ -109,7 +109,7 @@ export default function CTA() {
                   hover:bg-primary/90
                 "
               >
-                <Link href="/book-demo">
+                <Link href="/contact-us">
                   Book A Demo
                 </Link>
               </Button>

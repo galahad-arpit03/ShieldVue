@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Zap, Lock, DollarSign, Sliders } from "lucide-react";
+import { ChevronDown, Zap, Lock, DollarSign, Sliders, Calendar } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
 
 const categories = [
   { id: "getting-started", title: "Getting Started", icon: Zap, articleCount: 5 },
   { id: "security", title: "Security", icon: Lock, articleCount: 8 },
+  { id: "demo", title: "Book a Demo", icon: Calendar, articleCount: 5 },
   { id: "pricing", title: "Pricing & Billing", icon: DollarSign, articleCount: 6 },
   { id: "integrations", title: "Integrations", icon: Sliders, articleCount: 12 },
 ];
@@ -71,6 +72,28 @@ const faqsByCategory: Record<string, { question: string; answer: string }[]> = {
     {
       question: "Is there an API available?",
       answer: "Yes, all enterprise plans include access to our robust REST API for custom automation and reporting."
+    }
+  ],
+  "demo": [
+    {
+      question: "How long does a typical demo take?",
+      answer: "Most ShieldVUE demos take between 30 and 45 minutes, including a live platform walkthrough and a Q&A session with our experts."
+    },
+    {
+      question: "Who should attend the demo from our side?",
+      answer: "We recommend including stakeholders from your security, compliance, and engineering teams to ensure all perspectives are covered during the session."
+    },
+    {
+      question: "What happens after I book a demo?",
+      answer: "You will receive a calendar invitation with a meeting link. One of our pre-sales engineers or sales representatives will also reach out to understand your specific requirements beforehand."
+    },
+    {
+      question: "How do I reschedule or cancel my demo?",
+      answer: "You can easily reschedule or cancel using the links provided in your calendar invitation, or by directly replying to the confirmation email."
+    },
+    {
+      question: "Is there any commitment or cost after the demo?",
+      answer: "No. The demo is completely free of charge, obligation-free, and designed to help you evaluate whether ShieldVUE aligns with your security and compliance goals."
     }
   ]
 };

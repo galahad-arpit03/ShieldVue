@@ -70,7 +70,7 @@ export default function ComplianceHero() {
 
             <motion.div variants={itemVariants} className="mt-10 flex flex-row gap-3">
               <Button asChild size="lg" className="h-11 flex-1 sm:flex-none px-3 sm:px-6 rounded-md text-xs sm:text-sm font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 border-0">
-                <Link href="/book-demo">Automate Compliance</Link>
+                <Link href="/contact-us">Automate Compliance</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="h-11 flex-1 sm:flex-none px-3 sm:px-6 rounded-md text-xs sm:text-sm font-medium border border-slate-200 text-slate-800 bg-white/50 backdrop-blur-md hover:bg-white/80 flex items-center justify-center gap-1 sm:gap-2 shadow-sm">
                 <Link href="#features">

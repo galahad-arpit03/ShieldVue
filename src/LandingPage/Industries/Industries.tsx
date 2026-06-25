@@ -55,7 +55,7 @@ export default function Industries() {
                   <Landmark className="w-5 h-5" />
                 </div> */}
                 <h3 className="text-xl font-medium text-slate-900 mb-2 group-hover:text-[#7755BE] transition-colors">
-                  Banking & Finance
+                  BFSI
                 </h3>
                 <p className="text-slate-800 font-light leading-relaxed text-sm mb-2">
                   Meet strict OCC guidelines and secure automated financial software pipelines.

@@ -23,7 +23,7 @@ export default function SupplyChainCTA() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-md font-semibold px-8 h-12 shadow-lg shadow-primary/20">
-                <Link href="/book-demo">Book Demo</Link>
+                <Link href="/contact-us">Book Demo</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white border-slate-200 text-slate-700 hover:bg-slate-50 rounded-md font-medium px-8 h-12 flex items-center gap-2 shadow-sm">
                 <Link href="/contact">

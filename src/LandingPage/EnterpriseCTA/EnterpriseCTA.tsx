@@ -29,7 +29,7 @@ export default function EnterpriseCTA() {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="h-11 px-6 rounded-md text-sm font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg">
-                <Link href="/book-demo">
+                <Link href="/contact-us">
                   Book Demo
                 </Link>
               </Button>

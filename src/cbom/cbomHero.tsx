@@ -162,7 +162,7 @@ export default function CBOMHero() {
                 border-0
               "
             >
-              <Link href="/book-demo">
+              <Link href="/contact-us">
                 Request Demo
               </Link>
             </Button>

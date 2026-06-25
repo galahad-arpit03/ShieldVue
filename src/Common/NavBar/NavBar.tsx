@@ -136,8 +136,8 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-4">
-          <Button
-            className="
+          <Button asChild
+            className="whitespace-nowrap flex justify-center items-center gap-2 flex-1 sm:flex-none 
               h-10
               px-5
               rounded-md
@@ -150,8 +150,8 @@ export default function Navbar() {
               shadow-sm
             "
           >
-            <Link href="/book-demo">
-              Book A Demo
+            <Link href="/contact-us">
+              Contact Us
             </Link>
           </Button>
         </div>
@@ -232,8 +232,8 @@ export default function Navbar() {
                   className="w-full h-11 rounded-lg text-sm font-bold bg-primary text-white shadow-lg shadow-primary/25"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Link href="/book-demo" className="w-full text-center flex items-center justify-center">
-                    Book A Demo
+                  <Link href="/contact-us" className="w-full text-center flex items-center justify-center">
+                    Contact Us
                   </Link>
                 </Button>
               </div>

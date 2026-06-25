@@ -39,7 +39,7 @@ export default function NotFound() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="bg-white border-slate-200 text-slate-700 hover:bg-slate-50 font-medium">
-              <Link href="/book-demo">
+              <Link href="/contact-us">
                 Book a Demo
               </Link>
             </Button>

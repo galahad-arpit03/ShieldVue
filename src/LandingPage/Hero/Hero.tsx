@@ -76,9 +76,8 @@ export default function Hero() {
               <span className="text-primary font-medium md:whitespace-nowrap">Supply Chain.</span>
             </motion.h1>
 
-            <motion.p variants={itemVariants} className="mt-6 text-lg sm:text-xl leading-8 text-slate-600">
-              Gain complete visibility into software components, vulnerabilities,
-              cryptographic assets, and compliance risks before they become business problems.
+            <motion.p variants={itemVariants} className="mt-6 text-lg sm:text-lg leading-8 text-slate-600">
+              Gain complete visibility into software components, vulnerabilities, cryptographic assets, and compliance risks through a unified Software Bill of Materials (SBOM) and Cybersecurity Governance Platform.
             </motion.p>
 
             <motion.div variants={itemVariants} className="mt-10 flex flex-row gap-3">
@@ -87,13 +86,13 @@ export default function Hero() {
                 size="lg"
                 className="h-11 flex-1 sm:flex-none px-3 sm:px-6 rounded-md text-xs sm:text-sm font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 border-0"
               >
-                <Link href="/book-demo">
+                <Link href="/contact-us">
                   Book Demo
                 </Link>
               </Button>
 
-              <Button size="lg" variant="outline" className="h-11 px-6 rounded-md text-sm font-medium border border-slate-200 text-slate-800 bg-white/50 backdrop-blur-md hover:bg-white/80 flex items-center gap-2 shadow-sm">
-                 <Link href="/platform/overview">
+              <Button asChild size="lg" variant="outline" className="whitespace-nowrap flex justify-center items-center gap-2 flex-1 sm:flex-none h-11 px-6 rounded-md text-sm font-medium border border-slate-200 text-slate-800 bg-white/50 backdrop-blur-md hover:bg-white/80 flex items-center gap-2 shadow-sm">
+                 <Link href="/platform/overview" >
                 Explore Platform
                 <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 </Link>

@@ -1,33 +1,45 @@
 "use client";
 
-import { EyeOff, ShieldAlert, FileSearch, Scale, Clock, Gavel } from "lucide-react";
+import { Eye, ShieldAlert, Key, Scale, FileCheck, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function TheProblem() {
   const problems = [
     {
-      icon: <EyeOff className="w-7 h-7 text-primary" />,
+      icon: <Eye className="w-7 h-7 text-primary" />,
       bgClass: "bg-primary/10",
-      title: "Limited Supply Chain Visibility",
-      description: "Organizations often lack visibility into components used across applications, creating significant blind spots."
+      title: "Complete Software Transparency",
+      description: "Gain comprehensive, real-time visibility into every proprietary and third-party component utilized across your entire application ecosystem."
     },
     {
       icon: <ShieldAlert className="w-7 h-7 text-primary" />,
       bgClass: "bg-primary/10",
-      title: "Rising Open Source Vulnerabilities",
-      description: "New CVEs emerge daily in third-party libraries, exponentially increasing attack surfaces."
+      title: "Continuous Vulnerability Intelligence",
+      description: "Stay proactively informed about emerging CVEs, zero-day threats, and critical vulnerabilities affecting your exact technology stack."
+    },
+    {
+      icon: <Key className="w-7 h-7 text-primary" />,
+      bgClass: "bg-primary/10",
+      title: "Cryptographic Governance",
+      description: "Continuously monitor and enforce standards for encryption algorithms, keys, certificates, and cryptographic libraries."
     },
     {
       icon: <Scale className="w-7 h-7 text-primary" />,
       bgClass: "bg-primary/10",
-      title: "Compliance Complexity",
-      description: "Meeting regulatory mandates and rigorous customer security requirements is becoming increasingly difficult."
+      title: "Automated Compliance",
+      description: "Seamlessly meet complex regulatory mandates, industry frameworks, and continuous audit requirements with automated reporting."
     },
     {
-      icon: <FileSearch className="w-7 h-7 text-primary" />,
+      icon: <FileCheck className="w-7 h-7 text-primary" />,
       bgClass: "bg-primary/10",
-      title: "Manual Tracking Challenges",
-      description: "Spreadsheet-based component tracking is highly inaccurate, error-prone, and not scalable."
+      title: "Policy Enforcement",
+      description: "Apply strict security governance and automated enforcement controls seamlessly throughout your continuous integration and deployment pipelines."
+    },
+    {
+      icon: <Globe className="w-7 h-7 text-primary" />,
+      bgClass: "bg-primary/10",
+      title: "Enterprise Scalability",
+      description: "Effortlessly manage, secure, and scale application portfolios across distributed multi-cloud environments and disparate business units."
     }
   ];
 
@@ -49,25 +61,27 @@ export default function TheProblem() {
   };
 
   return (
-    <section className="bg-white pt-28 md:pt-40 pb-12 md:pb-24 lg:pt-56 lg:pb-32 relative">
+    <section className="bg-white pt-40 pb-24 lg:pt-56 lg:pb-32 relative">
       <div className="shield-container relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Column: Sticky Header */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32 self-start">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-5xl font-medium text-slate-900 tracking-[-0.46px] leading-[1.1] font-['Clash_Grotesk']">
-                Why <br className="hidden lg:block" />Organizations <br className="hidden lg:block" /> Need <br className="hidden lg:block" /> <span className="text-primary">ShieldVUE.</span>
-              </h2>
-              <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-lg">
-                Modern applications rely heavily on open-source and third-party software components, creating complex security, compliance, and visibility challenges.
-              </p>
-            </motion.div>
+          <div className="lg:col-span-5 relative">
+            <div className="lg:sticky lg:top-32">
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-3xl md:text-5xl font-medium text-slate-900 tracking-[-0.46px] leading-[1.1] font-['Clash_Grotesk']">
+                  Why <br className="hidden lg:block" />Organizations <br className="hidden lg:block" /> Need <br className="hidden lg:block" /> <span className="text-primary">ShieldVUE.</span>
+                </h2>
+                <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-lg">
+                  Modern applications rely heavily on open-source and third-party software components, creating complex security, compliance, and visibility challenges.
+                </p>
+              </motion.div>
+            </div>
           </div>
 
           {/* Right Column: Stacked Problem Cards */}
