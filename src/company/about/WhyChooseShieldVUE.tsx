@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, m } from "framer-motion";
 import {
   Eye,
   Activity,
@@ -152,7 +152,7 @@ export default function WhyChooseShieldVUE() {
             const Icon = reason.icon;
 
             return (
-              <motion.div
+              <m.div
                 key={reason.title}
                 initial={{
                   opacity: 0,
@@ -270,13 +270,13 @@ export default function WhyChooseShieldVUE() {
                     {reason.description}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>
 
         {/* Bottom Statement */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -339,7 +339,7 @@ export default function WhyChooseShieldVUE() {
             ShieldVUE brings every critical capability together into a
             unified enterprise platform.
           </p>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

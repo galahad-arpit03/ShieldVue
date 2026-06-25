@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion , m} from "framer-motion";
 import Image from "next/image";
 import {
   ShieldCheck,
@@ -52,7 +52,7 @@ export default function AboutShieldVUE() {
       <div className="shield-container relative z-10">
         <div className="grid items-center gap-20 lg:grid-cols-2">
           {/* Left Side */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: -40,
@@ -96,10 +96,10 @@ export default function AboutShieldVUE() {
                 priority
               />
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Right Side */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: 40,
@@ -243,7 +243,7 @@ export default function AboutShieldVUE() {
                 );
               })}
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

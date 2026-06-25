@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion , m} from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
@@ -52,7 +52,7 @@ export default function AboutHero() {
       <div className="shield-container relative z-10">
         <div className="max-w-4xl">
           {/* Breadcrumb */}
-          {/* <motion.div
+          {/* <m.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -78,10 +78,10 @@ export default function AboutHero() {
             "
           >
             Company
-          </motion.div> */}
+          </m.div> */}
 
           {/* Heading */}
-          <motion.h1
+          <m.h1
             initial={{
               opacity: 0,
               y: 30,
@@ -120,10 +120,10 @@ export default function AboutHero() {
             <span className="text-primary">
               {" "}Supply Chains
             </span>
-          </motion.h1>
+          </m.h1>
 
           {/* Description */}
-          <motion.p
+          <m.p
             initial={{
               opacity: 0,
               y: 20,
@@ -151,10 +151,10 @@ export default function AboutHero() {
             into software components, vulnerabilities, cryptographic
             assets, and compliance posture through a unified software
             supply chain security platform.
-          </motion.p>
+          </m.p>
 
           {/* CTA */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               y: 20,
@@ -227,10 +227,10 @@ export default function AboutHero() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-          </motion.div>
+          </m.div>
 
           {/* Stats */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               y: 20,
@@ -296,7 +296,7 @@ export default function AboutHero() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

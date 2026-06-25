@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion , m} from "framer-motion";
 import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 
@@ -128,7 +128,7 @@ export default function LeadershipGrid() {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {leaders.map((leader, index) => (
-            <motion.div
+            <m.div
               key={leader.role}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -277,7 +277,7 @@ export default function LeadershipGrid() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

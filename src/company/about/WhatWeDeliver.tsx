@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion , m} from "framer-motion";
 import {
   FileCode2,
   Shield,
@@ -134,7 +134,7 @@ export default function WhatWeDeliver() {
             const Icon = item.icon;
 
             return (
-              <motion.div
+              <m.div
                 key={item.title}
                 initial={{
                   opacity: 0,
@@ -282,7 +282,7 @@ export default function WhatWeDeliver() {
                     />
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>
