@@ -120,7 +120,7 @@ export default function Workflow() {
   "
                     >
                         <Image
-                            src="/images/sbom-workflow.png"
+                            src="/images/sbom-workflow2.png"
                             alt="ShieldVUE SBOM Workflow"
                             width={1600}
                             height={900}

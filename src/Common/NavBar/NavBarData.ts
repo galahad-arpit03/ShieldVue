@@ -52,17 +52,22 @@ export const navigation = [
         title: "Blogs",
         href: "/resources/blogs",
       },
-      // {
-      //   title: "Whitepapers",
-      //   href: "/resources/whitepapers",
-      // },
-      // {
-      //   title: "Case Studies",
-      //   href: "/resources/case-studies",
-      // },
       {
         title: "FAQs",
         href: "/resources/faqs",
+      },
+    ],
+  },
+  {
+    title: "Company",
+    items: [
+      {
+        title: "About",
+        href: "/company/about",
+      },
+      {
+        title: "Leadership",
+        href: "/company/leadership",
       },
     ],
   },

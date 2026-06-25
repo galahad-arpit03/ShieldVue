@@ -9,43 +9,51 @@ import {
   ShieldCheck,
   FileText,
   ArrowRight,
+  GitBranch,
 } from "lucide-react";
 
 const workflowSteps = [
   {
     icon: Code2,
-    title: "Connect Repositories",
-    description: "Git Repositories, Registries & Build Pipelines",
+    title: "Configure Application",
+    description:
+      "Set up applications, repositories, agents, or scan targets for software analysis.",
   },
   {
     icon: Boxes,
-    title: "Discover Components",
-    description: "Identify Packages, Dependencies & Assets",
+    title: "Generate SBOM",
+    description:
+      "Create a comprehensive inventory of software components and dependencies.",
   },
   {
     icon: Database,
-    title: "Generate SBOM & CBOM",
-    description: "Create Complete Software & Crypto Inventories",
+    title: "Manage Software Inventory",
+    description:
+      "Store, organize, version, and maintain software inventories in a centralized repository.",
   },
   {
     icon: Radar,
     title: "Identify Vulnerabilities",
-    description: "CVE Correlation & Threat Intelligence",
+    description:
+      "Correlate software components with CVEs, security advisories, and threat intelligence.",
   },
   {
-    icon: ShieldCheck,
-    title: "Apply Policies",
-    description: "Governance, Compliance & Security Controls",
+    icon: GitBranch,
+    title: "Analyze Software Composition",
+    description:
+      "Review dependencies, inventory records, licenses, and version changes.",
   },
   {
     icon: FileText,
     title: "Generate Reports",
-    description: "Audit Evidence, Dashboards & Analytics",
+    description:
+      "Produce executive dashboards, compliance evidence, and audit-ready reports.",
   },
   {
-    icon: Radar,
-    title: "Continuous Monitoring",
-    description: "Track Changes, Risks & New Threats",
+    icon: ShieldCheck,
+    title: "Strengthen Governance",
+    description:
+      "Improve software supply chain visibility, risk management, and compliance readiness.",
   },
 ];
 
