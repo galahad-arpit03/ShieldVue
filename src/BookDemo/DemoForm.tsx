@@ -7,7 +7,14 @@ import {
   Clock3,
   Users,
   CheckCircle,
-  MessageSquare
+  MessageSquare,
+  Mail,
+  Send,
+  Shield,
+  Clock,
+  Headphones,
+  MapPin,
+  Phone
 } from "lucide-react";
 
 export default function DemoForm() {
@@ -27,73 +34,67 @@ export default function DemoForm() {
   return (
     <section
       id="demo-form"
-      className="relative overflow-hidden bg-slate-50 py-10 md:py-16 md:py-32"
+      className="relative overflow-hidden bg-slate-100 py-12 md:py-20"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,#6843b7_1px,transparent_1px)] bg-[length:36px_36px]" />
-
-      {/* Vibrant Background Orbs for Glassmorphism */}
-      {/* <div className="absolute left-[5%] top-[10%] h-[500px] w-[500px] rounded-full bg-primary/20 blur-[100px]" /> */}
-      {/* <div className="absolute right-[5%] top-[40%] h-[600px] w-[600px] rounded-full bg-purple-500/15 blur-[120px]" /> */}
-      {/* <div className="absolute left-[40%] bottom-[-10%] h-[400px] w-[400px] rounded-full bg-indigo-500/15 blur-[100px]" /> */}
-
       <div className="shield-container relative z-10">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          {/* LEFT SIDE */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:sticky lg:top-6 h-fit"
-          >
-            <h2 className="mt-8 text-2xl md:text-4xl md:text-5xl font-medium tracking-[-0.46px] leading-[1.1] text-slate-900 font-['Clash_Grotesk']">
-              See <span className="text-primary">ShieldVUE</span>
-              <br />
-              In Action
-            </h2>
+        <div className="w-full flex flex-col lg:flex-row bg-white rounded-2xl shadow-2xl overflow-hidden relative">
+          
+          {/* LEFT SIDE (Purple Background) */}
+          <div className="lg:w-[45%] bg-primary p-8 lg:p-10 text-white relative flex flex-col justify-between">
+            {/* Abstract Background Elements inside Purple */}
+            <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_center,#ffffff_1px,transparent_1px)] bg-[length:24px_24px]" />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent opacity-60" />
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-5xl text-white font-medium tracking-tight leading-tight font-['Clash_Grotesk'] mb-4">
+                See ShieldVUE <br />
+                In Action
+              </h2>
 
-            <p className="mt-6 text-lg leading-relaxed text-slate-600 lg:max-w-[85%]">
-              Discover how leading enterprises gain complete visibility into
-              software components, vulnerabilities, cryptographic assets and
-              compliance posture.
-            </p>
+              <p className="text-white/80 leading-relaxed mb-8 lg:max-w-[90%] text-lg">
+                Discover how leading enterprises gain complete visibility into software components, vulnerabilities, cryptographic assets and compliance posture.
+              </p>
 
-            <div className="mt-8 lg:max-w-[85%]">
-              <div className="relative overflow-hidden border border-primary/30 bg-white/20 backdrop-blur-2xl rounded-lg p-8 shadow-[0_8px_32px_0_rgba(104,67,183,0.1)]">
-                {/* Internal highlight for premium glass feel */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-50 pointer-events-none" />
-                <div className="relative z-10">
-                  <h4 className="font-bold text-slate-900 text-lg mb-6">Contact Information</h4>
+              <div className="space-y-4">
+                <div className="bg-white/10 p-5 rounded-2xl border border-white/20 backdrop-blur-md shadow-lg shadow-black/10">
+                  <h4 className="font-bold text-white text-lg mb-4">Contact Information</h4>
 
                   <div className="space-y-4">
                     <div>
-                      <h5 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Corporate Office</h5>
-                      <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                      <h5 className="text-[10px] font-bold text-white/70 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5" /> Corporate Office
+                      </h5>
+                      <p className="text-sm text-white font-medium leading-relaxed">
                         Apmosys Technologies,<br />
                         Mahape, Navi Mumbai
                       </p>
                     </div>
 
                     <div>
-                      <h5 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Email Addresses</h5>
-                      <p className="text-sm">
-                        <a href="mailto:sales@apmosys.com" className="text-primary font-medium hover:underline">sales@apmosys.com</a>
-                        <span className="text-slate-400 mx-2">|</span>
-                        <a href="mailto:presales@apmosys.com" className="text-primary font-medium hover:underline">presales@apmosys.com</a>
+                      <h5 className="text-[10px] font-bold text-white/70 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <Mail className="w-3.5 h-3.5" /> Email Addresses
+                      </h5>
+                      <p className="text-sm text-white font-medium">
+                        sales@apmosys.com
+                        <span className="text-white/30 mx-2">|</span>
+                        presales@apmosys.com
                       </p>
                     </div>
 
                     <div>
-                      <h5 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Pre-Sales Phone</h5>
-                      <p className="text-sm text-slate-900 font-medium">
+                      <h5 className="text-[10px] font-bold text-white/70 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <Phone className="w-3.5 h-3.5" /> Pre-Sales Phone
+                      </h5>
+                      <p className="text-sm text-white font-medium">
                         +91 89768 19122
                       </p>
                     </div>
 
                     <div>
-                      <h5 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Support Phone</h5>
-                      <p className="text-sm text-slate-900 font-medium">
+                      <h5 className="text-[10px] font-bold text-white/70 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <Headphones className="w-3.5 h-3.5" /> Support Phone
+                      </h5>
+                      <p className="text-sm text-white font-medium">
                         +91-22-4122 2250 / 2251
                       </p>
                     </div>
@@ -101,23 +102,22 @@ export default function DemoForm() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          {/* FORM CARD */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative overflow-hidden bg-white/20 backdrop-blur-2xl border border-primary/30 p-8 md:p-12 rounded-lg lg:w-[115%] lg:-ml-[15%]"
+          {/* FORM CARD (White with rounded left corners overlapping purple) */}
+          <div
+            className="lg:w-[55%] bg-white lg:rounded-l-2xl p-6 lg:p-10 relative z-10 shadow-[-15px_0_40px_rgba(0,0,0,0.15)] flex flex-col justify-center"
           >
-            {/* Internal highlight for premium glass feel */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-50 pointer-events-none" />
             <div className="relative z-10">
               <div className="transition-all duration-300">
-                <div className="flex items-center gap-3 mb-8">
-                  {/* <div className="w-8 h-8 rounded bg-primary/10 text-primary flex items-center justify-center font-bold">1</div> */}
-                  <h3 className="text-xl font-bold text-slate-900">Send Us A Message</h3>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">Send Us A Message</h3>
+                    <p className="text-sm text-slate-500 mt-1">Fill in the details below and our team will get back to you.</p>
+                  </div>
                 </div>
 
                 {isSubmitted ? (
@@ -149,7 +149,7 @@ export default function DemoForm() {
                   </motion.div>
                 ) : (
                   <form
-                    className="space-y-4"
+                    className="space-y-3"
                     onSubmit={async (e) => {
                       e.preventDefault();
                       setIsSubmitting(true);
@@ -178,94 +178,139 @@ export default function DemoForm() {
                   >
                     <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Name</label>
+                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Name <span className="text-red-500">*</span></label>
                         <input
                           required
+                          placeholder="Enter your name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
+                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
                         />
                       </div>
                       <div>
-                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Company</label>
+                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Company <span className="text-red-500">*</span></label>
                         <input
                           required
+                          placeholder="Enter your company name"
                           value={formData.company}
                           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
+                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
                         />
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Designation</label>
+                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Designation <span className="text-red-500">*</span></label>
                         <input
                           required
+                          placeholder="Enter your designation"
                           value={formData.designation}
                           onChange={(e) => setFormData({ ...formData, designation: e.target.value })}
-                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
+                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
                         />
                       </div>
                       <div>
-                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Industry</label>
-                        <input
+                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Industry <span className="text-red-500">*</span></label>
+                        <select
                           required
                           value={formData.industry}
                           onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
-                        />
+                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all text-slate-700"
+                        >
+                          <option value="" disabled hidden>Select your industry</option>
+                          <option value="Technology">Technology</option>
+                          <option value="Finance">Finance</option>
+                          <option value="Healthcare">Healthcare</option>
+                          <option value="Retail">Retail</option>
+                          <option value="Manufacturing">Manufacturing</option>
+                          <option value="Other">Other</option>
+                        </select>
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Work Email</label>
+                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Work Email <span className="text-red-500">*</span></label>
                         <input
                           type="email"
                           required
+                          placeholder="Enter your work email"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
+                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
                         />
                       </div>
                       <div>
-                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Phone</label>
+                        <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Phone <span className="text-red-500">*</span></label>
                         <input
                           type="tel"
                           required
+                          placeholder="Enter your phone number"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
+                          className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all placeholder:text-slate-400"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Message</label>
+                      <label className="block text-[10px] font-bold text-slate-500 tracking-wider mb-2 uppercase">Message <span className="text-red-500">*</span></label>
                       <textarea
                         required
-                        rows={4}
+                        rows={2}
+                        placeholder="Tell us how we can help you..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all resize-none placeholder:text-slate-400"
+                        className="w-full bg-white/40 backdrop-blur-sm text-sm border border-primary/20 rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/60 transition-all resize-none placeholder:text-slate-400"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full mt-4 bg-primary text-white rounded-md py-4 font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full mt-4 flex items-center justify-center gap-2 bg-primary text-white rounded-md py-3 font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
+                      <Send className="w-5 h-5" />
                       {isSubmitting ? "Sending..." : "Submit Request"}
                     </button>
+
+                    <div className="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/10 grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="flex items-center gap-4 md:border-r border-primary/10 pb-4 md:pb-0 md:pr-4">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                          <Clock className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h5 className="text-xs font-bold text-slate-900 mb-1">Quick Response</h5>
+                          <p className="text-[11px] text-slate-500 leading-snug">We typically reply within 24 hours</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4 md:border-r border-primary/10 pb-4 md:pb-0 md:px-2">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                          <Shield className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h5 className="text-xs font-bold text-slate-900 mb-1">Secure & Private</h5>
+                          <p className="text-[11px] text-slate-500 leading-snug">Your information is safe with us</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4 md:pl-2">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                          <Headphones className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h5 className="text-xs font-bold text-slate-900 mb-1">Expert Support</h5>
+                          <p className="text-[11px] text-slate-500 leading-snug">Our experts are here to help</p>
+                        </div>
+                      </div>
+                    </div>
                   </form>
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
