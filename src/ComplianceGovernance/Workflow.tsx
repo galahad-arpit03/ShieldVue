@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 
 export default function Workflow() {
@@ -61,7 +61,7 @@ export default function Workflow() {
         </div>
 
         {/* Workflow Image */}
-        <motion.div
+        <m.div
           initial={{
             opacity: 0,
             y: 40,
@@ -103,7 +103,7 @@ export default function Workflow() {
               object-contain
             "
           />
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

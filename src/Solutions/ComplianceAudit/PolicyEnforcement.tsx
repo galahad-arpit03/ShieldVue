@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { GitPullRequest, XCircle, Search } from "lucide-react";
 
 export default function PolicyEnforcement() {
@@ -9,7 +9,7 @@ export default function PolicyEnforcement() {
       <div className="shield-container">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -20,9 +20,9 @@ export default function PolicyEnforcement() {
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
               Automatically block non-compliant code, missing SBOMs, or unauthorized licenses from progressing through your CI/CD pipelines. Security shouldn't be an afterthought.
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -36,7 +36,7 @@ export default function PolicyEnforcement() {
                <div className="absolute left-[23px] top-4 bottom-12 w-0.5 bg-slate-800" />
 
                {/* Step 1 */}
-               <motion.div 
+               <m.div 
                  initial={{ opacity: 0, x: -10 }}
                  whileInView={{ opacity: 1, x: 0 }}
                  transition={{ delay: 0.2 }}
@@ -49,10 +49,10 @@ export default function PolicyEnforcement() {
                    <span className="text-slate-300 font-medium tracking-wide text-xs md:text-sm">git push origin main</span>
                    <span className="text-slate-500 text-xs">00:00s</span>
                  </div>
-               </motion.div>
+               </m.div>
 
                {/* Step 2 */}
-               <motion.div 
+               <m.div 
                  initial={{ opacity: 0, x: -10 }}
                  whileInView={{ opacity: 1, x: 0 }}
                  transition={{ delay: 0.6 }}
@@ -68,7 +68,7 @@ export default function PolicyEnforcement() {
                      <span className="text-primary/80 text-xs flex items-center gap-1"><Search className="w-3 h-3" /> Running</span>
                    </div>
                    <div className="w-full bg-black/50 h-1.5 rounded-md overflow-hidden">
-                     <motion.div 
+                     <m.div 
                        initial={{ width: "0%" }}
                        whileInView={{ width: "100%" }}
                        transition={{ duration: 2, delay: 0.6 }}
@@ -76,10 +76,10 @@ export default function PolicyEnforcement() {
                      />
                    </div>
                  </div>
-               </motion.div>
+               </m.div>
 
                {/* Step 3 (Blocked) */}
-               <motion.div 
+               <m.div 
                  initial={{ opacity: 0, x: -10 }}
                  whileInView={{ opacity: 1, x: 0 }}
                  transition={{ delay: 2.8 }}
@@ -101,10 +101,10 @@ export default function PolicyEnforcement() {
                      </p>
                    </div>
                  </div>
-               </motion.div>
+               </m.div>
 
              </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

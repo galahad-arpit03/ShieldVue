@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
 import { navigation } from "./NavBarData";
 import { Button } from "@/Common/UI/Button/Button";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -177,7 +177,7 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -202,7 +202,7 @@ export default function Navbar() {
 
                   <AnimatePresence>
                     {activeMobileDropdown === group.title && (
-                      <motion.div
+                      <m.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -221,7 +221,7 @@ export default function Navbar() {
                             {item.title}
                           </Link>
                         )})}
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
                 </div>
@@ -238,7 +238,7 @@ export default function Navbar() {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>

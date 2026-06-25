@@ -1,7 +1,7 @@
 "use client";
 
 import { Eye, ShieldAlert, Key, Scale, FileCheck, Globe } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function TheProblem() {
   const problems = [
@@ -68,7 +68,7 @@ export default function TheProblem() {
           {/* Left Column: Sticky Header */}
           <div className="lg:col-span-5 relative">
             <div className="lg:sticky lg:top-32">
-              <motion.div 
+              <m.div 
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -80,12 +80,12 @@ export default function TheProblem() {
                 <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-lg">
                   Modern applications rely heavily on open-source and third-party software components, creating complex security, compliance, and visibility challenges.
                 </p>
-              </motion.div>
+              </m.div>
             </div>
           </div>
 
           {/* Right Column: Stacked Problem Cards */}
-          <motion.div 
+          <m.div 
             className="lg:col-span-7 flex flex-col gap-6"
             variants={containerVariants}
             initial="hidden"
@@ -93,7 +93,7 @@ export default function TheProblem() {
             viewport={{ once: true, margin: "-100px" }}
           >
             {problems.map((problem, index) => (
-              <motion.div 
+              <m.div 
                 key={index} 
                 variants={itemVariants}
                 className="group bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start rounded-md shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300"
@@ -109,9 +109,9 @@ export default function TheProblem() {
                     {problem.description}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
 
         </div>
       </div>

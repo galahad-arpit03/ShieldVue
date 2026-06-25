@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   FileJson,
   Shield,
@@ -63,7 +63,7 @@ export default function SupportedFormats() {
       <div className="shield-container relative z-10">
         <div className="grid items-start gap-20 lg:grid-cols-12">
           {/* Left Content */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -126,13 +126,13 @@ export default function SupportedFormats() {
               in the format best suited for your compliance,
               governance, and operational requirements.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Right Formats */}
           <div className="lg:col-span-7">
             <div className="space-y-4">
               {formats.map((format, index) => (
-                <motion.div
+                <m.div
                   key={format.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -211,7 +211,7 @@ export default function SupportedFormats() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>

@@ -6,6 +6,13 @@ import WhatIsCompliance from "@/ComplianceGovernance/WhatIsCompliance";
 import Workflow from "@/ComplianceGovernance/Workflow";
 import AuditReporting from "@/ComplianceGovernance/ AuditReporting";
 import CTA from "@/ComplianceGovernance/CTA";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Compliance & Governance",
+  description: "Ensure continuous security compliance with ShieldVUE automated governance and reporting capabilities.",
+};
+
 
 export default function PlatformOverviewPage() {
   return (

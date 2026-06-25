@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   KeyRound,
   ShieldCheck,
@@ -33,7 +33,7 @@ export default function WhatIsCBOM() {
       <div className="shield-container">
         <div className="grid items-center gap-20 lg:grid-cols-2">
           {/* Left Content */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               y: 30,
@@ -117,10 +117,10 @@ export default function WhatIsCBOM() {
               teams prepare for algorithm migrations, compliance
               requirements, and future quantum-era risks.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Right Visual */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: 40,
@@ -267,7 +267,7 @@ export default function WhatIsCBOM() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

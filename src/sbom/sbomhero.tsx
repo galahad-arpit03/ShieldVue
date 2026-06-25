@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Button } from "@/Common/UI/Button/Button";
 import {ArrowRight} from "lucide-react";
 import Link from "next/link";
@@ -52,7 +52,7 @@ export default function SBOMHero() {
       <div className="shield-container relative z-10">
         <div className="max-w-4xl">
           {/* Eyebrow */}
-          {/* <motion.div
+          {/* <m.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -77,10 +77,10 @@ export default function SBOMHero() {
             "
           >
             SBOM Management
-          </motion.div> */}
+          </m.div> */}
 
           {/* Heading */}
-          <motion.h1
+          <m.h1
             initial={{
               opacity: 0,
               y: 30,
@@ -120,10 +120,10 @@ export default function SBOMHero() {
               {" "}In Your Software
 
             </span>
-          </motion.h1>
+          </m.h1>
 
           {/* Description */}
-          <motion.p
+          <m.p
             initial={{
               opacity: 0,
               y: 20,
@@ -152,10 +152,10 @@ export default function SBOMHero() {
             containers, binaries, packages, and CI/CD pipelines.
             Gain complete dependency visibility and maintain
             audit-ready software inventories at scale.
-          </motion.p>
+          </m.p>
 
           {/* CTA */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               y: 20,
@@ -232,10 +232,10 @@ export default function SBOMHero() {
               View Documentation
               <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </Button>
-          </motion.div>
+          </m.div>
 
           {/* Metrics
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               y: 20,
@@ -309,7 +309,7 @@ export default function SBOMHero() {
                 </div>
               </div>
             ))}
-          </motion.div> */}
+          </m.div> */}
         </div>
       </div>
     </section>

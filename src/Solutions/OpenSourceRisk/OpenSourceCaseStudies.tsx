@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Quote } from "lucide-react";
 
 export default function OpenSourceCaseStudies() {
@@ -8,7 +8,7 @@ export default function OpenSourceCaseStudies() {
     <section className="py-12 bg-primary text-white">
       <div className="shield-container text-center max-w-4xl mx-auto">
         <Quote className="w-12 h-12 text-white/30 mx-auto mb-8" />
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -19,7 +19,7 @@ export default function OpenSourceCaseStudies() {
           <div className="text-white/80 font-bold uppercase tracking-widest text-sm bg-white/10 inline-block px-4 py-2 rounded-full">
             — Tech Leader
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

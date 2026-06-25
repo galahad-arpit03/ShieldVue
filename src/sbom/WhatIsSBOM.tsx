@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Boxes,
   ShieldCheck,
@@ -33,7 +33,7 @@ export default function WhatIsSBOM() {
       <div className="shield-container">
         <div className="grid gap-20 items-center lg:grid-cols-2">
           {/* Left Content */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               y: 30,
@@ -115,10 +115,10 @@ export default function WhatIsSBOM() {
               and CI/CD pipelines while maintaining centralized
               governance and traceability.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Right Visual */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: 40,
@@ -199,7 +199,7 @@ export default function WhatIsSBOM() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

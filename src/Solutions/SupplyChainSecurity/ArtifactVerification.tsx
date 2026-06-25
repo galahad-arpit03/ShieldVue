@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown, ShieldCheck, FileCode, ShieldAlert, Lock } from "lucide-react";
 import Image from "next/image";
 
@@ -84,7 +84,7 @@ export default function ArtifactVerification() {
                   </button>
                   <AnimatePresence>
                     {isActive && (
-                      <motion.div
+                      <m.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -93,7 +93,7 @@ export default function ArtifactVerification() {
                         <div className="px-6 pb-5 pl-[4.5rem] pr-8 text-slate-600 leading-relaxed text-base">
                           {item.content}
                         </div>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
                 </div>

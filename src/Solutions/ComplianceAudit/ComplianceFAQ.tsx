@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 export default function ComplianceFAQ() {
@@ -44,7 +44,7 @@ export default function ComplianceFAQ() {
               </button>
               <AnimatePresence>
                 {activeIndex === index && (
-                  <motion.div
+                  <m.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
@@ -53,7 +53,7 @@ export default function ComplianceFAQ() {
                     <div className="p-6 pt-0 text-slate-600 leading-relaxed text-sm md:text-base">
                       {faq.answer}
                     </div>
-                  </motion.div>
+                  </m.div>
                 )}
               </AnimatePresence>
             </div>

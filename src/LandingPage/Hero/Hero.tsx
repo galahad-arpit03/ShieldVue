@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/Common/UI/Button/Button";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -44,7 +44,7 @@ export default function Hero() {
     <section ref={containerRef} className="relative bg-white pt-32 pb-12 md:pb-24 md:pb-48 lg:pt-48 lg:pb-64 min-h-[100vh] flex flex-col justify-center">
       {/* Light Enterprise Background Image with Parallax */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <motion.div
+        <m.div
           className="absolute inset-0 z-0 opacity-100 origin-top"
           style={{ y: yBg, scale: 1.1 }}
         >
@@ -52,18 +52,19 @@ export default function Hero() {
             src="/landing/hero_bg.png"
             alt="Abstract Software Supply Chain Visualization"
             fill
+            sizes="100vw"
             className="object-cover object-right"
             priority
           />
           {/* Gradient overlay to ensure text readability on the left */}
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent w-[130%]" />
-        </motion.div>
+        </m.div>
       </div>
 
       <div className="shield-container relative z-10 w-full">
         <div className="grid items-center gap-16 lg:grid-cols-12">
           {/* Left Content */}
-          <motion.div
+          <m.div
             className="max-w-2xl lg:max-w-none lg:col-span-7 xl:col-span-8"
             variants={containerVariants}
             initial="hidden"
@@ -71,16 +72,16 @@ export default function Hero() {
           >
             {/* Eyebrow */}
 
-            <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-[-0.02em] text-slate-900 font-['Clash_Grotesk']">
+            <m.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-[-0.02em] text-slate-900 font-['Clash_Grotesk']">
               <span className="md:whitespace-nowrap">Know Your Software</span> <br />
               <span className="text-primary font-medium md:whitespace-nowrap">Supply Chain.</span>
-            </motion.h1>
+            </m.h1>
 
-            <motion.p variants={itemVariants} className="mt-6 text-lg sm:text-lg leading-8 text-slate-600">
+            <m.p variants={itemVariants} className="mt-6 text-lg sm:text-lg leading-8 text-slate-600">
               Gain complete visibility into software components, vulnerabilities, cryptographic assets, and compliance risks through a unified Software Bill of Materials (SBOM) and Cybersecurity Governance Platform.
-            </motion.p>
+            </m.p>
 
-            <motion.div variants={itemVariants} className="mt-10 flex flex-row gap-3">
+            <m.div variants={itemVariants} className="mt-10 flex flex-row gap-3">
               <Button
                 asChild
                 size="lg"
@@ -97,23 +98,23 @@ export default function Hero() {
                 <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 </Link>
               </Button>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
           {/* Right Product Preview with Parallax */}
-          <motion.div
+          <m.div
             className="relative mx-auto w-full max-w-lg lg:max-w-none"
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, type: "spring", bounce: 0.4 }}
             style={{ y: yMockup }}
           >
-          </motion.div>
+          </m.div>
         </div>
       </div>
 
       {/* 3 Overlapping Glassmorphic Cards with Parallax */}
-      <motion.div
+      <m.div
         className="relative mt-8 md:mt-16 md:absolute md:left-0 md:right-0 md:-bottom-24 lg:-bottom-36 z-20 mx-auto w-full px-4 sm:px-6 lg:px-8 shield-container"
         style={{ y: yCards }}
       >
@@ -143,7 +144,7 @@ export default function Hero() {
             <a href="#" className="text-sm font-semibold mt-4 text-primary hover:underline flex items-center gap-1">Discover Options <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" /></a>
           </div>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 }

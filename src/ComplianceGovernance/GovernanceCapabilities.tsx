@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ShieldCheck,
   Lock,
@@ -108,7 +108,7 @@ export default function GovernanceCapabilities() {
         {/* Capability Grid */}
         <div className="mt-10 md:mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((capability, index) => (
-            <motion.div
+            <m.div
               key={capability.title}
               initial={{
                 opacity: 0,
@@ -187,7 +187,7 @@ export default function GovernanceCapabilities() {
               >
                 {capability.description}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

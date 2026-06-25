@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 
 export default function DependencyMapping() {
@@ -9,7 +9,7 @@ export default function DependencyMapping() {
       <div className="shield-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -33,10 +33,10 @@ export default function DependencyMapping() {
                 <div className="w-2 h-2 rounded-full bg-primary" /> Real-Time Exploit Path Mapping
               </li>
             </ul>
-          </motion.div>
+          </m.div>
 
           {/* Node Graph Image */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -50,7 +50,7 @@ export default function DependencyMapping() {
               className="object-contain transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent pointer-events-none" />
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ShieldAlert,
   FileCheck,
@@ -129,7 +129,7 @@ export default function BusinessOutcomes() {
         {/* Outcomes Grid */}
         <div className="mt-10 md:mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {outcomes.map((item, index) => (
-            <motion.div
+            <m.div
               key={item.title}
               initial={{
                 opacity: 0,
@@ -261,7 +261,7 @@ export default function BusinessOutcomes() {
                   {item.description}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ShieldCheck,
   Clock3,
@@ -121,7 +121,7 @@ export default function DemoForm() {
                 </div>
 
                 {isSubmitted ? (
-                  <motion.div
+                  <m.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="flex flex-col items-center justify-center text-center p-8 bg-[#FAFAFA] border border-slate-100 rounded-md min-h-[400px]"
@@ -146,7 +146,7 @@ export default function DemoForm() {
                     >
                       Send Another Message
                     </button>
-                  </motion.div>
+                  </m.div>
                 ) : (
                   <form
                     className="space-y-3"

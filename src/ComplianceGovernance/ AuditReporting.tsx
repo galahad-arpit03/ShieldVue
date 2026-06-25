@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   FileCheck,
   ClipboardCheck,
@@ -68,7 +68,7 @@ export default function AuditReporting() {
           "
         >
           {/* Left Content */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: -30,
@@ -179,10 +179,10 @@ export default function AuditReporting() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Dashboard Image */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: 30,
@@ -315,7 +315,7 @@ export default function AuditReporting() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

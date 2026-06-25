@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Button } from "@/Common/UI/Button/Button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -52,7 +52,7 @@ export default function ComplianceHero() {
       <div className="shield-container relative z-10">
         <div className="max-w-4xl">
           {/* Heading */}
-          <motion.h1
+          <m.h1
             initial={{
               opacity: 0,
               y: 30,
@@ -89,10 +89,10 @@ export default function ComplianceHero() {
             <span className="text-primary">
               {" "}Governance
             </span>
-          </motion.h1>
+          </m.h1>
 
           {/* Description */}
-          <motion.p
+          <m.p
             initial={{
               opacity: 0,
               y: 20,
@@ -121,10 +121,10 @@ export default function ComplianceHero() {
             compliance requirements through centralized controls,
             role-based access management, and comprehensive
             compliance reporting.
-          </motion.p>
+          </m.p>
 
           {/* CTA */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               y: 20,
@@ -201,7 +201,7 @@ export default function ComplianceHero() {
               View Documentation
               <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </Button>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

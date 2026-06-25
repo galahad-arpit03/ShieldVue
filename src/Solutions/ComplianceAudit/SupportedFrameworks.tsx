@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Shield, FileText, CheckSquare, FileKey } from "lucide-react";
 
 export default function SupportedFrameworks() {
@@ -25,7 +25,7 @@ export default function SupportedFrameworks() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full relative z-10">
           {frameworks.map((fw, i) => (
-            <motion.div 
+            <m.div 
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function SupportedFrameworks() {
                   {fw.desc}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

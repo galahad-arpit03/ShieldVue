@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Code2,
   Boxes,
@@ -155,7 +155,7 @@ export default function Workflow() {
 
               <div className="grid grid-cols-7 gap-4">
                 {workflowSteps.map((step, index) => (
-                  <motion.div
+                  <m.div
                     key={step.title}
                     initial={{
                       opacity: 0,
@@ -260,7 +260,7 @@ export default function Workflow() {
                         "
                       />
                     )}
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
             </div>
@@ -270,7 +270,7 @@ export default function Workflow() {
           <div className="xl:hidden">
             <div className="mx-auto max-w-3xl">
               {workflowSteps.map((step, index) => (
-                <motion.div
+                <m.div
                   key={step.title}
                   initial={{
                     opacity: 0,
@@ -366,7 +366,7 @@ export default function Workflow() {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>

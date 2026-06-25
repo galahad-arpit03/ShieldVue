@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 
 export default function SupplyChainOverview() {
@@ -9,7 +9,7 @@ export default function SupplyChainOverview() {
       <div className="shield-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -40,10 +40,10 @@ export default function SupplyChainOverview() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </m.div>
 
           {/* Static Image Display */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -62,7 +62,7 @@ export default function SupplyChainOverview() {
 
             {/* Subtle Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

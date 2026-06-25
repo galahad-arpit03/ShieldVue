@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   KeyRound,
   ShieldCheck,
@@ -68,7 +68,7 @@ export default function Workflow() {
         </div>
 
         {/* Workflow Image */}
-        <motion.div
+        <m.div
           initial={{
             opacity: 0,
             y: 40,
@@ -110,7 +110,7 @@ export default function Workflow() {
               object-contain
             "
           />
-        </motion.div>
+        </m.div>
 
         {/* Outcomes
         <div

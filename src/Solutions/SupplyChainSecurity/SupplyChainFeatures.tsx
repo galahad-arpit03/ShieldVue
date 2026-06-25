@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { FileCode, Lock, Activity } from "lucide-react";
 
 export default function SupplyChainFeatures() {
@@ -17,7 +17,7 @@ export default function SupplyChainFeatures() {
         <div className="grid md:grid-cols-3 gap-6 w-full">
           
           {/* Feature 1 - Large Card spanning 2 columns */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -33,10 +33,10 @@ export default function SupplyChainFeatures() {
             <p className="text-slate-600 leading-relaxed max-w-2xl relative z-10">
               Track every component seamlessly. Automatically generate standardized Software Bills of Materials directly from your source code and CI/CD pipelines. Gain profound visibility into open-source libraries, direct and transitive dependencies, and third-party components to ensure full regulatory compliance and mitigate supply chain risks at scale.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Feature 2 - Tall Card */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -53,10 +53,10 @@ export default function SupplyChainFeatures() {
                 Prepare for post-quantum cryptographic standards by discovering and cataloging all cryptographic assets.
               </p>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Feature 3 - Wide bottom card */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -94,7 +94,7 @@ export default function SupplyChainFeatures() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
         </div>
       </div>

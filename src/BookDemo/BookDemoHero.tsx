@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
 
@@ -31,7 +31,7 @@ export default function BookDemoHero() {
 
       <div className="shield-container relative z-10">
         <div className="min-h-[80vh] flex items-center">
-          <motion.div
+          <m.div
             className="max-w-3xl"
             initial={{
               opacity: 0,
@@ -194,7 +194,7 @@ export default function BookDemoHero() {
                 </div>
               </div> */}
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
 

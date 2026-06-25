@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   FileCode2,
   ShieldCheck,
@@ -111,7 +111,7 @@ export default function DemoBenefits() {
         {/* Cards */}
         <div className="mt-10 md:mt-20 grid gap-6 lg:grid-cols-4">
           {items.map((item, index) => (
-            <motion.div
+            <m.div
               key={item.title}
               initial={{
                 opacity: 0,
@@ -252,7 +252,7 @@ export default function DemoBenefits() {
                   <ArrowRight className="h-4 w-4" />
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

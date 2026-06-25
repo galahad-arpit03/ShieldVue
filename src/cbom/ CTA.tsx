@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
@@ -9,7 +9,7 @@ export default function CTA() {
   return (
     <section className="bg-white py-10 md:py-16 md:py-24">
       <div className="shield-container">
-        <motion.div
+        <m.div
           initial={{
             opacity: 0,
             y: 30,
@@ -280,7 +280,7 @@ export default function CTA() {
               </Button>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

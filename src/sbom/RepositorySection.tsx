@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Database,
   GitBranch,
@@ -68,7 +68,7 @@ export default function RepositorySection() {
           "
         >
           {/* Left Content */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: -30,
@@ -186,10 +186,10 @@ export default function RepositorySection() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Right Visual */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: 30,
@@ -322,7 +322,7 @@ export default function RepositorySection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

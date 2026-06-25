@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   FileCode2,
   Database,
@@ -129,7 +129,7 @@ export default function CapabilitiesGrid() {
               capability.className.includes("md:col-span-2");
 
             return (
-              <motion.div
+              <m.div
                 key={capability.title}
                 initial={{
                   opacity: 0,
@@ -325,7 +325,7 @@ to-transparent
                     </p>
                   </div>
                 )}
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

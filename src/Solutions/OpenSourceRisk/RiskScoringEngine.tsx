@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 
 export default function RiskScoringEngine() {
@@ -19,7 +19,7 @@ export default function RiskScoringEngine() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent pointer-events-none" />
           </div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -44,7 +44,7 @@ export default function RiskScoringEngine() {
                 <div className="w-2 h-2 rounded-full bg-primary" /> Community Maintenance Health
               </li>
             </ul>
-          </motion.div>
+          </m.div>
 
         </div>
       </div>

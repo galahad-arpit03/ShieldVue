@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   KeyRound,
   Shield,
@@ -124,7 +124,7 @@ export default function CryptoCapabilities() {
           "
         >
           {capabilities.map((capability, index) => (
-            <motion.div
+            <m.div
               key={capability.title}
               initial={{
                 opacity: 0,
@@ -235,7 +235,7 @@ export default function CryptoCapabilities() {
                   {capability.description}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

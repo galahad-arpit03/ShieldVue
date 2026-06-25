@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
     Boxes,
     Database,
@@ -58,7 +58,7 @@ export default function Workflow() {
                 </div>
 
                 {/* Video */}
-                <motion.div
+                <m.div
                     initial={{
                         opacity: 0,
                         y: 40,
@@ -89,7 +89,7 @@ export default function Workflow() {
           "
                 >
                     {/* Workflow Image */}
-                    <motion.div
+                    <m.div
                         initial={{
                             opacity: 0,
                             y: 40,
@@ -131,8 +131,8 @@ export default function Workflow() {
       object-contain
     "
                         />
-                    </motion.div>
-                </motion.div>
+                    </m.div>
+                </m.div>
 
                 {/* Benefits
                 <div

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown, Zap, Lock, DollarSign, Sliders, Calendar } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
 
@@ -144,7 +144,7 @@ export default function FAQs() {
                   const isActive = activeCategory === category.id;
                   
                   return (
-                    <motion.button
+                    <m.button
                       key={category.id}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => {
@@ -158,7 +158,7 @@ export default function FAQs() {
                       }`}
                     >
                       {isActive && (
-                        <motion.div
+                        <m.div
                           layoutId="activeCategoryBg"
                           className="absolute inset-0 bg-primary/5 rounded-xl border border-primary/10"
                           initial={false}
@@ -178,14 +178,14 @@ export default function FAQs() {
                           <span className="text-xs text-slate-400 font-medium">{category.articleCount} answers</span>
                         </div>
                       </div>
-                      <motion.div
+                      <m.div
                         animate={{ rotate: isActive ? 0 : -90 }}
                         transition={{ duration: 0.3 }}
                         className={`relative z-10 ${isActive ? "text-primary" : "text-slate-300"}`}
                       >
                         <ChevronDown className="w-5 h-5" />
-                      </motion.div>
-                    </motion.button>
+                      </m.div>
+                    </m.button>
                   );
                 })}
               </div>
@@ -207,9 +207,9 @@ export default function FAQs() {
 
           {/* Right Accordion List */}
           <div className="lg:w-2/3">
-            <motion.div layout className="flex flex-col gap-3 min-h-[400px]">
+            <m.div layout className="flex flex-col gap-3 min-h-[400px]">
               <AnimatePresence mode="wait">
-                <motion.div
+                <m.div
                   key={activeCategory}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -221,7 +221,7 @@ export default function FAQs() {
                     const isOpen = openIndex === index;
                     
                     return (
-                      <motion.div 
+                      <m.div 
                         layout
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -244,7 +244,7 @@ export default function FAQs() {
                       
                       <AnimatePresence>
                         {isOpen && (
-                          <motion.div
+                          <m.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
@@ -253,15 +253,15 @@ export default function FAQs() {
                             <div className="px-5 pb-6 text-slate-600 leading-8 border-t border-slate-100 pt-4 mt-1">
                               {faq.answer}
                             </div>
-                          </motion.div>
+                          </m.div>
                         )}
                       </AnimatePresence>
-                    </motion.div>
+                    </m.div>
                   );
                 })}
-                </motion.div>
+                </m.div>
               </AnimatePresence>
-            </motion.div>
+            </m.div>
           </div>
 
         </div>

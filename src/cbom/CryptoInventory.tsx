@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Database,
   KeyRound,
@@ -68,7 +68,7 @@ export default function CryptoInventory() {
           "
         >
           {/* Left Visual */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: -40,
@@ -156,10 +156,10 @@ export default function CryptoInventory() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Right Content */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: 40,
@@ -268,7 +268,7 @@ export default function CryptoInventory() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

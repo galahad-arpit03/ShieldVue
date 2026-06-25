@@ -1,15 +1,16 @@
 
 import Hero from "@/LandingPage/Hero/Hero";
 import TheProblem from "@/LandingPage/TheProblem/TheProblem";
-import Solutions from "@/LandingPage/Solutions/Solutions";
-import PlatformCapabilities from "@/LandingPage/PlatformCapabilities/PlatformCapabilities";
-import ProductScreenshots from "@/LandingPage/ProductScreenshots/ProductScreenshots";
-import ProcessFlow from "@/LandingPage/ProcessFlow/ProcessFlow";
-import SbomCbom from "@/LandingPage/SbomCbom/SbomCbom";
-import BusinessOutcomes from "@/LandingPage/BusinessOutcomes/BusinessOutcomes";
-import Industries from "@/LandingPage/Industries/Industries";
-import EnterpriseCTA from "@/LandingPage/EnterpriseCTA/EnterpriseCTA";
-import WhatShieldVUESolves from "@/LandingPage/WhatShieldVUESolves/WhatShieldVUESolves";
+import dynamic from "next/dynamic";
+
+const ProductScreenshots = dynamic(() => import("@/LandingPage/ProductScreenshots/ProductScreenshots"));
+const ProcessFlow = dynamic(() => import("@/LandingPage/ProcessFlow/ProcessFlow"));
+const SbomCbom = dynamic(() => import("@/LandingPage/SbomCbom/SbomCbom"));
+const PlatformCapabilities = dynamic(() => import("@/LandingPage/PlatformCapabilities/PlatformCapabilities"));
+const WhatShieldVUESolves = dynamic(() => import("@/LandingPage/WhatShieldVUESolves/WhatShieldVUESolves"));
+const BusinessOutcomes = dynamic(() => import("@/LandingPage/BusinessOutcomes/BusinessOutcomes"));
+const Industries = dynamic(() => import("@/LandingPage/Industries/Industries"));
+const EnterpriseCTA = dynamic(() => import("@/LandingPage/EnterpriseCTA/EnterpriseCTA"));
 
 export default function Home() {
   return (

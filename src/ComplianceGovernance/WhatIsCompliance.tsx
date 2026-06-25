@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ShieldCheck,
   FileCheck,
@@ -33,7 +33,7 @@ export default function WhatIsCompliance() {
       <div className="shield-container">
         <div className="grid gap-20 items-center lg:grid-cols-2">
           {/* Left Content */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               y: 30,
@@ -120,10 +120,10 @@ export default function WhatIsCompliance() {
               platform that enables organizations to
               operate securely and confidently.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Right Visual Card */}
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: 40,
@@ -270,7 +270,7 @@ export default function WhatIsCompliance() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>
