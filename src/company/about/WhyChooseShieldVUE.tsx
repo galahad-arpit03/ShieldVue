@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, m } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Eye,
   Activity,
@@ -51,295 +51,53 @@ const reasons = [
 
 export default function WhyChooseShieldVUE() {
   return (
-    <section className="relative overflow-hidden bg-white py-28">
-      {/* Background Pattern */}
-      <div
-        className="
-          absolute
-          inset-0
-          opacity-[0.03]
-          bg-[radial-gradient(circle_at_center,#6843b7_1px,transparent_1px)]
-          bg-[length:40px_40px]
-        "
-      />
-
-      {/* Ambient Glow */}
-      <div
-        className="
-          absolute
-          left-1/2
-          top-1/2
-
-          h-[700px]
-          w-[700px]
-
-          -translate-x-1/2
-          -translate-y-1/2
-
-          rounded-full
-
-          bg-primary/5
-
-          blur-[180px]
-        "
-      />
-
-      <div className="shield-container relative z-10">
+    <section className="py-12 md:py-24 bg-white border-y border-slate-100">
+      <div className="shield-container">
         {/* Header */}
-        <div className="mx-auto mb-20 max-w-3xl text-center">
-          {/* <span
-            className="
-              inline-flex
-
-              rounded-full
-
-              bg-primary/10
-
-              px-4
-              py-2
-
-              text-sm
-              font-medium
-
-              text-primary
-            "
-          >
-            Why ShieldVUE
-          </span> */}
-
-          <h2
-            className="
-              mt-6
-
-              text-4xl
-              md:text-5xl
-
-              font-medium
-
-              leading-[1.08]
-              tracking-[-0.03em]
-
-              text-slate-900
-
-              font-['Clash_Grotesk']
-            "
-          >
-            Why Organizations
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-medium tracking-normal font-['Clash_Grotesk'] text-slate-900 mb-4">
+            Why We{" "}
             <span className="text-primary">
-              {" "}Choose ShieldVUE
+              Choose "ShieldVUE"
             </span>
           </h2>
-
-          <p
-            className="
-              mt-6
-
-              text-lg
-              leading-8
-
-              text-slate-600
-            "
-          >
+{/* 
+          <p className="text-lg text-slate-600">
             Empower development, security, and compliance teams with
             complete software supply chain visibility, intelligent risk
             analysis, and enterprise-grade governance.
-          </p>
+          </p> */}
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon;
+        {/* Features */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-10">
+          {reasons.map((item, i) => (
+            <m.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="group flex items-start gap-5"
+            >
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-xl bg-primary text-white flex-shrink-0 flex items-center justify-center transition-all duration-100 shadow-sm">
+                <item.icon className="w-6 h-6 transition-colors duration-300" />
+              </div>
 
-            return (
-              <m.div
-                key={reason.title}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.08,
-                }}
-                whileHover={{
-                  y: -6,
-                }}
-                className="
-                  group
+              {/* Content */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                  {item.title}
+                </h3>
 
-                  relative
-
-                  overflow-hidden
-
-                  rounded-md
-
-                  border
-                  border-slate-200
-
-                  bg-white
-
-                  p-8
-
-                  shadow-sm
-
-                  transition-all
-                  duration-300
-
-                  hover:border-primary/20
-                  hover:shadow-xl
-                "
-              >
-                {/* Glow */}
-                <div
-                  className="
-                    absolute
-                    right-0
-                    top-0
-
-                    h-48
-                    w-48
-
-                    rounded-full
-
-                    bg-primary/10
-
-                    blur-[90px]
-
-                    opacity-0
-
-                    transition-opacity
-                    duration-500
-
-                    group-hover:opacity-100
-                  "
-                />
-
-                <div className="relative z-10">
-                  <div
-                    className="
-                      flex
-
-                      h-14
-                      w-14
-
-                      items-center
-                      justify-center
-
-                      rounded-xl
-
-                      bg-primary/10
-
-                      text-primary
-                    "
-                  >
-                    <Icon className="h-7 w-7" />
-                  </div>
-
-                  <h3
-                    className="
-                      mt-6
-
-                      text-xl
-
-                      font-medium
-
-                      text-slate-900
-                    "
-                  >
-                    {reason.title}
-                  </h3>
-
-                  <p
-                    className="
-                      mt-4
-
-                      text-sm
-                      leading-7
-
-                      text-slate-600
-                    "
-                  >
-                    {reason.description}
-                  </p>
-                </div>
-              </m.div>
-            );
-          })}
+                <p className="text-slate-600 leading-relaxed text-[15px]">
+                  {item.description}
+                </p>
+              </div>
+            </m.div>
+          ))}
         </div>
-
-        {/* Bottom Statement */}
-        <m.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.25 }}
-          className="
-            mx-auto
-            mt-20
-
-            max-w-5xl
-
-            rounded-md
-
-            border
-            border-primary/10
-
-            bg-gradient-to-r
-            from-primary/5
-            via-white
-            to-primary/5
-
-            px-8
-            py-10
-
-            text-center
-          "
-        >
-          <h3
-            className="
-              text-2xl
-              md:text-3xl
-
-              font-medium
-
-              text-slate-900
-
-              font-['Clash_Grotesk']
-            "
-          >
-            One Platform.
-            <span className="text-primary">
-              {" "}Complete Software Supply Chain Visibility.
-            </span>
-          </h3>
-
-          <p
-            className="
-              mx-auto
-              mt-5
-
-              max-w-3xl
-
-              text-lg
-              leading-8
-
-              text-slate-600
-            "
-          >
-            From software inventories and SBOMs to vulnerability
-            intelligence, cryptographic assets, and compliance reporting,
-            ShieldVUE brings every critical capability together into a
-            unified enterprise platform.
-          </p>
-        </m.div>
       </div>
     </section>
   );

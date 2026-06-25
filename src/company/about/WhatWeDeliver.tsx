@@ -1,34 +1,38 @@
 "use client";
 
-import { motion , m} from "framer-motion";
-import {
-  FileCode2,
-  Shield,
-  ShieldAlert,
-  Scale,
-  ArrowRight,
-} from "lucide-react";
+import { m } from "framer-motion";
+import { FileCode2, Shield, ShieldAlert, Scale } from "lucide-react";
 
-const offerings = [
+const featured = {
+//   stage: "01",
+  title: "SBOM Management",
+  description:
+    "Generate, manage, compare, and govern Software Bills of Materials across your entire software ecosystem — from first scan to continuous tracking.",
+  icon: FileCode2,
+  stats: [
+    { label: "Components tracked", value: "10k+" },
+    { label: "Formats supported", value: "SPDX · CycloneDX" },
+    { label: "Sync", value: "Real-time" },
+  ],
+};
+
+const supporting = [
   {
-    title: "SBOM Management",
-    description:
-      "Generate, manage, compare, and govern Software Bills of Materials across your entire software ecosystem.",
-    icon: FileCode2,
-  },
-  {
+    // stage: "02",
     title: "CBOM Management",
     description:
       "Discover cryptographic assets, encryption algorithms, certificates, and keys with complete visibility.",
     icon: Shield,
   },
   {
+    // stage: "03",
     title: "Vulnerability Intelligence",
     description:
       "Continuously correlate software components with CVEs, threat intelligence, and contextual risk.",
     icon: ShieldAlert,
   },
   {
+    // stage: "04",
     title: "Compliance & Governance",
     description:
       "Enforce security policies, licensing controls, and regulatory compliance from a unified platform.",
@@ -37,254 +41,109 @@ const offerings = [
 ];
 
 export default function WhatWeDeliver() {
+  const FeaturedIcon = featured.icon;
+
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-28">
+    <section className="relative overflow-hidden py-14 border-y">
       {/* Background Pattern */}
-      <div
-        className="
-          absolute
-          inset-0
-          opacity-[0.03]
-          bg-[radial-gradient(circle_at_center,#6843b7_1px,transparent_1px)]
-          bg-[length:40px_40px]
-        "
-      />
-
-      {/* Glow */}
-      <div
-        className="
-          absolute
-          right-0
-          top-0
-
-          h-[650px]
-          w-[650px]
-
-          rounded-full
-
-          bg-primary/5
-
-          blur-[150px]
-        "
-      />
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,#6843b7_1px,transparent_1px)] bg-[length:40px_40px]" />
+      <div className="absolute right-0 top-0 h-[650px] w-[650px] rounded-full bg-primary/5 blur-[150px]" />
 
       <div className="shield-container relative z-10">
         {/* Header */}
         <div className="mx-auto mb-20 max-w-3xl text-center">
-          {/* <span
-            className="
-              inline-flex
-
-              rounded-full
-
-              bg-primary/10
-
-              px-4
-              py-2
-
-              text-sm
-              font-medium
-
-              text-primary
-            "
-          >
-            Platform Capabilities
-          </span> */}
-
-          <h2
-            className="
-              mt-6
-
-              text-4xl
-              md:text-5xl
-
-              font-medium
-
-              leading-[1.08]
-
-              tracking-[-0.03em]
-
-              text-slate-900
-
-              font-['Clash_Grotesk']
-            "
-          >
+          <h2 className="text-4xl md:text-5xl font-medium leading-[1.08] tracking-[-0.03em] text-slate-900 font-['Clash_Grotesk']">
             What We Deliver
           </h2>
-
-          <p
-            className="
-              mt-6
-
-              text-lg
-              leading-8
-
-              text-slate-600
-            "
-          >
-            ShieldVUE brings together software visibility,
-            vulnerability intelligence, cryptographic analysis,
-            and governance into one integrated enterprise platform.
+          <p className="mt-6 text-lg leading-8 text-slate-600">
+            ShieldVUE brings together software visibility, vulnerability
+            intelligence, cryptographic analysis, and governance into one
+            integrated enterprise platform.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {offerings.map((item, index) => {
-            const Icon = item.icon;
+        {/* Bento grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-6">
+          {/* Featured panel */}
+          <m.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-10 lg:p-12 shadow-sm"
+          >
+            <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-primary/10 blur-[110px]" />
 
-            return (
-              <m.div
-                key={item.title}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -6,
-                }}
-                className="
-                  group
-
-                  relative
-
-                  overflow-hidden
-
-                  rounded-md
-
-                  border
-                  border-slate-200
-
-                  bg-white
-
-                  p-8
-
-                  shadow-sm
-
-                  transition-all
-                  duration-300
-
-                  hover:border-primary/20
-                  hover:shadow-xl
-                "
-              >
-                {/* Glow */}
-                <div
-                  className="
-                    absolute
-                    right-0
-                    top-0
-
-                    h-56
-                    w-56
-
-                    rounded-full
-
-                    bg-primary/10
-
-                    blur-[100px]
-
-                    opacity-0
-
-                    transition-opacity
-                    duration-500
-
-                    group-hover:opacity-100
-                  "
-                />
-
-                <div className="relative z-10">
-                  <div
-                    className="
-                      flex
-
-                      h-14
-                      w-14
-
-                      items-center
-                      justify-center
-
-                      rounded-xl
-
-                      bg-primary/10
-
-                      text-primary
-                    "
-                  >
-                    <Icon className="h-7 w-7" />
-                  </div>
-
-                  <h3
-                    className="
-                      mt-6
-
-                      text-2xl
-
-                      font-medium
-
-                      text-slate-900
-                    "
-                  >
-                    {item.title}
-                  </h3>
-
-                  <p
-                    className="
-                      mt-4
-
-                      text-slate-600
-
-                      leading-7
-                    "
-                  >
-                    {item.description}
-                  </p>
-
-                  <div
-                    className="
-                      mt-8
-
-                      inline-flex
-
-                      items-center
-
-                      gap-2
-
-                      text-sm
-                      font-semibold
-
-                      text-primary
-                    "
-                  >
-                    Learn More
-
-                    <ArrowRight
-                      className="
-                        h-4
-                        w-4
-
-                        transition-transform
-                        duration-300
-
-                        group-hover:translate-x-1
-                      "
-                    />
-                  </div>
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="flex items-center justify-between">
+                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <FeaturedIcon className="h-8 w-8" />
                 </div>
-              </m.div>
-            );
-          })}
+                {/* <span className="font-mono text-xs tracking-wider text-primary">
+                  {featured.stage}
+                </span> */}
+              </div>
+
+              <h3 className="mt-8 text-3xl font-medium text-slate-900">
+                {featured.title}
+              </h3>
+
+              <p className="mt-4 max-w-md text-lg leading-7 text-slate-600">
+                {featured.description}
+              </p>
+
+              {/* Stat strip — snapshot of the product, not decoration */}
+              <div className="mt-10 grid grid-cols-3 gap-4 border-t border-slate-100 pt-8">
+                {featured.stats.map((stat) => (
+                  <div key={stat.label}>
+                    <div className="text-lg font-medium text-slate-900">
+                      {stat.value}
+                    </div>
+                    <div className="mt-1 text-xs text-slate-500">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </m.div>
+
+          {/* Supporting column */}
+          <div className="flex flex-col gap-4">
+            {supporting.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <m.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+                  className="group relative flex-1 overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-colors duration-300 hover:border-primary/20"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                      <Icon className="h-5 w-5" />
+                    </div>
+
+                    <div>
+                      <div className="flex items-center gap-2">
+                        {/* <span className="font-mono text-xs tracking-wider text-slate-400">
+                          {item.stage}
+                        </span> */}
+                        <h3 className="text-lg font-medium text-slate-900">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="mt-2 text-[15px] leading-6 text-slate-600">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </m.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

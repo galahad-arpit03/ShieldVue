@@ -1,171 +1,272 @@
 "use client";
 
-import { motion, m } from "framer-motion";
+import { m } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
 
 export default function CTA() {
   return (
-    <section className="relative overflow-hidden bg-slate-900 py-28">
-      {/* Ambient Glow */}
-      <div
-        className="
-          absolute
-          left-1/2
-          top-1/2
-
-          h-[700px]
-          w-[700px]
-
-          -translate-x-1/2
-          -translate-y-1/2
-
-          rounded-full
-
-          bg-primary/20
-
-          blur-[180px]
-        "
-      />
-
-      {/* Background Pattern */}
-      <div
-        className="
-          absolute
-          inset-0
-
-          opacity-[0.05]
-
-          bg-[radial-gradient(circle_at_center,#ffffff_1px,transparent_1px)]
-          bg-[length:40px_40px]
-        "
-      />
-
-      <div className="shield-container relative z-10">
+    <section className="bg-white py-10 md:py-16 lg:py-24">
+      <div className="shield-container">
         <m.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mx-auto max-w-4xl text-center"
+          transition={{ duration: 0.6 }}
+          className="
+            relative
+            overflow-hidden
+            rounded-md
+
+            bg-gradient-to-br
+            from-slate-100/80
+            to-slate-200/40
+
+            backdrop-blur-2xl
+
+            border
+            border-white/60
+
+            shadow-[0_8px_40px_-12px_rgba(0,0,0,0.1)]
+
+            px-6
+            py-12
+
+            sm:px-12
+            sm:py-16
+
+            md:px-16
+
+            lg:px-20
+          "
         >
-          <h2
-            className="
-              text-4xl
-              md:text-5xl
-              lg:text-6xl
-
-              font-medium
-
-              leading-[1.05]
-
-              tracking-[-0.03em]
-
-              text-white
-
-              font-['Clash_Grotesk']
-            "
-          >
-            Let's Build A More
-            <br />
-            Secure Software Future
-            <span className="text-primary">
-              {" "}Together
-            </span>
-          </h2>
-
-          <p
-            className="
-              mx-auto
-              mt-8
-
-              max-w-2xl
-
-              text-lg
-              leading-8
-
-              text-slate-300
-            "
-          >
-            Connect with the ShieldVUE team to discover how our
-            leadership, expertise, and platform can help strengthen
-            your software supply chain security strategy.
-          </p>
-
-          <div
-            className="
-              mt-12
-
-              flex
-              flex-wrap
-              justify-center
-
-              gap-4
-            "
-          >
-            <Button
-              asChild
-              size="lg"
+          {/* Background Effects */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {/* Purple Ray */}
+            <div
               className="
-                h-12
+                absolute
+                -top-[20%]
+                left-[-20%]
+                md:left-[10%]
 
-                rounded-md
+                w-[150%]
+                md:w-[80%]
 
-                bg-primary
+                h-[140%]
 
-                px-7
+                bg-gradient-to-b
+                from-primary/20
+                via-primary/5
+                to-transparent
 
-                text-sm
-                font-semibold
+                -rotate-[15deg]
 
-                text-white
+                blur-2xl
 
-                shadow-lg
-                shadow-primary/30
-
-                hover:bg-primary/90
+                transform-gpu
               "
-            >
-              <Link href="/book-demo">
-                Book A Demo
-              </Link>
-            </Button>
+            />
 
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
+            {/* Ambient Glow */}
+            <div
               className="
-                h-12
+                absolute
+                top-0
+                right-0
 
-                rounded-md
+                w-[300px]
+                md:w-[500px]
 
-                border
-                border-white/20
+                h-[300px]
+                md:h-[500px]
 
-                bg-white/5
+                rounded-full
 
-                px-7
+                bg-primary/10
 
-                text-sm
+                blur-[80px]
+                md:blur-[100px]
+
+                translate-x-1/3
+                -translate-y-1/3
+              "
+            />
+
+            {/* Bottom Glow */}
+            <div
+              className="
+                absolute
+                bottom-0
+                left-0
+
+                w-[250px]
+                md:w-[400px]
+
+                h-[250px]
+                md:h-[400px]
+
+                rounded-full
+
+                bg-indigo-400/10
+
+                blur-[60px]
+                md:blur-[80px]
+
+                -translate-x-1/3
+                translate-y-1/3
+              "
+            />
+
+            {/* Dot Pattern */}
+            <div
+              className="
+                absolute
+                inset-0
+
+                bg-[radial-gradient(circle_at_center,#cbd5e1_1px,transparent_1px)]
+                bg-[length:24px_24px]
+
+                md:bg-[length:32px_32px]
+
+                opacity-40"
+              />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 max-w-3xl mx-auto text-center">
+            <h2
+              className="
+                text-2xl
+                sm:text-3xl
+                md:text-4xl
+                lg:text-5xl
+
                 font-medium
 
-                text-white
+                tracking-tight
 
-                backdrop-blur-md
+                leading-[1.2]
 
-                hover:bg-white/10
+                text-slate-900
+
+                mb-4
+
+                font-['Clash_Grotesk']
               "
             >
-              <Link
-                href="/company/about"
-                className="flex items-center gap-2"
+              Let's Build A More
+              <br className="hidden sm:block" />
+              Secure Software Future{" "}
+              <span className="text-primary">
+                Together
+              </span>
+            </h2>
+
+            <p
+              className="
+                text-base
+                sm:text-lg
+
+                text-slate-600
+
+                mb-8
+
+                leading-relaxed
+
+                max-w-2xl
+
+                mx-auto
+              "
+            >
+              Connect with the ShieldVUE team to discover how our
+              leadership, expertise, and platform can help strengthen
+              your software supply chain security strategy.
+            </p>
+
+            <div
+              className="
+                flex
+                flex-col
+
+                sm:flex-row
+
+                justify-center
+
+                gap-4
+              "
+            >
+              <Button
+                asChild
+                size="lg"
+                className="
+                  h-11
+                  px-6
+
+                  rounded-md
+
+                  text-sm
+                  font-semibold
+
+                  bg-primary
+                  hover:bg-primary/90
+
+                  text-white
+
+                  shadow-lg
+                "
               >
-                Learn More
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
+                <Link href="/contact-us">
+                  Book A Demo
+                </Link>
+              </Button>
+
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="
+                  w-full
+                  sm:w-auto
+
+                  h-12
+                  px-8
+
+                  rounded-md
+
+                  text-sm
+                  font-medium
+
+                  border
+                  border-slate-300
+
+                  text-slate-700
+
+                  bg-white/80
+
+                  hover:bg-white
+                  hover:text-slate-900
+
+                  flex
+                  items-center
+                  justify-center
+                  gap-2
+
+                  shadow-sm
+
+                  transition-all
+                "
+              >
+                <Link
+                  href="/company/about"
+                  className="flex items-center gap-2"
+                >
+                  Learn More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </m.div>
       </div>

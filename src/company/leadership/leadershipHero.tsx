@@ -13,7 +13,7 @@ export default function LeadershipHero() {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "url('/images/ChatGPT Image Jun 22, 2026, 04_12_49 PM.png')",
+            "url('/images/image.png')",
           backgroundSize: "cover",
           backgroundPosition: "right center",
         }}
@@ -227,7 +227,7 @@ export default function LeadershipHero() {
             </Button>
           </m.div>
 
-          {/* Leadership Highlights */}
+          {/* Leadership Highlights
           <m.div
             initial={{
               opacity: 0,
@@ -295,7 +295,7 @@ export default function LeadershipHero() {
                 </div>
               </div>
             ))}
-          </m.div>
+          </m.div> */}
         </div>
       </div>
     </section>
