@@ -190,7 +190,7 @@ export default function WhatShieldVUESolves() {
   const activeData = tabs[activeTab].content;
 
   return (
-    <section className="bg-slate-50 pt-8 pb-12 md:pt-12 md:pb-24 relative">
+    <section className="bg-slate-50 pt-8 pb-8 md:pt-12 md:pb-12 relative">
       <div className="shield-container relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-8">

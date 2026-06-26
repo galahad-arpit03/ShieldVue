@@ -68,12 +68,12 @@ export default function Hero() {
           <div className="max-w-2xl lg:max-w-none lg:col-span-7 xl:col-span-8">
             {/* Eyebrow */}
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-[-0.02em] text-slate-900 font-['Clash_Grotesk'] animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-[-0.02em] text-slate-900 font-['Clash_Grotesk']">
               <span className="md:whitespace-nowrap">Know Your Software</span> <br />
               <span className="text-primary font-medium md:whitespace-nowrap">Supply Chain.</span>
             </h1>
 
-            <p className="mt-6 text-lg sm:text-lg leading-8 text-slate-600 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-forwards opacity-0">
+            <p className="mt-6 text-lg sm:text-lg leading-8 text-slate-600">
               Gain complete visibility into software components, vulnerabilities, cryptographic assets, and compliance risks through a unified Software Bill of Materials (SBOM) and Cybersecurity Governance Platform.
             </p>
 

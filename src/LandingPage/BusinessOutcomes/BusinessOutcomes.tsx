@@ -55,7 +55,7 @@ export default function BusinessOutcomes() {
   ];
 
   return (
-    <section className="relative py-12 md:py-24 overflow-hidden">
+    <section className="relative pt-8 pb-12 md:pt-12 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 z-[-10]">
         <Image src="/landing/outcome_bg.png" alt="Background" fill className="object-cover object-center" />
       </div>
