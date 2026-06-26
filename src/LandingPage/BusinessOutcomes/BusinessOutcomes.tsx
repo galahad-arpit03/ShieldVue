@@ -1,4 +1,5 @@
-import { ShieldAlert, FileCheck, Eye, LockKeyhole, HeartHandshake, Zap, Wrench } from "lucide-react";
+import { ShieldAlert, FileCheck, Eye, LockKeyhole, HeartHandshake, Wrench } from "lucide-react";
+import Image from "next/image";
 
 export default function BusinessOutcomes() {
   const outcomes = [
@@ -54,10 +55,10 @@ export default function BusinessOutcomes() {
   ];
 
   return (
-    <section 
-      className="bg-white py-12 md:py-24 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/landing/outcome_bg.png')" }}
-    >
+    <section className="relative py-12 md:py-24 overflow-hidden">
+      <div className="absolute inset-0 z-[-10]">
+        <Image src="/landing/outcome_bg.png" alt="Background" fill className="object-cover object-center" />
+      </div>
       <div className="shield-container">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-medium tracking-normal font-['Clash_Grotesk'] text-slate-900 mb-4">

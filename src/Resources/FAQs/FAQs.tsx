@@ -123,7 +123,7 @@ export default function FAQs() {
           
           <h1 className="text-3xl md:text-5xl font-medium text-slate-900 mb-4 font-['Clash_Grotesk']">
             Got Questions? <br />
-            <span className="text-primary">We've Got Answers</span>
+            <span className="text-primary">We&apos;ve Got Answers</span>
           </h1>
           
           <p className="text-slate-500 text-lg">
@@ -195,7 +195,7 @@ export default function FAQs() {
             <div className="bg-primary rounded-2xl p-6 text-white shadow-xl shadow-primary/20">
               <h4 className="text-xl font-medium mb-2 font-['Clash_Grotesk']">Still have questions?</h4>
               <p className="text-primary-foreground/80 text-sm mb-6 leading-relaxed">
-                Can't find the answer you're looking for? Our support team is here to help.
+                Can&apos;t find the answer you&apos;re looking for? Our support team is here to help.
               </p>
               <Button variant="secondary" className="w-full bg-white text-primary hover:bg-slate-50 font-semibold py-6" asChild>
                 <a href="mailto:support@apmosys.com">

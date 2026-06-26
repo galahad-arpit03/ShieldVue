@@ -1,6 +1,7 @@
 "use client";
 
-import { m } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Button } from "@/Common/UI/Button/Button";
 import {ArrowRight} from "lucide-react";
 import Link from "next/link";
@@ -8,16 +9,25 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function SBOMHero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-40 pb-8 md:pb-16">
+    <section ref={containerRef} className="relative overflow-hidden pt-28 md:pt-40 pb-8 md:pb-16">
       {/* Background Image */}
-      <Image
+      <m.div className="absolute inset-0 z-0 origin-top" style={{ y: yBg, scale: 1.1 }}>
+<Image
         src="/images/sbom-hero.png"
         alt="ShieldVUE SBOM"
         fill
         priority
         className="object-cover object-[right_center] -z-10"
       />
+</m.div>
 
       {/* White Gradient Overlay */}
       <div

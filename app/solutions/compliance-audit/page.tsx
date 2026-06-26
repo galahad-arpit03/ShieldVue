@@ -1,7 +1,7 @@
 import ComplianceHero from "@/Solutions/ComplianceAudit/ComplianceHero";
 import SupportedFrameworks from "@/Solutions/ComplianceAudit/SupportedFrameworks";
 import PolicyEnforcement from "@/Solutions/ComplianceAudit/PolicyEnforcement";
-import RegulatoryReporting from "@/Solutions/ComplianceAudit/RegulatoryReporting";
+
 import ComplianceFAQ from "@/Solutions/ComplianceAudit/ComplianceFAQ";
 import ComplianceCTA from "@/Solutions/ComplianceAudit/ComplianceCTA";
 

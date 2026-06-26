@@ -1,22 +1,32 @@
 "use client";
 
 import Image from "next/image";
-import { m } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
 
 export default function BookDemoHero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+
   return (
-    <section className="relative overflow-hidden bg-white pt-28 md:pt-40 pb-8 md:pb-16 md:pb-32">
+    <section ref={containerRef} className="relative overflow-hidden bg-white pt-28 md:pt-40 pb-8 md:pb-16 md:pb-32">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image
+        <m.div className="absolute inset-0 z-0 origin-top" style={{ y: yBg, scale: 1.1 }}>
+<Image
           src="/book_demo/contact_us_hero.png"
           alt=""
           fill
           priority
           className="object-cover object-center"
         />
+</m.div>
 
         {/* Left Content Readability Gradient */}
         <div

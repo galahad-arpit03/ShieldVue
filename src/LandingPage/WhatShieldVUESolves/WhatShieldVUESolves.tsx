@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { Shield, Zap, Cloud, Lock, FileCheck, ArrowRight } from "lucide-react";
-import Link from "next/link";
+
+
 
 export default function WhatShieldVUESolves() {
   const [activeTab, setActiveTab] = useState(0);
@@ -190,7 +190,7 @@ export default function WhatShieldVUESolves() {
   const activeData = tabs[activeTab].content;
 
   return (
-    <section className="bg-slate-50 py-12 md:py-24 relative">
+    <section className="bg-slate-50 pt-8 pb-12 md:pt-12 md:pb-24 relative">
       <div className="shield-container relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-8">
@@ -204,7 +204,7 @@ export default function WhatShieldVUESolves() {
 
         {/* Navigation */}
         <div
-          className="sticky z-50 bg-slate-50/90 backdrop-blur-md flex overflow-x-auto md:justify-between border-b border-slate-200 mb-6 md:mb-12 gap-x-2 transition-[top] duration-300"
+          className="sticky z-50 bg-slate-50/90 backdrop-blur-md flex overflow-x-auto hide-scrollbar snap-x snap-mandatory md:justify-between border-b border-slate-200 mb-6 md:mb-12 gap-x-2 transition-[top] duration-300"
           style={{ top: isNavVisible ? '64px' : '0px' }}
         >
           {tabs.map((tab, idx) => {
@@ -214,7 +214,7 @@ export default function WhatShieldVUESolves() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(idx)}
-                className={`flex items-center px-4 py-4 md:py-5 whitespace-nowrap transition-all duration-300 font-medium flex-shrink-0 ${isActive
+                className={`flex items-center px-4 py-4 md:py-5 whitespace-nowrap transition-all duration-300 font-medium flex-shrink-0 snap-center ${isActive
                   ? 'text-primary border-b-2 border-primary'
                   : 'text-slate-500 hover:text-slate-900 border-b-2 border-transparent'
                   }`}

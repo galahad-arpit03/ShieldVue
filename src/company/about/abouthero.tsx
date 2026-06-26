@@ -1,13 +1,22 @@
 "use client";
 
-import { m } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
 
 export default function AboutHero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+
     return (
-<section
+<section ref={containerRef}
   className="
     relative
     overflow-hidden
@@ -20,18 +29,20 @@ export default function AboutHero() {
 >
             {/* Background Image */}
             <div className="absolute inset-0 overflow-hidden">
-                <img
-                    src="/images/about-hero2.png"
+                <m.div className="absolute inset-0 z-0 origin-top" style={{ y: yBg, scale: 1.1 }}>
+<Image
+                    src="/images/about-hero3.png"
                     alt="ShieldVUE Office"
+                    fill
+                    sizes="100vw"
                     className="
-            h-full
-            w-full
             object-cover
             object-[82%_center]
             select-none
             pointer-events-none
           "
                 />
+</m.div>
             </div>
 
             {/* Main Left Gradient */}

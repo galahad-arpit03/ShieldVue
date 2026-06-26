@@ -3,11 +3,11 @@
 import { useState } from "react";
 import { m } from "framer-motion";
 import {
-  ShieldCheck,
-  Clock3,
-  Users,
+  
+  
+  
   CheckCircle,
-  MessageSquare,
+  
   Mail,
   Send,
   Shield,
@@ -74,11 +74,10 @@ export default function DemoForm() {
                       <h5 className="text-[10px] font-bold text-white/70 uppercase tracking-wider mb-1 flex items-center gap-1.5">
                         <Mail className="w-3.5 h-3.5" /> Email Addresses
                       </h5>
-                      <p className="text-sm text-white font-medium">
-                        sales@apmosys.com
-                        <span className="text-white/30 mx-2">|</span>
-                        presales@apmosys.com
-                      </p>
+                      <div className="flex flex-col gap-1">
+                        <a href="mailto:sales@apmosys.com" className="text-sm text-white font-medium hover:text-white/80 transition-colors">sales@apmosys.com</a>
+                        <a href="mailto:presales@apmosys.com" className="text-sm text-white font-medium hover:text-white/80 transition-colors">presales@apmosys.com</a>
+                      </div>
                     </div>
 
                     <div>
@@ -169,7 +168,7 @@ export default function DemoForm() {
                         } else {
                           alert("Failed to submit demo request. Please try again.");
                         }
-                      } catch (error) {
+                      } catch {
                         alert("An error occurred. Please try again later.");
                       } finally {
                         setIsSubmitting(false);

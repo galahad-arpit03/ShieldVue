@@ -1,10 +1,11 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const fs = require('fs');
 let content = fs.readFileSync('src/Common/NavBar/NavBar.tsx', 'utf8');
 
 // Update desktop button group
 content = content.replace(
   /<button[\s\S]*?className="[\s\S]*?text-slate-600[\s\S]*?"[\s\S]*?>[\s\S]*?{group.title}/m,
-  (match) => {
+  () => {
     return `const isActiveGroup = pathname && group.items.some((item) => pathname.startsWith(item.href));
             
             return (

@@ -14,7 +14,7 @@ export default function OpenSourceCaseStudies() {
           viewport={{ once: true }}
         >
           <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-relaxed font-['Clash_Grotesk'] mb-8">
-            "ShieldVUE gave us immediate visibility into our sprawling open-source estate, reducing our compliance review time by 80%."
+            &quot;ShieldVUE gave us immediate visibility into our sprawling open-source estate, reducing our compliance review time by 80%.&quot;
           </p>
           <div className="text-white/80 font-bold uppercase tracking-widest text-sm bg-white/10 inline-block px-4 py-2 rounded-full">
             — Tech Leader

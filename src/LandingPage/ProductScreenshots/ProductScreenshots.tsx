@@ -31,13 +31,13 @@ export default function ProductScreenshots() {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-12">
+        <div className="flex overflow-x-auto pb-2 hide-scrollbar snap-x snap-mandatory gap-2 mb-6 md:mb-12 md:flex-wrap md:justify-center">
           {tabs.map((tab) => (
             <button
               key={tab.name}
               onClick={() => setActiveTab(tab)}
               className={cn(
-                "px-5 py-2.5 rounded-md text-sm font-semibold transition-all duration-300",
+                "px-5 py-2.5 rounded-md text-sm font-semibold transition-all duration-300 whitespace-nowrap snap-center shrink-0",
                 activeTab.name === tab.name
                   ? "bg-primary text-white shadow-md"
                   : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"

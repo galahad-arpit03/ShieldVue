@@ -87,7 +87,7 @@ export default function DemoBenefits() {
               md:text-5xl
             "
           >
-            What You'll See During
+            What You&apos;ll See During
             <br />
             Your Demo
           </h2>
@@ -102,7 +102,7 @@ export default function DemoBenefits() {
               text-slate-600
             "
           >
-            A guided walkthrough of ShieldVUE's most powerful
+            A guided walkthrough of ShieldVUE&apos;s most powerful
             capabilities for software visibility, vulnerability
             management and compliance readiness.
           </p>

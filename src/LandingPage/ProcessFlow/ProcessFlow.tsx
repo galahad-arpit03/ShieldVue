@@ -15,13 +15,16 @@ export default function ProcessFlow() {
             A frictionless pipeline that integrates seamlessly into your existing CI/CD environments to secure your software from code to production.
           </p>
         </div>
-        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
-          <Image
-            src="/landing/process_flow.png"
-            alt="ShieldVUE Process Flow"
-            fill
-            className="object-contain object-center"
-          />
+        <div className="w-full overflow-x-auto hide-scrollbar pb-4">
+          <div className="relative min-w-[800px] md:min-w-full h-[350px] md:h-[500px] lg:h-[600px]">
+            <Image
+              src="/landing/process_flow.png"
+              alt="ShieldVUE Process Flow"
+              fill
+              sizes="(max-width: 768px) 800px, 100vw"
+              className="object-contain object-left md:object-center"
+            />
+          </div>
         </div>
       </div>
     </section>

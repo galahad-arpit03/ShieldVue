@@ -28,7 +28,7 @@ export default function NotFound() {
           </h2>
 
           <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-md mx-auto">
-            We couldn't find the page you're looking for. It might have been removed, renamed, or didn't exist in the first place.
+            We couldn&apos;t find the page you&apos;re looking for. It might have been removed, renamed, or didn&apos;t exist in the first place.
           </p>
 
           <div className="flex items-center gap-4">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Landmark, Umbrella, HeartPulse, Building2, Cloud, Server, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { HeartPulse, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 export default function Industries() {
   return (

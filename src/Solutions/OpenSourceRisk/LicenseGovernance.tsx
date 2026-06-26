@@ -1,4 +1,4 @@
-import { Scale, CheckCircle, XCircle, Check } from "lucide-react";
+import { CheckCircle, XCircle, Check } from "lucide-react";
 import Image from "next/image";
 
 export default function LicenseGovernance() {
@@ -10,7 +10,7 @@ export default function LicenseGovernance() {
           Automated <span className="text-primary">License Compliance</span>
         </h2>
         <p className="text-lg text-slate-600 leading-relaxed mb-10 max-w-3xl mx-auto">
-          Automatically detect restrictive open-source licenses and enforce your organization's legal policies before code is merged.
+          Automatically detect restrictive open-source licenses and enforce your organization&apos;s legal policies before code is merged.
         </p>
 
         {/* Comparison Grid (Glassmorphism Layout) */}

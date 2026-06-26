@@ -1,13 +1,21 @@
 "use client";
 
-import { motion , m } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/Common/UI/Button/Button";
 
 export default function LeadershipHero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+
   return (
-    <section className="relative overflow-hidden pt-40 pb-32">
+    <section ref={containerRef} className="relative overflow-hidden pt-40 pb-32">
       {/* Background Image */}
       <div
         className="absolute inset-0"

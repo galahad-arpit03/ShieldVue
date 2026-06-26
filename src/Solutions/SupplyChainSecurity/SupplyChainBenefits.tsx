@@ -1,6 +1,6 @@
 "use client";
 
-import { m } from "framer-motion";
+
 
 export default function SupplyChainBenefits() {
   const metrics = [

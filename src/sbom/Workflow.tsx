@@ -2,10 +2,10 @@
 
 import { m } from "framer-motion";
 import {
-    Boxes,
-    Database,
-    GitBranch,
-    ShieldCheck,
+    
+    
+    
+    
 } from "lucide-react";
 import Image from "next/image";
 

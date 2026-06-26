@@ -2,14 +2,13 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/Common/UI/Button/Button";
 import { m, useScroll, useTransform } from "framer-motion";
 
 export default function ComplianceHero() {
   const containerRef = useRef<HTMLElement>(null);
-  const badges = ["NIST SSDF", "EO 14028", "CIS Controls", "SOC 2"];
 
   const { scrollYProgress } = useScroll({
     target: containerRef,

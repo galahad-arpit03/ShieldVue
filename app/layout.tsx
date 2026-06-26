@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Sora, IBM_Plex_Sans, Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -64,6 +64,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 import Navbar from "@/Common/NavBar/NavBar";
 import Footer from "@/Common/Footer/Footer";

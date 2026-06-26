@@ -18,7 +18,7 @@ export default function PolicyEnforcement() {
               Shift-Left <span className="text-primary">Governance</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              Automatically block non-compliant code, missing SBOMs, or unauthorized licenses from progressing through your CI/CD pipelines. Security shouldn't be an afterthought.
+              Automatically block non-compliant code, missing SBOMs, or unauthorized licenses from progressing through your CI/CD pipelines. Security shouldn&apos;t be an afterthought.
             </p>
           </m.div>
 

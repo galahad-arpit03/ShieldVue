@@ -74,7 +74,7 @@ export default function SupplyChainFeatures() {
                 <div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Continuous Monitoring</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Security doesn't stop after deployment. ShieldVUE provides real-time alerts for supply chain anomalies, new CVEs, and dependency drift, ensuring your application remains secure post-production.
+                    Security doesn&apos;t stop after deployment. ShieldVUE provides real-time alerts for supply chain anomalies, new CVEs, and dependency drift, ensuring your application remains secure post-production.
                   </p>
                 </div>
               </div>

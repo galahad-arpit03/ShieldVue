@@ -156,9 +156,11 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
           className="
             relative
             z-50
@@ -178,6 +180,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <m.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

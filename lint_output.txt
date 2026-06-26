@@ -1,0 +1,170 @@
+
+> shieldvue-website@0.1.0 lint
+> eslint
+
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/app/contact-us/page.tsx
+  2:8  warning  'BookDemoHero' is defined but never used  @typescript-eslint/no-unused-vars
+  3:8  warning  'DemoBenefits' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/app/not-found.tsx
+  31:22   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  31:42   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  31:103  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/app/platform/cbom-management/page.tsx
+  4:8  warning  'CryptoInventory' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/app/platform/compliance-governance/page.tsx
+  1:8  warning  'Footer' is defined but never used  @typescript-eslint/no-unused-vars
+  2:8  warning  'Navbar' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/app/solutions/compliance-audit/page.tsx
+  4:8  warning  'RegulatoryReporting' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/fix_nav.js
+  1:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  7:4   warning  'match' is defined but never used        @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/scripts/add-metadata.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/scripts/framer-to-m.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/BookDemo/DemoBenefits.tsx
+   90:21  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  105:46  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/BookDemo/DemoForm.tsx
+    6:3   warning  'ShieldCheck' is defined but never used    @typescript-eslint/no-unused-vars
+    7:3   warning  'Clock3' is defined but never used         @typescript-eslint/no-unused-vars
+    8:3   warning  'Users' is defined but never used          @typescript-eslint/no-unused-vars
+   10:3   warning  'MessageSquare' is defined but never used  @typescript-eslint/no-unused-vars
+  172:32  warning  'error' is defined but never used          @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/LandingPage/BusinessOutcomes/BusinessOutcomes.tsx
+  1:68  warning  'Zap' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/LandingPage/Industries/Industries.tsx
+  2:10  warning  'Landmark' is defined but never used   @typescript-eslint/no-unused-vars
+  2:20  warning  'Umbrella' is defined but never used   @typescript-eslint/no-unused-vars
+  2:42  warning  'Building2' is defined but never used  @typescript-eslint/no-unused-vars
+  2:53  warning  'Cloud' is defined but never used      @typescript-eslint/no-unused-vars
+  2:60  warning  'Server' is defined but never used     @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/LandingPage/WhatShieldVUESolves/WhatShieldVUESolves.tsx
+  4:10  warning  'Shield' is defined but never used      @typescript-eslint/no-unused-vars
+  4:18  warning  'Zap' is defined but never used         @typescript-eslint/no-unused-vars
+  4:23  warning  'Cloud' is defined but never used       @typescript-eslint/no-unused-vars
+  4:30  warning  'Lock' is defined but never used        @typescript-eslint/no-unused-vars
+  4:36  warning  'FileCheck' is defined but never used   @typescript-eslint/no-unused-vars
+  4:47  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  5:8   warning  'Link' is defined but never used        @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Overview/CapabilitiesGrid.tsx
+  177:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Resources/FAQs/FAQs.tsx
+  126:46  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  198:20  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  198:42  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Solutions/ComplianceAudit/ComplianceHero.tsx
+   5:22  warning  'CheckCircle' is defined but never used      @typescript-eslint/no-unused-vars
+  12:9   warning  'badges' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Solutions/ComplianceAudit/PolicyEnforcement.tsx
+  21:158  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Solutions/OpenSourceRisk/LicenseGovernance.tsx
+   1:10  warning  'Scale' is defined but never used                                @typescript-eslint/no-unused-vars
+  13:94  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Solutions/OpenSourceRisk/OpenSourceCaseStudies.tsx
+  17:13   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  17:135  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Solutions/SupplyChainSecurity/SupplyChainBenefits.tsx
+  3:10  warning  'm' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Solutions/SupplyChainSecurity/SupplyChainFeatures.tsx
+  77:35  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Solutions/VulnerabilityManagement/RemediationWorkflows.tsx
+   4:8   warning  'Image' is defined but never used                                       @typescript-eslint/no-unused-vars
+  21:18  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+  42:54  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  42:67  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  43:56  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  43:62  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  43:65  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  43:73  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  55:21  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  55:28  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  55:31  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  55:40  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  55:76  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  68:21  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  68:28  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  68:31  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  68:40  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  68:76  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  71:56  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  71:62  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  71:65  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  71:72  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/Solutions/VulnerabilityManagement/VulnerabilityDashboardUI.tsx
+  34:3  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/VulnerabilityIntelligence/CTA.tsx
+  200:29  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/VulnerabilityIntelligence/IntelligenceCapabilities.tsx
+  188:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/cbom/ CTA.tsx
+  5:10  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/cbom/Workflow.tsx
+  6:3  warning  'KeyRound' is defined but never used     @typescript-eslint/no-unused-vars
+  7:3  warning  'ShieldCheck' is defined but never used  @typescript-eslint/no-unused-vars
+  8:3  warning  'Cpu' is defined but never used          @typescript-eslint/no-unused-vars
+  9:3  warning  'Database' is defined but never used     @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/company/about/AboutShieldVUE.tsx
+  3:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/company/about/WhyChooseShieldVUE.tsx
+  61:22  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  61:32  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/company/about/abouthero.tsx
+  23:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/company/leadership/CTA.tsx
+  159:18  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/company/leadership/LeadershipGrid.tsx
+  3:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/company/leadership/LeadershipIntro.tsx
+  3:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/company/leadership/leadershipHero.tsx
+  3:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/sbom/CTA.tsx
+  5:10  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/arpit.gupta@apmosys.mahape/Videos/Internal/Netraa X Cliqtest X Apmosys/ShieldVUE/ShieldVUE/src/sbom/Workflow.tsx
+  5:5  warning  'Boxes' is defined but never used        @typescript-eslint/no-unused-vars
+  6:5  warning  'Database' is defined but never used     @typescript-eslint/no-unused-vars
+  7:5  warning  'GitBranch' is defined but never used    @typescript-eslint/no-unused-vars
+  8:5  warning  'ShieldCheck' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 91 problems (43 errors, 48 warnings)
+

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion,m } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import {
   ShieldCheck,
@@ -50,48 +50,20 @@ export default function LeadershipIntro() {
       />
 
       <div className="shield-container relative z-10">
-        <div className="grid items-center gap-20 lg:grid-cols-2">
-          {/* Left Content */}
-          <m.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            {/* <span
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div className="text-left">
+            <m.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               className="
-                inline-flex
-
-                rounded-full
-
-                bg-primary/10
-
-                px-4
-                py-2
-
-                text-sm
-                font-medium
-
-                text-primary
-              "
-            >
-              Leadership Philosophy
-            </span> */}
-
-            <h2
-              className="
-                mt-6
-
                 text-4xl
                 md:text-5xl
-
                 font-medium
-
                 leading-[1.08]
                 tracking-[-0.03em]
-
                 text-slate-900
-
                 font-['Clash_Grotesk']
               "
             >
@@ -99,15 +71,18 @@ export default function LeadershipIntro() {
               <span className="text-primary">
                 {" "}Software Supply Chain Security
               </span>
-            </h2>
+            </m.h2>
+          </div>
 
-            <p
+          <div className="text-left">
+            <m.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="
-                mt-8
-
                 text-lg
                 leading-8
-
                 text-slate-600
               "
             >
@@ -118,110 +93,87 @@ export default function LeadershipIntro() {
               enabling enterprises to confidently manage software
               supply chain risks while meeting evolving compliance
               requirements.
-            </p>
-
-            {/* Values */}
-            <div className="mt-12 grid gap-4 sm:grid-cols-2">
-              {values.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <div
-                    key={item.title}
-                    className="
-                      flex
-                      items-center
-                      gap-4
-
-                      rounded-md
-
-                      border
-                      border-slate-200
-
-                      bg-white
-
-                      p-4
-
-                      shadow-sm
-
-                      transition-all
-                      duration-300
-
-                      hover:border-primary/30
-                      hover:shadow-md
-                    "
-                  >
-                    <div
-                      className="
-                        flex
-
-                        h-12
-                        w-12
-
-                        items-center
-                        justify-center
-
-                        rounded-xl
-
-                        bg-primary/10
-
-                        text-primary
-                      "
-                    >
-                      <Icon className="h-6 w-6" />
-                    </div>
-
-                    <span
-                      className="
-                        text-sm
-                        font-semibold
-
-                        text-slate-800
-                      "
-                    >
-                      {item.title}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </m.div>
-
-          {/* Right Illustration */}
-          <m.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="relative"
-          >
-            <div
-              className="
-                overflow-hidden
-
-                rounded-md
-
-                border
-                border-slate-200
-
-                bg-gradient-to-br
-                from-white
-                to-primary/5
-
-                shadow-xl
-              "
-            >
-              <Image
-                src="/images/leadership-intro.png"
-                alt="ShieldVUE Leadership"
-                width={900}
-                height={900}
-                className="h-full w-full object-cover"
-                priority
-              />
-            </div>
-          </m.div>
+            </m.p>
+          </div>
         </div>
+
+        {/* Values */}
+        <m.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {values.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <m.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                className="
+                  group
+                  flex
+                  flex-col
+                  items-center
+                  text-center
+                  gap-4
+                  rounded-xl
+                  border
+                  border-slate-200/60
+                  bg-white/50
+                  backdrop-blur-sm
+                  p-8
+                  shadow-sm
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-primary/30
+                  hover:shadow-xl
+                  hover:shadow-primary/5
+                "
+              >
+                <div
+                  className="
+                    flex
+                    h-16
+                    w-16
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    bg-gradient-to-br
+                    from-primary/10
+                    to-primary/5
+                    text-primary
+                    transition-transform
+                    duration-300
+                    group-hover:scale-110
+                    group-hover:bg-primary
+                    group-hover:text-white
+                    shadow-inner
+                  "
+                >
+                  <Icon className="h-8 w-8" />
+                </div>
+
+                <span
+                  className="
+                    text-base
+                    font-bold
+                    tracking-tight
+                    text-slate-800
+                  "
+                >
+                  {item.title}
+                </span>
+              </m.div>
+            );
+          })}
+        </m.div>
       </div>
     </section>
   );

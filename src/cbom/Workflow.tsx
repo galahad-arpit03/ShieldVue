@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { m } from "framer-motion";
 import {
-  KeyRound,
-  ShieldCheck,
-  Cpu,
-  Database,
+  
+  
+  
+  
 } from "lucide-react";
 
 export default function Workflow() {

@@ -72,19 +72,19 @@ export default function BlogHero() {
             Expert analysis, deep dives, and best practices for building secure, scalable, and high-performance applications in the enterprise.
           </m.p>
 
-          <m.div variants={itemVariants} className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
+          <m.div variants={itemVariants} className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <Button
               asChild
               size="lg"
-              className="h-11 flex-1 sm:flex-none px-3 sm:px-6 rounded-md text-xs sm:text-sm font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 border-0"
+              className="w-full sm:w-auto h-11 px-6 rounded-md text-sm font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 border-0"
             >
               <Link href="/contact-us">
                 Book Demo
               </Link>
             </Button>
 
-            <Button asChild size="lg" variant="outline" className="whitespace-nowrap flex justify-center items-center gap-2 h-11 flex-1 sm:flex-none px-3 sm:px-6 rounded-md text-xs sm:text-sm font-medium border border-slate-200 text-slate-800 bg-white/80 backdrop-blur-md hover:bg-slate-50 flex items-center gap-2 shadow-sm">
-               <Link href="/overview"  className="flex items-center justify-center gap-2 whitespace-nowrap w-full">
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto h-11 px-6 rounded-md text-sm font-medium border border-slate-200 text-slate-800 bg-white/80 backdrop-blur-md hover:bg-slate-50 shadow-sm">
+               <Link href="/overview" className="flex items-center justify-center gap-2 whitespace-nowrap w-full sm:w-auto">
                  Explore Platform
                  <ArrowRight className="h-4 w-4 text-slate-600" />
                </Link>

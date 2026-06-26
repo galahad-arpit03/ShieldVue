@@ -58,7 +58,7 @@ export default function WhyChooseShieldVUE() {
           <h2 className="text-3xl md:text-5xl font-medium tracking-normal font-['Clash_Grotesk'] text-slate-900 mb-4">
             Why We{" "}
             <span className="text-primary">
-              Choose "ShieldVUE"
+              Choose &quot;ShieldVUE&quot;
             </span>
           </h2>
 {/* 

@@ -51,7 +51,7 @@ export default function WhatWeDeliver() {
 
       <div className="shield-container relative z-10">
         {/* Header */}
-        <div className="mx-auto mb-20 max-w-3xl text-center">
+        <div className="mb-10 max-w-3xl text-left">
           <h2 className="text-4xl md:text-5xl font-medium leading-[1.08] tracking-[-0.03em] text-slate-900 font-['Clash_Grotesk']">
             What We Deliver
           </h2>
@@ -70,7 +70,7 @@ export default function WhatWeDeliver() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-10 lg:p-12 shadow-sm"
+            className="relative overflow-hidden rounded-md border border-slate-200 bg-white p-10 lg:p-12 shadow-sm"
           >
             <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-primary/10 blur-[110px]" />
 
@@ -119,7 +119,7 @@ export default function WhatWeDeliver() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
-                  className="group relative flex-1 overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-colors duration-300 hover:border-primary/20"
+                  className="group relative flex-1 overflow-hidden rounded-md border border-slate-200 bg-white p-7 shadow-sm transition-colors duration-300 hover:border-primary/20"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">

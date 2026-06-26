@@ -1,5 +1,5 @@
-import Footer from "@/Common/Footer/Footer";
-import Navbar from "@/Common/NavBar/NavBar";
+
+
 import ComplianceHero from "@/ComplianceGovernance/ComplianceHero";
 import GovernanceCapabilities from "@/ComplianceGovernance/GovernanceCapabilities";
 import WhatIsCompliance from "@/ComplianceGovernance/WhatIsCompliance";
