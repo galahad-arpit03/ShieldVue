@@ -232,6 +232,7 @@ export default function Navbar() {
 
               <div className="mt-6 px-2">
                 <Button
+                  asChild
                   className="w-full h-11 rounded-lg text-sm font-bold bg-primary text-white shadow-lg shadow-primary/25"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
